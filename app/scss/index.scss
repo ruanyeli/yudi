@@ -310,3 +310,23 @@ width:25%;
 }
 
 }
+html{
+    width: 100%;
+    height: 100%;
+    body{
+        width: 100%;
+        height: 100%;
+        .person-container{
+            width: 100%;
+            height:100%;
+            // overflow: hidden;
+            background: url("../images/banner.png") no-repeat;
+            background-size:cover;
+            background-size:100% 100%; 
+            .person-container-box{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
