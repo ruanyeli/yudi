@@ -79,6 +79,10 @@ html {
             background-color: #fff;
             border-radius: 12px;
             border: solid 1px #dddddd; }
+            html body .curriculum-container .curriculum-right .curriculum-right-center .curriculum-right-center-left .curriculum-right-center-left-button {
+              display: flex;
+              flex-direction: column;
+              margin: 35px 17px 0 13px; }
           html body .curriculum-container .curriculum-right .curriculum-right-center .curriculum-right-center-right {
             width: 67%;
             height: 100%;
@@ -87,4 +91,40 @@ html {
             border-radius: 12px;
             border: solid 1px #dddddd; }
         html body .curriculum-container .curriculum-right .curriculum-right-bottom {
-          margin-top: 20px; }
+          margin-top: 20px;
+          display: flex; }
+          html body .curriculum-container .curriculum-right .curriculum-right-bottom .curriculum-right-bottom-image {
+            htight: 124px;
+            width: 120px; }
+          html body .curriculum-container .curriculum-right .curriculum-right-bottom .curriculum-right-bottom-video {
+            margin: 0 24px;
+            height: 124px;
+            width: 30%;
+            background-color: #fff;
+            border-radius: 12px;
+            border: solid 1px #dddddd; }
+          html body .curriculum-container .curriculum-right .curriculum-right-bottom .curriculum-right-bottom-share {
+            width: 50%;
+            display: flex;
+            justify-content: flex-end; }
+            html body .curriculum-container .curriculum-right .curriculum-right-bottom .curriculum-right-bottom-share .curriculum-right-bottom-share-save {
+              width: 68px;
+              height: 68px;
+              margin: 0 10px 0 0; }
+              html body .curriculum-container .curriculum-right .curriculum-right-bottom .curriculum-right-bottom-share .curriculum-right-bottom-share-save img {
+                width: 68px;
+                height: 68px; }
+            html body .curriculum-container .curriculum-right .curriculum-right-bottom .curriculum-right-bottom-share .curriculum-right-bottom-share-share {
+              width: 68px;
+              height: 68px;
+              margin: 0 10px 0 0; }
+              html body .curriculum-container .curriculum-right .curriculum-right-bottom .curriculum-right-bottom-share .curriculum-right-bottom-share-share img {
+                width: 68px;
+                height: 68px; }
+            html body .curriculum-container .curriculum-right .curriculum-right-bottom .curriculum-right-bottom-share .curriculum-right-bottom-share-return {
+              width: 68px;
+              height: 68px;
+              margin: 0 10px 0 0; }
+              html body .curriculum-container .curriculum-right .curriculum-right-bottom .curriculum-right-bottom-share .curriculum-right-bottom-share-return img {
+                width: 68px;
+                height: 68px; }
