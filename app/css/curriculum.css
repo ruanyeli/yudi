@@ -23,8 +23,10 @@ html {
           box-sizing: border-box;
           border: solid 1px #dddddd; }
           html body .curriculum-container .curriculum-left .curriculum-box .curriculum-left-top {
-            background-color: #626262;
             height: 70%; }
+            html body .curriculum-container .curriculum-left .curriculum-box .curriculum-left-top #canvas {
+              width: 100%;
+              height: 100%; }
           html body .curriculum-container .curriculum-left .curriculum-box .curriculum-left-center {
             border-radius: 12px;
             border: solid 4px #ffff00;
@@ -48,7 +50,7 @@ html {
         float: left;
         width: 66%;
         height: 100%;
-        margin-left: 20px; }
+        margin-left: 1%; }
         html body .curriculum-container .curriculum-right .curriculum-right-top {
           background-color: #fff;
           border-radius: 12px;
@@ -83,18 +85,22 @@ html {
               display: flex;
               flex-direction: column;
               margin: 35px 17px 0 13px; }
+            html body .curriculum-container .curriculum-right .curriculum-right-center .curriculum-right-center-left .curriculum-right-center-left-text {
+              height: 100%; }
           html body .curriculum-container .curriculum-right .curriculum-right-center .curriculum-right-center-right {
             width: 67%;
             height: 100%;
             float: left;
-            background-color: #fff;
             border-radius: 12px;
             border: solid 1px #dddddd; }
+            html body .curriculum-container .curriculum-right .curriculum-right-center .curriculum-right-center-right #editor {
+              height: 100%;
+              border-radius: 10px; }
         html body .curriculum-container .curriculum-right .curriculum-right-bottom {
           margin-top: 20px;
           display: flex; }
           html body .curriculum-container .curriculum-right .curriculum-right-bottom .curriculum-right-bottom-image {
-            htight: 124px;
+            height: 124px;
             width: 120px; }
           html body .curriculum-container .curriculum-right .curriculum-right-bottom .curriculum-right-bottom-video {
             margin: 0 24px;
