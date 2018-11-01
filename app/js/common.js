@@ -1,5 +1,6 @@
-
-    var personAnv=document.querySelector('.person-anv');
+window.onload=function(){
+    var personAnv=document.getElementsByClassName('person-anv');
+    console.log(personAnv)
     var personAnvChild=personAnv.querySelector('ul');
     var personAnvLi=personAnvChild.children;
     var headerResiger=document.querySelector('.header-register');//导航栏注册
@@ -27,5 +28,5 @@
     headerLogin.onclick=function(){
         personloginregister.style.display="block"
     }
-
+}
    

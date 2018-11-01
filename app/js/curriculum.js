@@ -1,4 +1,7 @@
-$(function(){
+function goRight(){
+	alert(1)
+}
+window.onload=function(){
 	 //导入editor(初始化)
 	 var editor = ace.edit("editor");//初始化
 	 editor.setTheme("ace/theme/monokai");//设置主题
@@ -16,7 +19,9 @@ $(function(){
 		 enableLiveAutocompletion: true
 	 });
 
-	 
+	function goRight(){
+		alert(1)
+	}
     var can = document.getElementById("canvas");
 	var tips=document.querySelector(".tips").children[1];
 	// var error=document.querySelector(".error").children[1]
@@ -261,7 +266,7 @@ $(function(){
 		if (Trygo(p1,p2))
 		{
 			moveTimes ++;
-			showMoveInfo();
+			// showMoveInfo();
 		}
 		//重绘地板
 		InitMap();
@@ -298,7 +303,7 @@ $(function(){
 		if(p1.y<0) return false;//若果超出地图的左边，不通过
 		if(p1.x>curMap.length) return false;//若果超出地图的下边，不通过
 		if(p1.y>curMap[0].length) return false;//若果超出地图的右边，不通过
-		if(curMap[p1.x][p1.y]==1){error.innerHTML="error:前方已无路";return false; }//若果前面是墙，不通过
+		// if(curMap[p1.x][p1.y]==1){error.innerHTML="error:前方已无路";return false; }//若果前面是墙，不通过
 		if(curMap[p1.x][p1.y]==3){error.innerHTML="点击推箱子";return false}//当人物前面是箱子，则需要点击推箱子
 		if (curMap[p1.x][p1.y]==3 || curMap[p1.x][p1.y]==5)//若果小人前面是箱子那就还需要判断箱子前面有没有障碍物(箱子/墙)
 		//1-墙壁，2-陷阱，3-箱子，4-人物，5-箱子及陷阱位置
@@ -377,27 +382,7 @@ $(function(){
 		//若果小动了 返回true 指代能够移动小人
 		return true;
 	}
-	//判断是否推成功
-	//与键盘上的上下左右键关联
-	//与按钮结合
-	// function doKeyDown(event){
-	// 	switch (event.keyCode)
-	// 	{
-	// 	case 37://左键头
-	// 		go("left");
-	// 		break;
-	// 	case 38://上键头
-	// 		go("up");
-	// 		break;
-	// 	case 39://右箭头
-	// 		go("right");
-	// 		break;
-	// 	case 40://下箭头
-	// 		go("down");
-	// 		break;
-	// 	}
-
-	// }
+	
 	//点击事件
 	var editorText=document.getElementById('editor').innerText;//代码框的数据
 	// console.log(editorText)
@@ -408,7 +393,6 @@ $(function(){
 		// editor.insert(name);
 		// editor.moveCursorTo(1, 0);
 		go("down");
-		// tips.innerHTML+=arguments.callee.name+"()"+"<br>";
 		trycatch()
 	}
 
@@ -417,26 +401,25 @@ $(function(){
 		for(var i=0;i<4;i++){
 			go("down");
 		}
-		// tips.innerHTML+=arguments.callee.name+"()"+"<br>";
 		trycatch()
 	}
 	function goUp(){
 		go("up");
 		trycatch();
-		// tips.innerHTML+=arguments.callee.name+"()"+"<br>"
 	}
 	function goLeft(){
 		go("left");
 		trycatch()
-		// tips.innerHTML+=arguments.callee.name+"()"+"<br>"
 	}
 	function goRighttwo(){
 		for(var i=0;i<2;i++){
 			go("right");
 		}
 		trycatch()
-		// tips.innerHTML+=arguments.callee.name+"()"+"<br>"
 	}
+	$(".curriculum-right-center-left-button-lefe").click(function(){
+		go("right")
+	})
 	function goRightthree(){
 		for(var i=0;i<3;i++){
 			go("right");
@@ -541,6 +524,5 @@ $(function(){
 		}
 		return b;
 	}
-})
-	
 
+}
