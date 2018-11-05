@@ -14,6 +14,7 @@ const gulp = require('gulp'), //
     rev = require('gulp-rev'),//添加hash值
     revReplace = require('gulp-rev-replace'),//替换hash值
     filter = require('gulp-filter'),  //-文件
+    connect = require('gulp-connect'),
     csso = require('gulp-csso');   //压缩css
 
 
@@ -27,15 +28,27 @@ gulp.task('sass', function () {
         }))
 })
 
+gulp.task('connect',function(){
+    connect.server({
+        root:'app',//根目录
+        port: '47.100.37.94',//端口号
+        livereload:true
+    });
+});
+
+
 
 //搭建本地服务器并实时刷新
 gulp.task('browserSync', function () {
     browserSync({
         server: {
-            baseDir: 'app'
+            baseDir: 'app',
         },
+        port:8000
     })
 })
+
+
 
 
 //合并压缩js/css
