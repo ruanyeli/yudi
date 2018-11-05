@@ -26,10 +26,8 @@ window.getData = function(param,callback){
         async: param.async==null?true:false,
         dataType : 'json',
         success : function(data){
-            console.log(data)
-        },
-        error :function(data){
-            console.log(data)
+            // console.log(data)
+            callback&&callback(data)
         }        
     })
 }
