@@ -1,7 +1,7 @@
 //api
 const serverurl='http://47.100.31.94';
 const config={
-    register:serverurl+'/users/',//注册
+    register:serverurl+'/users',//注册
     code:serverurl+'/sms_codes/',//短信验证码
     news:serverurl+'/news/',//新闻列表
     lesson:serverurl+'/lessons',//课程
