@@ -1,7 +1,7 @@
 $(function(){
     //获取短信验证码
-    // clearInterval(timer);
-    // var timer=null;
+    clearInterval(timer);
+    var timer=null;
     $('.person-code-get').click(function(){
         var registerPhone=$.trim($(".register-phone").val());
         $(this).attr("disabled",true);
@@ -19,21 +19,19 @@ $(function(){
       //获取短信验证码
         getData({url:config.code+registerPhone,type:'GET'},function(data){
             console.log(data)
-            // console.log($('.person-code-get').val())
             //设置定时器
             var s=60;
-            // timer=setInterval(function(){
-            //     // $('.person-code-get').val()=s;
-            //     s--;
-            //     if(s == 0){
-            //         $('.person-code-get').val("请输入验证码");
-            //         $('.person-code-get').removeAttr("disabled");
-            //         clearInterval(timer);                   
-            //     }else{
-            //         $('.person-code-get').val(s+"秒后重试");
-            //         return;
-            //     }
-            // },1000)
+            timer=setInterval(function(){
+                s--;
+                if(s == 0){
+                    $('.person-code-get').val("请输入验证码").removeAttr("disabled");
+                    // $('.person-code-get').removeAttr("disabled");
+                    clearInterval(timer);                   
+                }else{
+                    $('.person-code-get').val(s+"秒后重试");
+                    return;
+                }
+            },1000)
         })
 
         //注册
