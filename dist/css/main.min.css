@@ -566,6 +566,12 @@ input {
   -ms-border-radius: 10px;
   -o-border-radius: 10px; }
 
+.register-password {
+  margin-top: 20px;
+  width: 100%;
+  height: 40px;
+  line-height: 40px; }
+
 .person-container {
   width: 100%;
   height: 100%;

@@ -1,31 +1,19 @@
-// window.onload=function(){
-    var personAnv=document.querySelector('.person-anv');
-    var personAnvChild=personAnv.querySelector('ul');
-    var personAnvLi=personAnvChild.children;
-    var headerResiger=document.querySelector('.header-register');//导航栏注册
-    var headerLogin=document.querySelector('.header-login');//导航栏登陆
+$(function(){
+    //导航栏切换
+    var personAnv=$(".person-anv").children().children();
+    personAnv.on('click',function(){
+        $(this).addClass('active').siblings('li').removeClass('active');
+    })
+    
+    //点击登陆弹出模态框
+    $(".header-login").on('click',function(){
+        $(".person-login").css('display','block')
+    })
 
-    var personLogin=document.querySelector(".person-register");
-    var  personloginregister = document.querySelector(".person-login");
+    //点击注册弹出模态框
+    $(".header-register").on('click',function(){
+        $(".person-register").css('display','block')
+    })
 
-   
-
-    for(var i=0;i<personAnvLi.length;i++){
-        personAnvLi[i].index=i;
-        personAnvLi[i].onclick=function(){
-            for(var i=0;i<personAnvLi.length;i++){
-                personAnvLi[i].className=""
-            }
-            this.className="active"
-        }
-    }
-
-    headerResiger.onclick=function(){
-        personLogin.style.display="block"
-    }
-
-    headerLogin.onclick=function(){
-        personloginregister.style.display="block"
-    }
-// }
+})
    

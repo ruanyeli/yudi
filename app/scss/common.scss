@@ -499,3 +499,18 @@ input{cursor: pointer;}
       -ms-border-radius: 10px;
       -o-border-radius: 10px; }
 
+.register-password{
+  margin-top: 20px;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  input{
+    width: 100%;
+    height: 100%;
+    border: solid 1px #dddddd;
+    text-indent: 2em;
+    color: #aaa;
+    border-radius: 10px;
+    font-size: 14px;
+  }
+}
