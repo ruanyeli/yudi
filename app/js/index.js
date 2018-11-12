@@ -13,7 +13,6 @@ $(function(){
             alert("请输入正确的手机号码");
             $(this).attr("disabled",false);
             console.log(registerPhone)  
-            // $(".register-phone").val(" ");
             return false; 
         }
       //获取短信验证码
@@ -25,15 +24,14 @@ $(function(){
                 s--;
                 if(s == 0){
                     $('.person-code-get').val("请输入验证码").removeAttr("disabled");
-                    // $('.person-code-get').removeAttr("disabled");
                     clearInterval(timer);                   
                 }else{
                     $('.person-code-get').val(s+"秒后重试");
-                    return;
+                    // return;
                 }
             },1000)
         })
-
+        
         //注册
         $('.register-success').click(function(){
             var registerPhone=$.trim($(".register-phone").val());
