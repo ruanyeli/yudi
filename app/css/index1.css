@@ -375,7 +375,7 @@ html {
               opacity: 0.9;
               margin-right: 30px;
               position: relative;
-              animation: Updown4 1s; }
+              animation: Updown4 0.5s; }
 
 @keyframes Updown4 {
   from {
@@ -745,7 +745,7 @@ html {
   z-index: 4;
   position: absolute;
   width: 100%;
-  background-color: rgba(63, 68, 255, 0.4);
+  background-color: rgba(63, 68, 255, 0.8);
   height: 68px;
   padding: 0 5%;
   box-sizing: border-box; }
@@ -838,7 +838,7 @@ html {
   -o-border-radius: 10px; }
 
 #scene {
-  width: 100%;
+  width: 105%;
   height: 100%; }
 
 #scene .layer {
