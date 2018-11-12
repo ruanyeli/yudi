@@ -7,12 +7,12 @@ $(function(){
     
     //点击登陆弹出模态框
     $(".header-login").on('click',function(){
-        $(".person-login").css('display','block')
+        location.href="login.html"
     })
 
     //点击注册弹出模态框
     $(".header-register").on('click',function(){
-        $(".person-register").css('display','block')
+       location.href="register.html"
     })
 
 })

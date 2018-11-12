@@ -20,22 +20,47 @@ body {
             }
             .login-phonenum{
                 input{
-                    background-color: rgb(0,99,179);
+                    background-color: rgb(0,99,179)!important;
+                    // color:#fff!important;
                 }
                 input::-webkit-input-placeholder{
                     // background-color: rgb(0,99,179);
+                    background-color: rgb(0,99,179)!important;
                     color:#fff;
                 }
                 input::-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+                    background-color: rgb(0,99,179)!important;
                     color:#fff;
                  }
                  input::-moz-placeholder { /* Mozilla Firefox 19+ */
+                    background-color: rgb(0,99,179)!important;
                     color:#fff;
                  }
                  input::-ms-input-placeholder { /* Internet Explorer 10-11 */
+                    background-color: rgb(0,99,179)!important;
                     color:#fff;
                  }
 
+            }
+            input[type=password]{
+                background-color: rgb(0,99,179)!important;
+                // color:#fff;
+            }
+            input[type=password]::-webkit-input-placeholder{
+                background-color: rgb(0,99,179)!important;
+                color:#fff;
+            }
+            input[type=password]::-moz-placeholder{
+                background-color: rgb(0,99,179)!important;
+                color:#fff;
+            }
+            input[type=password]::-moz-placeholder{
+                background-color: rgb(0,99,179)!important;
+                color:#fff;
+            }
+            input[type=password]::-ms-input-placeholder{
+                background-color: rgb(0,99,179)!important;
+                color:#fff;
             }
         }
     }

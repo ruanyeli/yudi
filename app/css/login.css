@@ -19,19 +19,42 @@ body {
         text-align: center; }
       html .person-container .person-login-box .login-phonenum input,
       body .person-container .person-login-box .login-phonenum input {
-        background-color: #0063b3; }
+        background-color: #0063b3 !important; }
       html .person-container .person-login-box .login-phonenum input::-webkit-input-placeholder,
       body .person-container .person-login-box .login-phonenum input::-webkit-input-placeholder {
+        background-color: #0063b3 !important;
         color: #fff; }
       html .person-container .person-login-box .login-phonenum input::-moz-placeholder,
       body .person-container .person-login-box .login-phonenum input::-moz-placeholder {
         /* Mozilla Firefox 4 to 18 */
+        background-color: #0063b3 !important;
         color: #fff; }
       html .person-container .person-login-box .login-phonenum input::-moz-placeholder,
       body .person-container .person-login-box .login-phonenum input::-moz-placeholder {
         /* Mozilla Firefox 19+ */
+        background-color: #0063b3 !important;
         color: #fff; }
       html .person-container .person-login-box .login-phonenum input::-ms-input-placeholder,
       body .person-container .person-login-box .login-phonenum input::-ms-input-placeholder {
         /* Internet Explorer 10-11 */
+        background-color: #0063b3 !important;
+        color: #fff; }
+      html .person-container .person-login-box input[type=password],
+      body .person-container .person-login-box input[type=password] {
+        background-color: #0063b3 !important; }
+      html .person-container .person-login-box input[type=password]::-webkit-input-placeholder,
+      body .person-container .person-login-box input[type=password]::-webkit-input-placeholder {
+        background-color: #0063b3 !important;
+        color: #fff; }
+      html .person-container .person-login-box input[type=password]::-moz-placeholder,
+      body .person-container .person-login-box input[type=password]::-moz-placeholder {
+        background-color: #0063b3 !important;
+        color: #fff; }
+      html .person-container .person-login-box input[type=password]::-moz-placeholder,
+      body .person-container .person-login-box input[type=password]::-moz-placeholder {
+        background-color: #0063b3 !important;
+        color: #fff; }
+      html .person-container .person-login-box input[type=password]::-ms-input-placeholder,
+      body .person-container .person-login-box input[type=password]::-ms-input-placeholder {
+        background-color: #0063b3 !important;
         color: #fff; }
