@@ -3,6 +3,16 @@ html,body{
     height: 100%;
     box-sizing: border-box;
 }
+body{
+    position: relative;
+    .body-img{
+        position: absolute;
+        right:3%;
+        top:4%;
+        z-index: 10;
+        cursor: pointer;
+    }
+}
 .recommendation-container{
     width: 100%;
     height: 100%;
@@ -11,6 +21,16 @@ html,body{
     position: relative;
     padding: 3% 6%;
     box-sizing: border-box;
+    .rec-bg1{
+        position: absolute;
+        top:4.9%;
+        left:5.6%;
+    }
+    .rec-bg2{
+        position: absolute;
+        right:6%;
+        bottom:6.7%;
+    }
     .recommendation-header{
         // position: absolute;
         width: 100%;
@@ -55,34 +75,44 @@ html,body{
                     // padding: 20px 10px;
                     .recommendation-left{
                         float: left;
-                        width: 25%;
+                        width: 24%;
                         height: 100%;
+                        display: flex;
+                        align-items: center;
+                        text-align: center;
+                        box-sizing: border-box;
                         // margin-right: 20px;
                         img{
                             width: 100%;
+                            height: 100%;
+                            align-items: center;
                         }
                     }
                     .recommendation-right{
                         float: right;
                        width: 74%;
                        height: 100%;
-                       margin-left: 1%;
+                       margin-left: 2%;
                        box-sizing: border-box;
                        padding: 5px;
-                    //    word-wrap:break-word;
                        h3{
                            color:#fff;
                            font-weight: 700;
                            font-size: 17px;
-                        //    padding-bottom: 10px;
+                        //    padding-top: 10px;
+                        padding-bottom: 10px;
                        }
                        p{
                            color:#fff;
-                           font-size: 14px;
+                           font-size: 13px;
                        }
                     }
                 }
 
+            }
+            li:nth-child(1){
+                background:url("../images/recommendation/1.png") no-repeat;
+                background-size: 100% 100%;
             }
             li:nth-child(3){
                 background:url("../images/recommendation/3.png") no-repeat;
@@ -126,7 +156,7 @@ html,body{
             line-height: 50px;
             width: 25%;
             float: right;
-            background: url("../images/recommendation/bg7.png") no-repeat;
+            background: url("../images/recommendation/bg8.png") no-repeat;
             background-size:100% 100%;
             color:#fff;
             font-weight: 700;

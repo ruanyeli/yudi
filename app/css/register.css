@@ -1,0 +1,94 @@
+@charset "UTF-8";
+html,
+body {
+  width: 100%;
+  height: 100%; }
+  html .person-container,
+  body .person-container {
+    width: 100%;
+    height: 100%;
+    background: url("../images/login/bg-1.png") no-repeat;
+    background-size: 100% 100%; }
+    html .person-container .person-register-box,
+    body .person-container .person-register-box {
+      background-color: rgba(32, 85, 201, 0.6) !important;
+      box-shadow: 0px 4px 12px 1px rgba(0, 0, 0, 0.6);
+      background: -webkit-linear-gradient(left top, #2a38c8, #1780cc);
+      /* Safari 5.1 - 6.0 */
+      background: -o-linear-gradient(bottom right, #2a38c8, #1780cc);
+      /* Opera 11.1 - 12.0 */
+      background: -moz-linear-gradient(bottom right, #2a38c8, #1780cc);
+      /* Firefox 3.6 - 15 */
+      background: linear-gradient(to bottom right, #2a38c8, #1780cc);
+      /* 标准的语法 */ }
+      html .person-container .person-register-box h3,
+      body .person-container .person-register-box h3 {
+        letter-spacing: 10px;
+        color: #fff !important; }
+      html .person-container .person-register-box input[type=text],
+      html .person-container .person-register-box input[type=button],
+      html .person-container .person-register-box input[type=password],
+      body .person-container .person-register-box input[type=text],
+      body .person-container .person-register-box input[type=button],
+      body .person-container .person-register-box input[type=password] {
+        background-color: #0063b3 !important;
+        color: #fff; }
+      html .person-container .person-register-box input[type=text],
+      html .person-container .person-register-box input[type=button],
+      html .person-container .person-register-box input[type=password],
+      body .person-container .person-register-box input[type=text],
+      body .person-container .person-register-box input[type=button],
+      body .person-container .person-register-box input[type=password] {
+        background-color: #0063b3 !important; }
+      html .person-container .person-register-box input[type=text]::-webkit-input-placeholder,
+      html .person-container .person-register-box input[type=button]::-webkit-input-placeholder,
+      html .person-container .person-register-box input[type=password]::-webkit-input-placeholder,
+      body .person-container .person-register-box input[type=text]::-webkit-input-placeholder,
+      body .person-container .person-register-box input[type=button]::-webkit-input-placeholder,
+      body .person-container .person-register-box input[type=password]::-webkit-input-placeholder {
+        background-color: #0063b3 !important;
+        color: #fff; }
+      html .person-container .person-register-box input[type=text]::-moz-placeholder input[type=button]::-moz-placeholder,
+      html .person-container .person-register-box input[type=password]::-moz-placeholder,
+      body .person-container .person-register-box input[type=text]::-moz-placeholder input[type=button]::-moz-placeholder,
+      body .person-container .person-register-box input[type=password]::-moz-placeholder {
+        background-color: #0063b3 !important;
+        color: #fff; }
+      html .person-container .person-register-box input[type=text]::-ms-input-placeholder,
+      html .person-container .person-register-box input[type=button]::-ms-input-placeholder,
+      html .person-container .person-register-box input[type=password]::-ms-input-placeholder,
+      body .person-container .person-register-box input[type=text]::-ms-input-placeholder,
+      body .person-container .person-register-box input[type=button]::-ms-input-placeholder,
+      body .person-container .person-register-box input[type=password]::-ms-input-placeholder {
+        background-color: #0063b3 !important;
+        color: #fff; }
+      html .person-container .person-register-box .register-success,
+      body .person-container .person-register-box .register-success {
+        margin-top: 80px !important;
+        background: url("../images/register/button.png") no-repeat;
+        background-size: 100% 100%;
+        border-radius: 15px; }
+
+.person-register-container {
+  background-color: rgba(133, 200, 255, 0.15);
+  width: 430px;
+  height: 550px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 5px;
+  box-sizing: border-box;
+  text-align: center;
+  border-top-left-radius: 20px !important;
+  border-bottom-right-radius: 20px !important; }
+  .person-register-container .register-bg1 {
+    position: absolute;
+    left: -25px;
+    top: 0; }
+  .person-register-container .register-bg2 {
+    position: absolute;
+    bottom: 0;
+    right: -25px; }

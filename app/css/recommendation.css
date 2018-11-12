@@ -3,6 +3,15 @@ html, body {
   height: 100%;
   box-sizing: border-box; }
 
+body {
+  position: relative; }
+  body .body-img {
+    position: absolute;
+    right: 3%;
+    top: 4%;
+    z-index: 10;
+    cursor: pointer; }
+
 .recommendation-container {
   width: 100%;
   height: 100%;
@@ -11,6 +20,14 @@ html, body {
   position: relative;
   padding: 3% 6%;
   box-sizing: border-box; }
+  .recommendation-container .rec-bg1 {
+    position: absolute;
+    top: 4.9%;
+    left: 5.6%; }
+  .recommendation-container .rec-bg2 {
+    position: absolute;
+    right: 6%;
+    bottom: 6.7%; }
   .recommendation-container .recommendation-header {
     width: 100%;
     box-sizing: border-box;
@@ -48,24 +65,34 @@ html, body {
           height: 100px; }
           .recommendation-container .recommendation-box ul li a .recommendation-left {
             float: left;
-            width: 25%;
-            height: 100%; }
+            width: 24%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            box-sizing: border-box; }
             .recommendation-container .recommendation-box ul li a .recommendation-left img {
-              width: 100%; }
+              width: 100%;
+              height: 100%;
+              align-items: center; }
           .recommendation-container .recommendation-box ul li a .recommendation-right {
             float: right;
             width: 74%;
             height: 100%;
-            margin-left: 1%;
+            margin-left: 2%;
             box-sizing: border-box;
             padding: 5px; }
             .recommendation-container .recommendation-box ul li a .recommendation-right h3 {
               color: #fff;
               font-weight: 700;
-              font-size: 17px; }
+              font-size: 17px;
+              padding-bottom: 10px; }
             .recommendation-container .recommendation-box ul li a .recommendation-right p {
               color: #fff;
-              font-size: 14px; }
+              font-size: 13px; }
+      .recommendation-container .recommendation-box ul li:nth-child(1) {
+        background: url("../images/recommendation/1.png") no-repeat;
+        background-size: 100% 100%; }
       .recommendation-container .recommendation-box ul li:nth-child(3) {
         background: url("../images/recommendation/3.png") no-repeat;
         background-size: 100% 100%; }
@@ -100,7 +127,7 @@ html, body {
       line-height: 50px;
       width: 25%;
       float: right;
-      background: url("../images/recommendation/bg7.png") no-repeat;
+      background: url("../images/recommendation/bg8.png") no-repeat;
       background-size: 100% 100%;
       color: #fff;
       font-weight: 700;
