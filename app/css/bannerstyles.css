@@ -1,8 +1,9 @@
 body {
   font-family: monospace;
   font-size: 18px;
-  background: #111;
-  color: #666;
+  background:#1465ba;
+  /* background: #000; */
+  /* color: #666; */
   margin: 0;
   /* overflow: hidden; */
 }
@@ -36,6 +37,7 @@ button {
   top: 260px;
   margin: 0;
   left: 10%;
+  
 }
 
 button:hover {
@@ -94,28 +96,28 @@ input[type=checkbox]:checked + label:before {
 }
 
 .layer:nth-child(1) {
-  opacity: 0.6;
+  /* opacity: 0.6; */
 }
 .layer:nth-child(1) button {
   -webkit-transform: rotate(150deg);
 }
 
 .layer:nth-child(2) {
-  opacity: 0.70;
+  /* opacity: 0.70; */
 }
 .layer:nth-child(2) button {
   -webkit-transform: rotate(120deg);
 }
 
 .layer:nth-child(3) {
-  opacity: 0.80;
+  /* opacity: 0.80; */
 }
 .layer:nth-child(3) button {
   -webkit-transform: rotate(90deg);
 }
 
 .layer:nth-child(4) {
-  opacity: 0.90;
+  /* opacity: 0.90; */
 }
 .layer:nth-child(4) button {
   -webkit-transform: rotate(60deg);

@@ -6,7 +6,7 @@ html {
     height: 100%; }
     html body .index-container {
       width: 100%;
-      height: 110%; }
+      height: 100%; }
       html body .index-container .index-container-box {
         width: 100%;
         height: 100%; }
@@ -14,6 +14,7 @@ html {
           top: 0;
           left: 0;
           z-index: 2;
+          position: relative;
           width: 100%;
           height: 100%;
           overflow: hidden; }
@@ -42,7 +43,14 @@ html {
           flex-direction: row; }
           html body .index-container .index-content .game-introduction .game-introduction-left {
             width: 50%;
-            height: 100%; }
+            height: 100%;
+            animation: Updown1 1s infinite alternate; }
+
+@keyframes Updown1 {
+  from {
+    margin-top: 20px; }
+  to {
+    margin-top: 10px; } }
             html body .index-container .index-content .game-introduction .game-introduction-left img {
               width: 357px;
               height: 357px;
@@ -60,7 +68,7 @@ html {
               float: right; }
             html body .index-container .index-content .game-introduction .game-introduction-right .game-introduction-right-content {
               height: 247px;
-              width: 512px;
+              width: 95%;
               float: right;
               padding-left: 9%;
               margin-bottom: 81px;
@@ -72,7 +80,12 @@ html {
                 font-weight: normal;
                 font-stretch: normal;
                 letter-spacing: 1.7px;
-                color: #ffffff; }
+                color: #ffffff;
+                padding: 0 2em; }
+              html body .index-container .index-content .game-introduction .game-introduction-right .game-introduction-right-content img {
+                float: left;
+                margin-top: 10px;
+                margin-right: 0px; }
         html body .index-container .index-content .study-plan {
           background: url("../images/index/study-plan.png") no-repeat;
           width: 100%;
@@ -188,10 +201,18 @@ html {
               float: right;
               margin-right: 40px;
               margin-top: 33px; }
-            html body .index-container .index-content .study-plan .study-plan-right .study-plan-right-content img {
-              width: 340px;
-              height: 340px;
-              margin-top: 33px; }
+            html body .index-container .index-content .study-plan .study-plan-right .study-plan-right-content {
+              animation: Updown2 1s infinite alternate; }
+
+@keyframes Updown2 {
+  from {
+    margin-top: 20px; }
+  to {
+    margin-top: 10px; } }
+              html body .index-container .index-content .study-plan .study-plan-right .study-plan-right-content img {
+                width: 340px;
+                height: 340px;
+                margin-top: 33px; }
         html body .index-container .index-content .class-introduction {
           width: 100%;
           height: 516px;
@@ -258,6 +279,8 @@ html {
                 letter-spacing: 0.7px;
                 color: #ffffff;
                 padding-top: 10px; }
+              html body .index-container .index-content .class-introduction .class-introduction-bottom .class-introduction-bottom2 img {
+                padding-top: 25px; }
         html body .index-container .index-content .class-system {
           width: 100%;
           height: 516px;
@@ -293,7 +316,39 @@ html {
               border-radius: 8px;
               opacity: 0.9;
               margin-left: 110px;
-              margin-right: 30px; }
+              margin-right: 30px;
+              position: relative; }
+              html body .index-container .index-content .class-system .class-system-bottom .class-system-bottom1 p {
+                bottom: 19px;
+                position: absolute;
+                margin-left: 13.5%; }
+              html body .index-container .index-content .class-system .class-system-bottom .class-system-bottom1 img {
+                margin-top: 30px;
+                margin-left: 15px; }
+            html body .index-container .index-content .class-system .class-system-bottom .class-system-bottom1-animation {
+              width: 140px;
+              height: 50px;
+              background-image: linear-gradient(0deg, #fa6d23 0%, #fda100 100%);
+              box-shadow: 0px 5px 4.6px 0.4px rgba(0, 3, 109, 0.17);
+              border-radius: 8px;
+              opacity: 0.9;
+              margin-left: 110px;
+              margin-right: 30px;
+              position: relative;
+              animation: Updown3 1s; }
+
+@keyframes Updown3 {
+  from {
+    height: 0px; }
+  to {
+    height: 127px; } }
+              html body .index-container .index-content .class-system .class-system-bottom .class-system-bottom1-animation p {
+                bottom: 19px;
+                position: absolute;
+                margin-left: 13.5%; }
+              html body .index-container .index-content .class-system .class-system-bottom .class-system-bottom1-animation img {
+                margin-top: 30px;
+                margin-left: 15px; }
             html body .index-container .index-content .class-system .class-system-bottom .class-system-bottom2 {
               width: 140px;
               height: 176px;
@@ -301,7 +356,38 @@ html {
               box-shadow: 0px 5px 4.6px 0.4px rgba(0, 3, 109, 0.17);
               border-radius: 8px;
               opacity: 0.9;
-              margin-right: 30px; }
+              margin-right: 30px;
+              position: relative; }
+              html body .index-container .index-content .class-system .class-system-bottom .class-system-bottom2 p {
+                bottom: 19px;
+                position: absolute;
+                margin-left: 13%; }
+              html body .index-container .index-content .class-system .class-system-bottom .class-system-bottom2 img {
+                margin-top: 30px;
+                margin-left: 15px; }
+            html body .index-container .index-content .class-system .class-system-bottom .class-system-bottom2-animation {
+              width: 140px;
+              height: 176px;
+              background-image: linear-gradient(0deg, #fa6d23 0%, #fda100 100%);
+              box-shadow: 0px 5px 4.6px 0.4px rgba(0, 3, 109, 0.17);
+              border-radius: 8px;
+              opacity: 0.9;
+              margin-right: 30px;
+              position: relative;
+              animation: Updown4 1s; }
+
+@keyframes Updown4 {
+  from {
+    height: 0px; }
+  to {
+    height: 176px; } }
+              html body .index-container .index-content .class-system .class-system-bottom .class-system-bottom2-animation p {
+                bottom: 19px;
+                position: absolute;
+                margin-left: 13%; }
+              html body .index-container .index-content .class-system .class-system-bottom .class-system-bottom2-animation img {
+                margin-top: 30px;
+                margin-left: 15px; }
             html body .index-container .index-content .class-system .class-system-bottom .class-system-bottom3 {
               width: 140px;
               height: 223px;
@@ -309,7 +395,38 @@ html {
               box-shadow: 0px 5px 4.6px 0.4px rgba(0, 3, 109, 0.17);
               border-radius: 8px;
               opacity: 0.9;
-              margin-right: 30px; }
+              margin-right: 30px;
+              position: relative; }
+              html body .index-container .index-content .class-system .class-system-bottom .class-system-bottom3 p {
+                bottom: 19px;
+                position: absolute;
+                margin-left: 13%; }
+              html body .index-container .index-content .class-system .class-system-bottom .class-system-bottom3 img {
+                margin-top: 30px;
+                margin-left: 15px; }
+            html body .index-container .index-content .class-system .class-system-bottom .class-system-bottom3-animation {
+              width: 140px;
+              height: 223px;
+              background-image: linear-gradient(0deg, #3f67eb 0%, #23b5ff 100%);
+              box-shadow: 0px 5px 4.6px 0.4px rgba(0, 3, 109, 0.17);
+              border-radius: 8px;
+              opacity: 0.9;
+              margin-right: 30px;
+              position: relative;
+              animation: Updown5 1s; }
+
+@keyframes Updown5 {
+  from {
+    height: 0px; }
+  to {
+    height: 223px; } }
+              html body .index-container .index-content .class-system .class-system-bottom .class-system-bottom3-animation p {
+                bottom: 19px;
+                position: absolute;
+                margin-left: 13%; }
+              html body .index-container .index-content .class-system .class-system-bottom .class-system-bottom3-animation img {
+                margin-top: 30px;
+                margin-left: 15px; }
             html body .index-container .index-content .class-system .class-system-bottom .class-system-bottom4 {
               width: 140px;
               height: 261px;
@@ -317,7 +434,38 @@ html {
               box-shadow: 0px 5px 4.6px 0.4px rgba(0, 3, 109, 0.17);
               border-radius: 8px;
               opacity: 0.9;
-              margin-right: 30px; }
+              margin-right: 30px;
+              position: relative; }
+              html body .index-container .index-content .class-system .class-system-bottom .class-system-bottom4 p {
+                bottom: 19px;
+                position: absolute;
+                margin-left: 25%; }
+              html body .index-container .index-content .class-system .class-system-bottom .class-system-bottom4 img {
+                margin-top: 30px;
+                margin-left: 15px; }
+            html body .index-container .index-content .class-system .class-system-bottom .class-system-bottom4-animation {
+              width: 140px;
+              height: 261px;
+              background-image: linear-gradient(0deg, #3f67eb 0%, #23b5ff 100%);
+              box-shadow: 0px 5px 4.6px 0.4px rgba(0, 3, 109, 0.17);
+              border-radius: 8px;
+              opacity: 0.9;
+              margin-right: 30px;
+              position: relative;
+              animation: Updown6 1s; }
+
+@keyframes Updown6 {
+  from {
+    height: 0px; }
+  to {
+    height: 261px; } }
+              html body .index-container .index-content .class-system .class-system-bottom .class-system-bottom4-animation p {
+                bottom: 19px;
+                position: absolute;
+                margin-left: 25%; }
+              html body .index-container .index-content .class-system .class-system-bottom .class-system-bottom4-animation img {
+                margin-top: 30px;
+                margin-left: 15px; }
             html body .index-container .index-content .class-system .class-system-bottom .class-system-bottom5 {
               width: 140px;
               height: 289px;
@@ -325,7 +473,38 @@ html {
               box-shadow: 0px 5px 4.6px 0.4px rgba(0, 3, 109, 0.17);
               border-radius: 8px;
               opacity: 0.9;
-              margin-right: 30px; }
+              margin-right: 30px;
+              position: relative; }
+              html body .index-container .index-content .class-system .class-system-bottom .class-system-bottom5 p {
+                bottom: 19px;
+                position: absolute;
+                margin-left: 14%; }
+              html body .index-container .index-content .class-system .class-system-bottom .class-system-bottom5 img {
+                margin-top: 30px;
+                margin-left: 15px; }
+            html body .index-container .index-content .class-system .class-system-bottom .class-system-bottom5-animation {
+              width: 140px;
+              height: 289px;
+              background-image: linear-gradient(0deg, #9450f7 0%, #cf97fe 100%);
+              box-shadow: 0px 5px 4.6px 0.4px rgba(0, 3, 109, 0.17);
+              border-radius: 8px;
+              opacity: 0.9;
+              margin-right: 30px;
+              position: relative;
+              animation: Updown7 1s; }
+              html body .index-container .index-content .class-system .class-system-bottom .class-system-bottom5-animation p {
+                bottom: 19px;
+                position: absolute;
+                margin-left: 14%; }
+              html body .index-container .index-content .class-system .class-system-bottom .class-system-bottom5-animation img {
+                margin-top: 30px;
+                margin-left: 15px; }
+
+@keyframes Updown7 {
+  from {
+    height: 0px; }
+  to {
+    height: 289px; } }
             html body .index-container .index-content .class-system .class-system-bottom .class-system-bottom6 {
               width: 140px;
               height: 311px;
@@ -333,7 +512,38 @@ html {
               box-shadow: 0px 5px 4.6px 0.4px rgba(0, 3, 109, 0.17);
               border-radius: 8px;
               opacity: 0.9;
-              margin-right: 108px; }
+              margin-right: 108px;
+              position: relative; }
+              html body .index-container .index-content .class-system .class-system-bottom .class-system-bottom6 p {
+                bottom: 19px;
+                position: absolute;
+                margin-left: 21%; }
+              html body .index-container .index-content .class-system .class-system-bottom .class-system-bottom6 img {
+                margin-top: 30px;
+                margin-left: 15px; }
+            html body .index-container .index-content .class-system .class-system-bottom .class-system-bottom6-animation {
+              width: 140px;
+              height: 311px;
+              background-image: linear-gradient(0deg, #9450f7 0%, #cf97fe 100%);
+              box-shadow: 0px 5px 4.6px 0.4px rgba(0, 3, 109, 0.17);
+              border-radius: 8px;
+              opacity: 0.9;
+              margin-right: 108px;
+              position: relative;
+              animation: Updown8 1s; }
+              html body .index-container .index-content .class-system .class-system-bottom .class-system-bottom6-animation p {
+                bottom: 19px;
+                position: absolute;
+                margin-left: 21%; }
+              html body .index-container .index-content .class-system .class-system-bottom .class-system-bottom6-animation img {
+                margin-top: 30px;
+                margin-left: 15px; }
+
+@keyframes Updown8 {
+  from {
+    height: 0px; }
+  to {
+    height: 311px; } }
         html body .index-container .index-content .team-introduction {
           width: 100%;
           height: 516px;
@@ -532,7 +742,9 @@ html {
   left: 0;
   top: 0;
   z-index: 4;
-  background-color: rgba(63, 68, 255, 0.1);
+  position: absolute;
+  width: 100%;
+  background-color: rgba(63, 68, 255, 0.4);
   height: 68px;
   padding: 0 5%;
   box-sizing: border-box; }
@@ -623,3 +835,15 @@ html {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px; }
+
+#scene {
+  width: 100%;
+  height: 100%; }
+
+#scene .layer {
+  width: 100%;
+  height: 100%; }
+
+#scene .layer img {
+  width: 100%;
+  height: 100%; }

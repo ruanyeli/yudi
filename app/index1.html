@@ -112,8 +112,11 @@
                        <img src="./images/index/game-intro-title.png" />
                     </div>
                     <div class="game-introduction-right-content">
+                        <img src="./images/index/tan.png"/>
                         <p>针对青少年学习人工智能制作，编程基础教学</p>
+                        <img src="./images/index/tan.png"/>
                         <p>提供系统化的专业编程课程，采用人工智能等技术辅助学生线上学习</p>
+                        <img src="./images/index/tan.png"/>
                         <p>线上一体化AI教学，提高学习效率降低教育成本，让所有愿意学习的孩子都能够更好的接触到这门高级学科。</p>
                     </div>
                 </div>
@@ -170,13 +173,16 @@
                      </div>
 
                      <div class="class-introduction-bottom2">
-                         <h1>1.录播课程</h1>
+                         <img src="./images/index/class-intro-01.png" alt="" style="padding-top:0px">
                          <p>（依据用户信息进行课程推送，系统化教学，专业知识讲解）</p>
-                         <h3>2.当堂课程练习 </h3>
+                         <!-- <h3>2.当堂课程练习 </h3> -->
+                         <img src="./images/index/class-intro-02.png" alt="">
                          <p>（现学现练，高效学习，智能引导纠错）</p>
-                         <h3>3.课程扩展练习 </h3>
+                         <!-- <h3>3.课程扩展练习 </h3> -->
+                         <img src="./images/index/class-intro-03.png" alt="">
                          <p>（类似例题练习，巩固知识，活学活用）</p>
-                         <h3>4.巩固练习</h3>
+                         <!-- <h3>4.巩固练习</h3> -->
+                         <img src="./images/index/class-intro-04.png" alt="">
                          <p> （针对性出题，不做无用功）</p>
                      </div>
                  </div>
@@ -192,17 +198,34 @@
                     </div>
                 </div>
                 <div class="class-system-bottom">
-                    <div class="class-system-bottom1">
+                    <div class="class-system-bottom1" id="classSystemBottom1" onmousemove="over1()"> 
+                        <img src="./images/index/L1.png" alt="">                          
+                            <p>python入门</p>
                     </div>
-                    <div class="class-system-bottom2">
+                    <div class="class-system-bottom2" id="classSystemBottom2" onmousemove="over2()">
+                        <img src="./images/index/L2.png" alt="">
+                        <p>python进阶</p>                
                     </div>
-                    <div class="class-system-bottom3">
+                    <div class="class-system-bottom3" id="classSystemBottom3" onmouseover="over3()">
+                        <img src="./images/index/M1.png" alt="">
+                        <p>python高级</p>       
                     </div>
-                    <div class="class-system-bottom4">
+                    <div class="class-system-bottom4" id="classSystemBottom4" onmouseover="over4()">
+                        <img src="./images/index/M1.png" alt="">
+                            <p>numpy<br/>
+                            pandas<br/>
+                            matplot<br/>
+                            数据分析</p>
                     </div>
-                    <div class="class-system-bottom5">
+                    <div class="class-system-bottom5" id="classSystemBottom5" onmouseover="over5()">
+                        <img src="./images/index/S1.png" alt="">
+                        <p>scikit-learn<br/>
+                                机器学习</p>
                     </div>
-                    <div class="class-system-bottom6">
+                    <div class="class-system-bottom6" id="classSystemBottom6" onmouseover="over6()">
+                        <img src="./images/index/S2.png" alt="">
+                        <p>CV ,NLP<br/>
+                                人工智能</p>
                     </div>
                 </div>
             </div>
@@ -379,9 +402,55 @@
 <script src="./js/common.js" type="text/javascript"></script>
 <script src="./js/parallax.js"></script>
 <script>
-        // Pretty simple huh?
         var scene = document.getElementById('scene');
         var parallax = new Parallax(scene);
+        // $(document).ready(function()
+        // { 
+        //     $("#classSystemBottom1").mouseover(function(){
+        //         var i=0;
+        //         // $("#classSystemBottom1").animate({height:'0px'});
+        //         while(!i){
+        //             console.log(i);
+        //             console.log(123);
+        //             $("#classSystemBottom1").animate({height:'0px'});
+        //             $("#classSystemBottom1").animate({height:'125px'}); 
+        //         }
+        //         ++i;
+        //     });
+        // }); 
+     
+        function over1(){
+            console.log(11);
+            var classSystemBottom1=document.getElementById('classSystemBottom1');
+            classSystemBottom1.className="class-system-bottom1-animation";
+            }
+        function over2(){
+            console.log(22);
+            var classSystemBottom2 = document.getElementById('classSystemBottom2');
+            classSystemBottom2.className="class-system-bottom2-animation";
+        }
+        function over3(){
+            console.log(33);
+            var classSystemBottom3 = document.getElementById('classSystemBottom3');
+            classSystemBottom3.className="class-system-bottom3-animation";
+        }
+        function over4(){
+            var classSystemBottom4 = document.getElementById('classSystemBottom4');
+            classSystemBottom4.className="class-system-bottom4-animation";
+        }
+        function over5(){
+            var classSystemBottom5 = document.getElementById('classSystemBottom5');
+            classSystemBottom5.className="class-system-bottom5-animation";
+        }
+        function over6(){
+            var classSystemBottom6 = document.getElementById('classSystemBottom6');
+            classSystemBottom6.className="class-system-bottom6-animation";
+        }
+
+        // function move(){
+        //     var classSystemBottom1 = document.getElementById('classSystemBottom1');
+        //     classSystemBottom1.className="class-system-bottom1";
+        // }
 </script>
 
 </html>
