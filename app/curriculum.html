@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,99 +8,115 @@
     <title>课程中心</title>
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/curriculum.css">
+    <link rel="stylesheet" type="text/css" href="./fonts/font/iconfont.css">
 </head>
 
 <body>
     <div class="curriculum-container">
-        <div class="curriculum-left">
-            <div class="curriculum-box">
-                <div class="curriculum-left-top">
-                    <canvas id="canvas" width="525px" height="560"></canvas>
+        <div class="curriculum-box-c">
+            <img src="./images/curriculum/bg1.png" alt="" class="curriculum-box1">
+            <img src="./images/curriculum/bg5.png" alt="" class="curriculum-box2">
+            <div class="curriculum-left">
+                <div class="curriculum-box">
+                    <div class="curriculum-left-top">
+                        <canvas id="canvas" width="525px" height="560"></canvas>
+                    </div>
+                    <div class="curriculum-left-center error">
+                        游戏指导
+                    </div>
                 </div>
-                <div class="curriculum-left-center error">
-                    游戏指导
-                </div>
-            </div>
-            <div class="curriculum-left-bottom">
+                <div class="curriculum-left-bottom">
                     章节进程
-            </div>
-        </div>
-
-        <div class="curriculum-right">
-            <div class="curriculum-right-top">
-                <div class="curriculum-right-top-help">
-                        请求帮助
-                </div>
-            </div>
-            <div class="curriculum-right-center">
-                <div class="curriculum-right-center-left">
-                    <div class="curriculum-right-center-left-button">
-                        <div class="curriculum-right-center-left-button-lefe">
-                            <img src="./images/Popup/left.png" alt="向左">
-                        </div>
-                        <div class="curriculum-right-center-left-button-right">
-                             <img src="./images/Popup/right.png" alt="向右">
-                        </div>
-                         <div class="curriculum-right-center-left-button-up">
-                             <img src="./images/Popup/up.png" alt="向上">
-                        </div>
-                         <div class="curriculum-right-center-left-button-down">
-                             <img src="./images/Popup/down.png" alt="向下">
-                        </div>
-                         <div class="curriculum-right-center-left-button-refresh">
-                             <img src="./images/Popup/refresh.png" alt="撤销">
-                        </div>
-
-
-                    </div>
-                </div>
-                <div class="curriculum-right-center-right">
-                    <div class="tips" id="editor">#这一节可以学习语法相关的知识</div>
-                </div>
-            </div>
-            <div class="curriculum-right-bottom">
-                <div class="curriculum-right-bottom-image">
-                    <!-- <img src="./images/user.png" alt="个人图像"> -->
-                </div>
-                <div class="curriculum-right-bottom-video">
-                </div>
-                <div class="curriculum-right-bottom-share">
-                    <div class="curriculum-right-bottom-share-save">
-                         <img src="./images/Popup/saveicon.png" alt="保存">
-                    </div>
-                    <div class="curriculum-right-bottom-share-share">
-                        <img src="./images/Popup/shareicon.png" alt="分享">
-                    </div>
-                    <div class="curriculum-right-bottom-share-return">
-                        <img src="./images/Popup/returnicon.png" alt="返回">
-                    </div>
                 </div>
             </div>
 
+            <div class="curriculum-right">
+                <div class="curriculum-right-top-cont">
+                        <div class="curriculum-right-top">
+                                加油,如果还有不理解的，可以点击下方视频重新学习或点击请求帮助。
+                            <div class="curriculum-right-top-help">
+                                    请求帮助
+                            </div>
+                        </div>
+                        <div class="curriculum-right-center">
+                            <div class="curriculum-right-center-left">
+                                <div class="curriculum-right-center-left-button">
+                                    <h3>函数</h3>
+                                    <div class="curriculum-right-center-left-button-left">
+                                        <i class="iconfont icon-zuo"></i>
+                                        <span>goLeft()</span>
+                                    </div>
+                                    <div class="curriculum-right-center-left-button-right">
+                                        <i class="iconfont icon-you"></i>
+                                    <span>goRight()</span>
+                                    </div>
+                                    <div class="curriculum-right-center-left-button-up">
+                                        <i class="iconfont icon-xiangshang"></i>
+                                        <span>goUp()</span>
+                                    </div>
+                                    <div class="curriculum-right-center-left-button-down">
+                                        <i class="iconfont icon-xiangxia"></i>
+                                    <span>goDown()</span>
+                                    </div>
+                                    <div class="curriculum-right-center-left-button-refresh">
+                                        <i class="iconfont icon-xunhuan"></i>
+                                    <span>onLoad()</span>
+                                    </div>
+            
+            
+                                </div>
+                            </div>
+                            <div class="curriculum-right-center-right">
+                                <div id="editor"></div>
+                            </div>
+                        </div>
+                </div>
+            
+                <div class="curriculum-right-bottom">
+                    <div class="curriculum-right-bottom-image">
+                        <!-- <img src="./images/user.png" alt="个人图像"> -->
+                    </div>
+                    <div class="curriculum-right-bottom-video">
+                        <video class="curriculum-video" controls >
+                            <source src="https://www.w3cschool.cn/statics/demosource/movie.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="curriculum-right-bottom-share">
+                        <div class="curriculum-right-bottom-share-save">
+                            <img src="./images/curriculum/save.png" alt="保存">
+                            <p>保存</p>
+                        </div>
+                        <div class="curriculum-right-bottom-share-share">
+                            <img src="./images/curriculum/share.png" alt="分享">
+                            <p>分享</p>
+                        </div>
+                        <div class="curriculum-right-bottom-share-return">
+                            <img src="./images/curriculum/return.png" alt="返回">
+                            <p>返回</p>
+                        </div>
+                    </div>
+                    <div class="curricu-right-go">
+                        <p>
+                            <img src="./images/curriculum/go.png" alt="">
+                        </p>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
+
+    <script src="./assets/jquery-3.3.1.js"></script>
+    <!-- <script src="./assets/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./assets/ace-builds/src-noconflict/ext-language_tools.js" type="text/javascript"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ext-language_tools.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./assets/map6.js" type="text/javascript"></script>
+    <script src="./js/curriculum.js"></script>
+    <script src="./js/aceconfig.js"></script>
+    <script src="./js/acetips.js"></script>
     
-<script src="./assets/jquery-3.3.1.js"></script>
-<script src="./assets/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
-<script src="./assets/ace-builds/src-noconflict/ext-language_tools.js" type="text/javascript"></script>
-<script src="./assets/map6.js" type="text/javascript"></script>
-<script src="./js/curriculum.js"></script>
-<script>
-     editor = ace.edit("editor");//初始化
-     editor.setTheme("ace/theme/monokai");//设置主题
-     editor.setFontSize(16);//设置字体大小
-     editor.setOption("wrap", "free")//自动换行
-     // editor.focus();//获取焦点
-     enableBasicAutocompletion = true//语法提示
-     enableLiveAutocompletion = true
-     editor.moveCursorTo(1, 0);//设置光标在第一行开始
-     editor.getSession().setMode("ace/mode/python");
-     editor.setOptions({//代码提示
-         enableBasicAutocompletion: true,
-         enableSnippets: true,
-         enableLiveAutocompletion: true
-     });
-</script>
 
 </body>
+
 </html>

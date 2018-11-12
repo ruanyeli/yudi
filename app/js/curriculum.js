@@ -1,6 +1,6 @@
 
     var can = document.getElementById("canvas");
-	var tips=document.querySelector(".tips").children[1];
+	// var tips=document.querySelector(".tips").children[1];
 	var error=document.querySelector(".error");
 	
 	var msg = document.getElementById("msg");

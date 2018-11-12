@@ -5,13 +5,13 @@ html {
     body {
         width: 100%;
         height: 100%;
-
+        background: url("../images/curriculum/bg4.png") no-repeat;
+        background-size: 100% 100%;
         .curriculum-container {
             width: 100%;
             height: 100%;
             padding: 3% 5%;
             box-sizing: border-box;
-            background-color: rgba(152, 203, 244, .8);
 
             .curriculum-left {
                 height: 100%;
@@ -22,11 +22,11 @@ html {
                 //    background-color: #fff;
                 .curriculum-box {
                     height: 75%;
-                    background-color: #fff;
+                    // position: absolute;
+                    background-color: #093753;
                     border-radius: 12px;
                     padding: 5%;
                     box-sizing: border-box;
-                    border: solid 1px #dddddd;
 
                     .curriculum-left-top {
                         // background-color: #626262;
@@ -39,22 +39,23 @@ html {
 
                     .curriculum-left-center {
                         border-radius: 12px;
-                        border: solid 4px #ffff00;
+                        border: solid 4px rgb(22,68,97);
+                        background-color: rgb(10,47,71);
                         height: 25%;
                         margin-top: 20px;
                         font-size: 12px;
                         color: #ccc;
                         padding: 10px;
                         box-sizing: border-box;
+                        overflow: hidden;
                     }
                 }
 
                 .curriculum-left-bottom {
                     height: 20%;
                     border-radius: 12px;
-                    border: solid 1px #dddddd;
                     font-size: 12px;
-                    background-color: #fff;
+                    background-color: #07304f;
                     color: #aaaaaa;
                     box-sizing: border-box;
                     padding: 5%;
@@ -64,17 +65,23 @@ html {
 
             .curriculum-right {
                 float: left;
-                width: 66%;
+                width: 65%;
                 height: 100%;
                 margin-left: 1%;
-
-                // background-color: #fff;
+                box-sizing: border-box;
+                // overflow: hidden;
                 .curriculum-right-top {
-                    background-color: #fff;
+                    background-color: rgb(10,55,84);
                     border-radius: 12px;
-                    border: solid 1px #dddddd;
-                    height: 20.5%;
+                    // border: solid 1px #dddddd;
+                    height: 28%;
+                    // margin-bottom: 2%;
                     position: relative;
+                    text-indent: 2em;
+                    color:#fff;
+                    font-weight: 500;
+                    padding-top: 30px;
+                    box-sizing: border-box;
 
                     .curriculum-right-top-help {
                         position: absolute;
@@ -86,28 +93,56 @@ html {
                         font-size: 15px;
                         height: 38px;
                         line-height: 38px;
-                        text-align: center;
+                        // text-align: center;
                         color:#fff;
+                        cursor: pointer;
                     }
                 }
 
                 .curriculum-right-center {
-                    height: 50.5%;
-                    margin-top: 20px;
+                    height: 70%;
+                    // margin-top: 2%;
                     width: 100%;
+                    box-sizing: border-box;
+                    position: absolute;
+                    bottom: 0;
 
                     .curriculum-right-center-left {
                         width: 30%;
                         height: 100%;
                         float: left;
                         margin-right: 2%;
-                        background-color: #fff;
+                        background-color: rgb(10,55,84);
                         border-radius: 12px;
-                        border: solid 1px #dddddd;
+                        // border: solid 1px #dddddd;
                         .curriculum-right-center-left-button{
                             display:flex;
                             flex-direction:column;
-                            margin:35px 17px 0 13px;
+                            margin:10px 17px 0 13px;
+                            h3{
+                                text-align: center;
+                                color:#fff;
+                                letter-spacing:5px;
+                                font-weight: 700;
+                            }
+                            .curriculum-right-center-left-button-left,
+                            .curriculum-right-center-left-button-right,
+                            .curriculum-right-center-left-button-down,
+                            .curriculum-right-center-left-button-up,
+                            .curriculum-right-center-left-button-refresh{
+                                font-weight: 700;
+                                color:#fff;
+                                font-size: 16px;
+                                padding: 10px 30px;
+                                background-color: #094274;
+                                margin-top: 10px;
+                                border-radius: 10px;
+                                text-align:center;
+                                cursor: pointer;
+                                .iconfont{
+                                    float: left;
+                                }
+                            }
                         }
                     
                     }
@@ -115,12 +150,13 @@ html {
                     .curriculum-right-center-right {
                         width: 67%;
                         height: 100%;
-                        float: left;
+                        float: right;
                         // background-color: #fff;
                         border-radius: 12px;
-                        border: solid 1px #dddddd;
+                        // border: solid 1px #dddddd;
                         #editor{
                             height: 100%;
+                            width: 100%;
                             border-radius: 10px;
                         }
                     }
@@ -128,54 +164,95 @@ html {
                 }
                 .curriculum-right-bottom{
                     margin-top: 20px;
+                    height: 20%;
                     display:flex;
                     .curriculum-right-bottom-image{
-                        height:124px;
+                        // height:100%;
+                        padding: 5% 2%;
+                        background-color: rgb(10,55,84);
+                        border-radius: 10px;
                         width:120px;
                     }
                     .curriculum-right-bottom-video{
                         margin:0 24px;
-                        height:124px;
-                        width:30%;
-                        background-color: #fff;
+                        // height:124px;
+                        width:40%;
+                        background-color: rgb(10,55,84);
+                        // background-color: #fff;
                         border-radius: 12px;
-                        border: solid 1px #dddddd;
+                        // border: solid 1px #dddddd;
+                        .curriculum-video{
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 10px;
+                            object-fit: fill
+                        }
                     }
                     .curriculum-right-bottom-share{
                         width:50%;
                         display:flex;
-                        justify-content: flex-end;
-                        .curriculum-right-bottom-share-save{
-                            width:68px;
-                            height:68px;
-                            margin:0 10px 0 0;
+                        // justify-content: center;
+                        align-items:center;
+                        padding-left: 3%;
+                        box-sizing: border-box;
+                        .curriculum-right-bottom-share-save,
+                        .curriculum-right-bottom-share-share,
+                        .curriculum-right-bottom-share-return
+                        {
+                            width:60px;
+                            height:60px;
+                            margin-right: 15px;
+                            text-align: center;
+                            cursor: pointer;
                             img{
-                                width:68px;
-                                height:68px;
+                                width:60px;
+                                height:60px;
+                            }
+                            p{
+                                color: #fff;
+                                font-weight: 700;
                             }
                         }
-                        .curriculum-right-bottom-share-share{
-                            width:68px;
-                            height:68px;
-                            margin:0 10px 0 0;
-                            img{
-                                width:68px;
-                                height:68px;
-                            }
-                        }
-                        .curriculum-right-bottom-share-return{
-                            width:68px;
-                            height:68px;
-                            margin:0 10px 0 0;
-                            img{
-                                width:68px;
-                                height:68px;
-                            }
-                        }
+                        
+                    }
+                    .curricu-right-go{
+                        display:flex;
+                        align-items:center;
+                        cursor: pointer;
+                        z-index: 10;
                     }
                 }
             }
 
         }
+    }
+}
+.curriculum-right-top-cont{
+    height: 75%;
+    position: relative;
+}
+.curriculum-box-c{
+    width: 100%;
+    height: 100%;
+    // padding: 2%;
+    background:url("../images/curriculum/bg3.png");
+    background-size: 100%;
+    padding:2% 2% 0 4%;
+    box-sizing: border-box;
+    position: relative;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    .curriculum-box1{
+        position: absolute;
+        top:0;
+        left:0;
+        height: 65%;
+    }
+    .curriculum-box2{
+        position: absolute;
+        right:0;
+        bottom: 0;
+        height: 57%;
+        z-index: 1;
     }
 }

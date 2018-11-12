@@ -3,13 +3,14 @@ html {
   height: 100%; }
   html body {
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    background: url("../images/curriculum/bg4.png") no-repeat;
+    background-size: 100% 100%; }
     html body .curriculum-container {
       width: 100%;
       height: 100%;
       padding: 3% 5%;
-      box-sizing: border-box;
-      background-color: rgba(152, 203, 244, 0.8); }
+      box-sizing: border-box; }
       html body .curriculum-container .curriculum-left {
         height: 100%;
         width: 32%;
@@ -17,11 +18,10 @@ html {
         box-sizing: border-box; }
         html body .curriculum-container .curriculum-left .curriculum-box {
           height: 75%;
-          background-color: #fff;
+          background-color: #093753;
           border-radius: 12px;
           padding: 5%;
-          box-sizing: border-box;
-          border: solid 1px #dddddd; }
+          box-sizing: border-box; }
           html body .curriculum-container .curriculum-left .curriculum-box .curriculum-left-top {
             height: 70%; }
             html body .curriculum-container .curriculum-left .curriculum-box .curriculum-left-top #canvas {
@@ -29,34 +29,40 @@ html {
               height: 100%; }
           html body .curriculum-container .curriculum-left .curriculum-box .curriculum-left-center {
             border-radius: 12px;
-            border: solid 4px #ffff00;
+            border: solid 4px #164461;
+            background-color: #0a2f47;
             height: 25%;
             margin-top: 20px;
             font-size: 12px;
             color: #ccc;
             padding: 10px;
-            box-sizing: border-box; }
+            box-sizing: border-box;
+            overflow: hidden; }
         html body .curriculum-container .curriculum-left .curriculum-left-bottom {
           height: 20%;
           border-radius: 12px;
-          border: solid 1px #dddddd;
           font-size: 12px;
-          background-color: #fff;
+          background-color: #07304f;
           color: #aaaaaa;
           box-sizing: border-box;
           padding: 5%;
           margin-top: 20px; }
       html body .curriculum-container .curriculum-right {
         float: left;
-        width: 66%;
+        width: 65%;
         height: 100%;
-        margin-left: 1%; }
+        margin-left: 1%;
+        box-sizing: border-box; }
         html body .curriculum-container .curriculum-right .curriculum-right-top {
-          background-color: #fff;
+          background-color: #0a3754;
           border-radius: 12px;
-          border: solid 1px #dddddd;
-          height: 20.5%;
-          position: relative; }
+          height: 28%;
+          position: relative;
+          text-indent: 2em;
+          color: #fff;
+          font-weight: 500;
+          padding-top: 30px;
+          box-sizing: border-box; }
           html body .curriculum-container .curriculum-right .curriculum-right-top .curriculum-right-top-help {
             position: absolute;
             bottom: 10px;
@@ -67,68 +73,130 @@ html {
             font-size: 15px;
             height: 38px;
             line-height: 38px;
-            text-align: center;
-            color: #fff; }
+            color: #fff;
+            cursor: pointer; }
         html body .curriculum-container .curriculum-right .curriculum-right-center {
-          height: 50.5%;
-          margin-top: 20px;
-          width: 100%; }
+          height: 70%;
+          width: 100%;
+          box-sizing: border-box;
+          position: absolute;
+          bottom: 0; }
           html body .curriculum-container .curriculum-right .curriculum-right-center .curriculum-right-center-left {
             width: 30%;
             height: 100%;
             float: left;
             margin-right: 2%;
-            background-color: #fff;
-            border-radius: 12px;
-            border: solid 1px #dddddd; }
+            background-color: #0a3754;
+            border-radius: 12px; }
             html body .curriculum-container .curriculum-right .curriculum-right-center .curriculum-right-center-left .curriculum-right-center-left-button {
               display: flex;
               flex-direction: column;
-              margin: 35px 17px 0 13px; }
+              margin: 10px 17px 0 13px; }
+              html body .curriculum-container .curriculum-right .curriculum-right-center .curriculum-right-center-left .curriculum-right-center-left-button h3 {
+                text-align: center;
+                color: #fff;
+                letter-spacing: 5px;
+                font-weight: 700; }
+              html body .curriculum-container .curriculum-right .curriculum-right-center .curriculum-right-center-left .curriculum-right-center-left-button .curriculum-right-center-left-button-left,
+              html body .curriculum-container .curriculum-right .curriculum-right-center .curriculum-right-center-left .curriculum-right-center-left-button .curriculum-right-center-left-button-right,
+              html body .curriculum-container .curriculum-right .curriculum-right-center .curriculum-right-center-left .curriculum-right-center-left-button .curriculum-right-center-left-button-down,
+              html body .curriculum-container .curriculum-right .curriculum-right-center .curriculum-right-center-left .curriculum-right-center-left-button .curriculum-right-center-left-button-up,
+              html body .curriculum-container .curriculum-right .curriculum-right-center .curriculum-right-center-left .curriculum-right-center-left-button .curriculum-right-center-left-button-refresh {
+                font-weight: 700;
+                color: #fff;
+                font-size: 16px;
+                padding: 10px 30px;
+                background-color: #094274;
+                margin-top: 10px;
+                border-radius: 10px;
+                text-align: center;
+                cursor: pointer; }
+                html body .curriculum-container .curriculum-right .curriculum-right-center .curriculum-right-center-left .curriculum-right-center-left-button .curriculum-right-center-left-button-left .iconfont,
+                html body .curriculum-container .curriculum-right .curriculum-right-center .curriculum-right-center-left .curriculum-right-center-left-button .curriculum-right-center-left-button-right .iconfont,
+                html body .curriculum-container .curriculum-right .curriculum-right-center .curriculum-right-center-left .curriculum-right-center-left-button .curriculum-right-center-left-button-down .iconfont,
+                html body .curriculum-container .curriculum-right .curriculum-right-center .curriculum-right-center-left .curriculum-right-center-left-button .curriculum-right-center-left-button-up .iconfont,
+                html body .curriculum-container .curriculum-right .curriculum-right-center .curriculum-right-center-left .curriculum-right-center-left-button .curriculum-right-center-left-button-refresh .iconfont {
+                  float: left; }
           html body .curriculum-container .curriculum-right .curriculum-right-center .curriculum-right-center-right {
             width: 67%;
             height: 100%;
-            float: left;
-            border-radius: 12px;
-            border: solid 1px #dddddd; }
+            float: right;
+            border-radius: 12px; }
             html body .curriculum-container .curriculum-right .curriculum-right-center .curriculum-right-center-right #editor {
               height: 100%;
+              width: 100%;
               border-radius: 10px; }
         html body .curriculum-container .curriculum-right .curriculum-right-bottom {
           margin-top: 20px;
+          height: 20%;
           display: flex; }
           html body .curriculum-container .curriculum-right .curriculum-right-bottom .curriculum-right-bottom-image {
-            height: 124px;
+            padding: 5% 2%;
+            background-color: #0a3754;
+            border-radius: 10px;
             width: 120px; }
           html body .curriculum-container .curriculum-right .curriculum-right-bottom .curriculum-right-bottom-video {
             margin: 0 24px;
-            height: 124px;
-            width: 30%;
-            background-color: #fff;
-            border-radius: 12px;
-            border: solid 1px #dddddd; }
+            width: 40%;
+            background-color: #0a3754;
+            border-radius: 12px; }
+            html body .curriculum-container .curriculum-right .curriculum-right-bottom .curriculum-right-bottom-video .curriculum-video {
+              width: 100%;
+              height: 100%;
+              border-radius: 10px;
+              object-fit: fill; }
           html body .curriculum-container .curriculum-right .curriculum-right-bottom .curriculum-right-bottom-share {
             width: 50%;
             display: flex;
-            justify-content: flex-end; }
-            html body .curriculum-container .curriculum-right .curriculum-right-bottom .curriculum-right-bottom-share .curriculum-right-bottom-share-save {
-              width: 68px;
-              height: 68px;
-              margin: 0 10px 0 0; }
-              html body .curriculum-container .curriculum-right .curriculum-right-bottom .curriculum-right-bottom-share .curriculum-right-bottom-share-save img {
-                width: 68px;
-                height: 68px; }
-            html body .curriculum-container .curriculum-right .curriculum-right-bottom .curriculum-right-bottom-share .curriculum-right-bottom-share-share {
-              width: 68px;
-              height: 68px;
-              margin: 0 10px 0 0; }
-              html body .curriculum-container .curriculum-right .curriculum-right-bottom .curriculum-right-bottom-share .curriculum-right-bottom-share-share img {
-                width: 68px;
-                height: 68px; }
+            align-items: center;
+            padding-left: 3%;
+            box-sizing: border-box; }
+            html body .curriculum-container .curriculum-right .curriculum-right-bottom .curriculum-right-bottom-share .curriculum-right-bottom-share-save,
+            html body .curriculum-container .curriculum-right .curriculum-right-bottom .curriculum-right-bottom-share .curriculum-right-bottom-share-share,
             html body .curriculum-container .curriculum-right .curriculum-right-bottom .curriculum-right-bottom-share .curriculum-right-bottom-share-return {
-              width: 68px;
-              height: 68px;
-              margin: 0 10px 0 0; }
+              width: 60px;
+              height: 60px;
+              margin-right: 15px;
+              text-align: center;
+              cursor: pointer; }
+              html body .curriculum-container .curriculum-right .curriculum-right-bottom .curriculum-right-bottom-share .curriculum-right-bottom-share-save img,
+              html body .curriculum-container .curriculum-right .curriculum-right-bottom .curriculum-right-bottom-share .curriculum-right-bottom-share-share img,
               html body .curriculum-container .curriculum-right .curriculum-right-bottom .curriculum-right-bottom-share .curriculum-right-bottom-share-return img {
-                width: 68px;
-                height: 68px; }
+                width: 60px;
+                height: 60px; }
+              html body .curriculum-container .curriculum-right .curriculum-right-bottom .curriculum-right-bottom-share .curriculum-right-bottom-share-save p,
+              html body .curriculum-container .curriculum-right .curriculum-right-bottom .curriculum-right-bottom-share .curriculum-right-bottom-share-share p,
+              html body .curriculum-container .curriculum-right .curriculum-right-bottom .curriculum-right-bottom-share .curriculum-right-bottom-share-return p {
+                color: #fff;
+                font-weight: 700; }
+          html body .curriculum-container .curriculum-right .curriculum-right-bottom .curricu-right-go {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            z-index: 10; }
+
+.curriculum-right-top-cont {
+  height: 75%;
+  position: relative; }
+
+.curriculum-box-c {
+  width: 100%;
+  height: 100%;
+  background: url("../images/curriculum/bg3.png");
+  background-size: 100%;
+  padding: 2% 2% 0 4%;
+  box-sizing: border-box;
+  position: relative;
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 50px; }
+  .curriculum-box-c .curriculum-box1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 65%; }
+  .curriculum-box-c .curriculum-box2 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 57%;
+    z-index: 1; }

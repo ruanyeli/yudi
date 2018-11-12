@@ -1,0 +1,108 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box; }
+
+.recommendation-container {
+  width: 100%;
+  height: 100%;
+  background: url("../images/recommendation/bg1.png") no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  padding: 3% 6%;
+  box-sizing: border-box; }
+  .recommendation-container .recommendation-header {
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 60px;
+    padding-top: 40px; }
+    .recommendation-container .recommendation-header img, .recommendation-container .recommendation-header h3 {
+      display: inline;
+      color: #fff;
+      font-weight: 700;
+      font-size: 18px; }
+    .recommendation-container .recommendation-header img {
+      vertical-align: middle; }
+  .recommendation-container .recommendation-box {
+    width: 100%;
+    height: 80%;
+    top: 100px;
+    padding: 2% 10%;
+    box-sizing: border-box; }
+    .recommendation-container .recommendation-box ul {
+      width: 100%;
+      height: 80%;
+      box-sizing: border-box; }
+      .recommendation-container .recommendation-box ul li {
+        float: left;
+        width: 45%;
+        padding: 10px;
+        box-sizing: border-box;
+        background: url("../images/recommendation/2.png") no-repeat;
+        background-size: 100% 100%;
+        border-radius: 10px;
+        margin-bottom: 10px; }
+        .recommendation-container .recommendation-box ul li a {
+          display: block;
+          width: 100%;
+          height: 100px; }
+          .recommendation-container .recommendation-box ul li a .recommendation-left {
+            float: left;
+            width: 25%;
+            height: 100%; }
+            .recommendation-container .recommendation-box ul li a .recommendation-left img {
+              width: 100%; }
+          .recommendation-container .recommendation-box ul li a .recommendation-right {
+            float: right;
+            width: 74%;
+            height: 100%;
+            margin-left: 1%;
+            box-sizing: border-box;
+            padding: 5px; }
+            .recommendation-container .recommendation-box ul li a .recommendation-right h3 {
+              color: #fff;
+              font-weight: 700;
+              font-size: 17px; }
+            .recommendation-container .recommendation-box ul li a .recommendation-right p {
+              color: #fff;
+              font-size: 14px; }
+      .recommendation-container .recommendation-box ul li:nth-child(3) {
+        background: url("../images/recommendation/3.png") no-repeat;
+        background-size: 100% 100%; }
+      .recommendation-container .recommendation-box ul li:nth-child(4) {
+        background: url("../images/recommendation/4.png") no-repeat;
+        background-size: 100% 100%; }
+      .recommendation-container .recommendation-box ul li:nth-child(5) {
+        background: url("../images/recommendation/5.png") no-repeat;
+        background-size: 100% 100%; }
+      .recommendation-container .recommendation-box ul li:nth-child(6) {
+        background: url("../images/recommendation/6.png") no-repeat;
+        background-size: 100% 100%; }
+      .recommendation-container .recommendation-box ul li:nth-child(odd) {
+        margin-right: 10%; }
+  .recommendation-container .recommendation-footer {
+    width: 100%;
+    height: 20%;
+    margin-top: 2%; }
+    .recommendation-container .recommendation-footer .recommendation-footer-left {
+      height: 50px;
+      line-height: 50px;
+      width: 30%;
+      float: left;
+      background: url("../images/recommendation/1.png") no-repeat;
+      background-size: 100% 100%;
+      color: #fff;
+      font-weight: 700;
+      font-size: 18px;
+      text-align: center; }
+    .recommendation-container .recommendation-footer .recommendation-footer-right {
+      height: 50px;
+      line-height: 50px;
+      width: 25%;
+      float: right;
+      background: url("../images/recommendation/bg7.png") no-repeat;
+      background-size: 100% 100%;
+      color: #fff;
+      font-weight: 700;
+      font-size: 18px;
+      text-align: center; }
