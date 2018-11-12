@@ -198,11 +198,11 @@
                     </div>
                 </div>
                 <div class="class-system-bottom">
-                    <div class="class-system-bottom1" id="classSystemBottom1" onmousemove="over1()"> 
+                    <div class="class-system-bottom1" id="classSystemBottom1" > 
                         <img src="./images/index/L1.png" alt="">                          
                             <p>python入门</p>
                     </div>
-                    <div class="class-system-bottom2" id="classSystemBottom2" onmousemove="over2()">
+                    <div class="class-system-bottom2" id="classSystemBottom2" >
                         <img src="./images/index/L2.png" alt="">
                         <p>python进阶</p>                
                     </div>
@@ -404,20 +404,21 @@
 <script>
         var scene = document.getElementById('scene');
         var parallax = new Parallax(scene);
-        // $(document).ready(function()
-        // { 
-        //     $("#classSystemBottom1").mouseover(function(){
-        //         var i=0;
-        //         // $("#classSystemBottom1").animate({height:'0px'});
-        //         while(!i){
-        //             console.log(i);
-        //             console.log(123);
-        //             $("#classSystemBottom1").animate({height:'0px'});
-        //             $("#classSystemBottom1").animate({height:'125px'}); 
-        //         }
-        //         ++i;
-        //     });
-        // }); 
+        $(document).ready(function()
+        { 
+            $("#classSystemBottom2").mouseout(function(){
+                console.log("out");
+                $("#classSystemBottom2").removeClass="class-system-bottom2-animation";
+                $("#classSystemBottom2").addClass="class-system-bottom2";
+                console.log($("#classSystemBottom2").attr("class"));
+            });
+            $("#classSystemBottom2").mouseover(function(){
+                console.log("over");
+                $("#classSystemBottom2").removeClass="class-system-bottom2";
+                // $("#classSystemBottom2").addClass="class-system-bottom2-animation";
+                console.log($("#classSystemBottom2").attr("class"));
+            });
+        }); 
      
         function over1(){
             console.log(11);

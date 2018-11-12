@@ -16,6 +16,9 @@
 	var pushNum = 0;
 	var editor;
 	var cursorLocation;
+	var initTime;
+	var errorTime=0;
+
 	//预加载所有图片
 	var oImgs = {
 		"block" : "images/game/block.gif",
@@ -28,42 +31,51 @@
 		"right" : "images/game/right.png",
 	}
 
-	$(".curriculum-right-center-left-button-lefe").click(function(){
-		cursorLocation=editor.selection.getCursor().column;//获取光标所在列数
-		if(cursorLocation!=0){//如果光标当前不在第一列，则先换行，否则就在光标所在处追加
-			editor.insert("\r");
-		}
-		editor.insert("IronMan.goLeft");
-		goLeft();
-	});
+	$(document).ready(function()
+	{ 
+		initTime = new Date();
+		
+		
+
+		
+	}); 
+
+	// $(".curriculum-right-center-left-button-lefe").click(function(){
+	// 	// cursorLocation=editor.selection.getCursor().column;//获取光标所在列数
+	// 	// if(cursorLocation!=0){//如果光标当前不在第一列，则先换行，否则就在光标所在处追加
+	// 	// 	editor.insert("\r");
+	// 	// }
+	// 	editor.insert("IronMan.goLeft");
+	// 	goLeft();
+	// });
 	
-	$(".curriculum-right-center-left-button-right").click(function(){
-		cursorLocation=editor.selection.getCursor().column;//获取光标所在列数
-		if(cursorLocation!=0){//如果光标当前不在第一列，则先换行，否则就在光标所在处追加
-			editor.insert("\r");
-		}
-		editor.insert("IronMan.goRight");
-		goRight();
+	// $(".curriculum-right-center-left-button-right").click(function(){
+	// 	// cursorLocation=editor.selection.getCursor().column;//获取光标所在列数
+	// 	// if(cursorLocation!=0){//如果光标当前不在第一列，则先换行，否则就在光标所在处追加
+	// 	// 	editor.insert("\r");
+	// 	// }
+	// 	editor.insert("IronMan.goRight");
+	// 	goRight();
 
-	});
-	$(".curriculum-right-center-left-button-up").click(function(){
-		cursorLocation=editor.selection.getCursor().column;//获取光标所在列数
-		if(cursorLocation!=0){//如果光标当前不在第一列，则先换行，否则就在光标所在处追加
-			editor.insert("\r");
-		}
-		editor.insert("IronMan.goUp");
-		goUp();
+	// });
+	// $(".curriculum-right-center-left-button-up").click(function(){
+	// 	// cursorLocation=editor.selection.getCursor().column;//获取光标所在列数
+	// 	// if(cursorLocation!=0){//如果光标当前不在第一列，则先换行，否则就在光标所在处追加
+	// 	// 	editor.insert("\r");
+	// 	// }
+	// 	editor.insert("IronMan.goUp");
+	// 	goUp();
 
-	});
-	$(".curriculum-right-center-left-button-down").click(function(){
-		cursorLocation=editor.selection.getCursor().column;//获取光标所在列数
-		if(cursorLocation!=0){//如果光标当前不在第一列，则先换行，否则就在光标所在处追加
-			editor.insert("\r");
-		}
-		editor.insert("IronMan.goDown");
-		goDown();
+	// });
+	// $(".curriculum-right-center-left-button-down").click(function(){
+	// 	// cursorLocation=editor.selection.getCursor().column;//获取光标所在列数
+	// 	// if(cursorLocation!=0){//如果光标当前不在第一列，则先换行，否则就在光标所在处追加
+	// 	// 	editor.insert("\r");
+	// 	// }
+	// 	editor.insert("IronMan.goDown");
+	// 	goDown();
 
-	});
+	// });
 
 		$("#editor").bind("keydown",function(e){
 		// 兼容FF和IE和Opera
@@ -138,7 +150,6 @@
 
 	function imgPreload(srcs,callback){
 		var count = 0,imgNum = 0,images = {};
-
 		for(src in srcs){
 			imgNum++;
 		}
@@ -236,24 +247,24 @@
 		DrawMap(curMap);//绘制出当前等级的地图
 	}
 	//下一关
-	// function NextLevel(i){
-	// 	//iCurlevel当前的地图关数
-	// 	iCurlevel = iCurlevel + i;
-	// 	if (iCurlevel<0)
-	// 	{
-	// 		iCurlevel = 0;
-	// 		return;
-	// 	}
-	// 	var len = levels.length;
-	// 	if (iCurlevel > len-1)
-	// 	{
-	// 		iCurlevel = len-1;
-	// 	}
-	// 	initLevel();//初始当前等级关卡
-	// 	moveTimes = 0;//游戏关卡移动步数清零
-	// 	showMoveInfo();//初始化当前关卡数据
-	// }
-	//小人移动
+	function NextLevel(i){
+		//iCurlevel当前的地图关数
+		iCurlevel = iCurlevel + i;
+		if (iCurlevel<0)
+		{
+			iCurlevel = 0;
+			return;
+		}
+		var len = levels.length;
+		if (iCurlevel > len-1)
+		{
+			iCurlevel = len-1;
+		}
+		initLevel();//初始当前等级关卡
+		moveTimes = 0;//游戏关卡移动步数清零
+		showMoveInfo();//初始化当前关卡数据
+	}
+	// 小人移动
 	function push(dir){
 		var p1,p2;
 		switch (dir)
@@ -294,7 +305,33 @@
 		//若果移动完成了进入下一关
 		if (checkFinish())
 		{
-			alert("恭喜过关！！");
+			var finishTime = new Date();
+			var initTimeMonth = initTime.getMonth();
+			var initTimeDay = initTime.getDay();
+			var initTimeHour = initTime.getHours();
+			var initTimeminute = initTime.getMinutes();
+			var initTimesecond = initTime.getSeconds();
+
+			var finishTimeMonth = finishTime.getMonth();
+			var finishTimeDay = finishTime.getDay();
+			var finishTimeHour = finishTime.getHours();
+			var finishTimeminute = finishTime.getMinutes();
+			var finishTimesecond = finishTime.getSeconds();
+
+			var month = finishTimeMonth - initTimeMonth;
+			var Day = finishTimeDay - initTimeDay;
+			var hour = finishTimeHour - initTimeHour;
+			var minute = finishTimeminute - initTimeminute;
+			var second = finishTimesecond - initTimesecond;
+
+			
+				$("#minute").html(minute);
+				$("#second").html(second);
+
+				$("#errorTimes").html(errorTime);
+			
+			console.log($("#dialog").attr("class"));
+			$("#dialog").style.visibility="visible";
 			NextLevel()
 		}
 
@@ -340,7 +377,40 @@
 		//若果移动完成了进入下一关
 		if (checkFinish())
 		{
-			alert("恭喜过关！！");
+			// alert("恭喜过关！！");
+
+			var finishTime = new Date();
+			
+			var initTimeDay = initTime.getDay();
+			var initTimeHour = initTime.getHours();
+			var initTimeminute = initTime.getMinutes();
+			var initTimesecond = initTime.getSeconds();
+
+			
+			var finishTimeDay = finishTime.getDay();
+			var finishTimeHour = finishTime.getHours();
+			var finishTimeminute = finishTime.getMinutes();
+			var finishTimesecond = finishTime.getSeconds();
+
+			
+			var Day = finishTimeDay - initTimeDay;
+			var hour = finishTimeHour - initTimeHour;
+			var minute = finishTimeminute - initTimeminute;
+			var second = finishTimesecond - initTimesecond;
+					// if(minute==0){
+					// 	$("#second").html(second);
+					// }else if(minute>0) {
+					// 	$("#minute").html(minute);
+					// 	$("#second").html(second);
+					// }
+			$("#minute").html(minute);
+			$("#second").html(second);
+			$("#errorTimes").html(errorTime);
+
+
+			$("#dialog").removeClass("dialog");
+			$("#dialog").addClass("visibility");
+
 			NextLevel()
 		}
 	}
@@ -368,8 +438,12 @@
 		if(p1.y<0) return false;//若果超出地图的左边，不通过
 		if(p1.x>curMap.length) return false;//若果超出地图的下边，不通过
 		if(p1.y>curMap[0].length) return false;//若果超出地图的右边，不通过
-		if(curMap[p1.x][p1.y]==1){error.innerHTML="小朋友，前方没有路了哦";return false; }//若果前面是墙，不通过
-		if(curMap[p1.x][p1.y]==3){error.innerHTML="点击推箱子";return false}//当人物前面是箱子，则需要点击推箱子
+		if(curMap[p1.x][p1.y]==1){
+			error.innerHTML="小朋友，前方没有路了哦";
+			errorTime++;
+			return false;
+		 }//若果前面是墙，不通过
+		if(curMap[p1.x][p1.y]==3){error.innerHTML="点击推箱子";errorTime++;return false}//当人物前面是箱子，则需要点击推箱子
 		if (curMap[p1.x][p1.y]==3 || curMap[p1.x][p1.y]==5)//若果小人前面是箱子那就还需要判断箱子前面有没有障碍物(箱子/墙)
 		//1-墙壁，2-陷阱，3-箱子，4-人物，5-箱子及陷阱位置
 		//p1:人物的前1个坐标，p2：人物的前2个坐标
@@ -378,6 +452,7 @@
 			{
 				// alert("前方已无路")
 				error.innerHTML="小朋友，前方没有路了哦";
+				errorTime++;
 				return false;
 			} 
 			//若果判断不成功小人前面的箱子前进一步
@@ -413,7 +488,7 @@
 		if(p1.y<0) return false;//若果超出地图的左边，不通过
 		if(p1.x>curMap.length) return false;//若果超出地图的下边，不通过
 		if(p1.y>curMap[0].length) return false;//若果超出地图的右边，不通过
-		if(curMap[p1.x][p1.y]==1){error.innerHTML="小朋友，前方没有路了哦";return false; }//若果前面是墙，不通过
+		if(curMap[p1.x][p1.y]==1){error.innerHTML="小朋友，前方没有路了哦";errorTime++;return false; }//若果前面是墙，不通过
 		//if(curMap[p1.x][p1.y]==3){alert("点击推箱子");return false}//当人物前面是箱子，则需要点击推箱子
 		if (curMap[p1.x][p1.y]==3 || curMap[p1.x][p1.y]==5)//若果小人前面是箱子那就还需要判断箱子前面有没有障碍物(箱子/墙)
 		//1-墙壁，2-陷阱，3-箱子，4-人物，5-箱子及陷阱位置
@@ -423,6 +498,7 @@
 			{
 				// alert("前方已无路")
 				error.innerHTML="小朋友，前方没有路了哦";
+				errorTime++;
 				return false;
 			} 
 			//若果判断不成功小人前面的箱子前进一步
@@ -604,3 +680,5 @@
 		}
 		return b;
 	}
+
+

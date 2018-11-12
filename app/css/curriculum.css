@@ -200,3 +200,60 @@ html {
     bottom: 0;
     height: 57%;
     z-index: 1; }
+
+.dialog {
+  background: url("../images/curriculum/dialog.png");
+  width: 451px;
+  height: 245px;
+  opacity: 0.87;
+  display: none; }
+
+.visibility {
+  background: url("../images/curriculum/dialog.png");
+  background-size: 100% 100%;
+  width: 514px;
+  height: 245px;
+  display: block;
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+  .visibility .dialog-contnet {
+    padding-left: 20%;
+    padding-top: 60px; }
+    .visibility .dialog-contnet p {
+      width: 289px;
+      height: 60px;
+      font-family: MicrosoftYaHei;
+      font-size: 20px;
+      font-weight: normal;
+      font-stretch: normal;
+      letter-spacing: 2.2px;
+      color: #ffffff; }
+    .visibility .dialog-contnet img {
+      margin-right: 20px; }
+    .visibility .dialog-contnet h5 {
+      font-family: MicrosoftYaHei;
+      font-size: 14px;
+      font-weight: normal;
+      font-stretch: normal;
+      letter-spacing: 1.4px;
+      color: #ffffff;
+      margin-left: 20%; }
+      .visibility .dialog-contnet h5 span {
+        color: #00fec5; }
+    .visibility .dialog-contnet h6 {
+      font-family: MicrosoftYaHei;
+      font-size: 14px;
+      font-weight: normal;
+      font-stretch: normal;
+      letter-spacing: 1.4px;
+      color: #ffffff;
+      margin-left: 20%; }
+      .visibility .dialog-contnet h6 span {
+        color: #00fec5; }
