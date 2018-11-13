@@ -243,6 +243,8 @@ html {
         }
     }
 }
+
+
 .curriculum-right-top-cont{
     height: 75%;
     position: relative;
@@ -271,4 +273,75 @@ html {
         height: 57%;
         z-index: 1;
     }
+}
+
+.dialog{
+    background: url("../images/curriculum/dialog.png");
+    width: 451px;
+    height: 245px;
+    opacity: 0.87;
+    display: none;
+   
+}
+
+.visibility{
+    background: url("../images/curriculum/dialog.png");
+    background-size: 100% 100%;
+    width: 514px;
+    height: 245px;
+    // opacity: 0.87;
+    // visibility: visible;
+    display: block;
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    .dialog-contnet{
+        padding-left:20%;
+        padding-top: 60px;
+        p{
+            width: 289px;
+            height: 60px;
+            font-family: MicrosoftYaHei;
+            font-size: 20px;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 2.2px;
+            color: #ffffff;
+        } 
+        img{
+            margin-right: 20px;
+        }   
+        h5{
+            font-family: MicrosoftYaHei;
+            font-size: 14px;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 1.4px;
+            color: #ffffff;
+            margin-left: 20%;
+            span{
+                color:#00fec5;
+            }
+        }
+        h6{
+            font-family: MicrosoftYaHei;
+            font-size: 14px;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 1.4px;
+            color: #ffffff;
+            margin-left: 20%;
+            span{
+                color:#00fec5;
+            }
+        }
+
+    }
+   
 }
