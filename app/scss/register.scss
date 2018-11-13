@@ -1,3 +1,5 @@
+$box:border-box;
+$cursor:pointer;
 html,
 body {
     width: 100%;
@@ -14,13 +16,13 @@ body {
             // border: 10px solid rgba(0, 0, 0, 0.33);
             box-shadow: 0px 4px 12px 1px rgba(0, 0, 0, 0.6);
             // opacity: 0.6;
-            background: -webkit-linear-gradient(left top, rgb(42, 56, 200), rgb(23, 128, 204));
+            background: -webkit-linear-gradient(bottom right, rgba(42, 56, 200,.2), rgba(23, 128, 204,.4));
             /* Safari 5.1 - 6.0 */
-            background: -o-linear-gradient(bottom right, rgb(42, 56, 200), rgb(23, 128, 204));
+            background: -o-linear-gradient(bottom right, rgba(42, 56, 200,.2), rgba(23, 128, 204,.2));
             /* Opera 11.1 - 12.0 */
-            background: -moz-linear-gradient(bottom right, rgb(42, 56, 200), rgb(23, 128, 204));
+            background: -moz-linear-gradient(bottom right, rgba(42, 56, 200,.2), rgba(23, 128, 204,.4));
             /* Firefox 3.6 - 15 */
-            background: linear-gradient(to bottom right, rgb(42, 56, 200), rgb(23, 128, 204));
+            background: linear-gradient(to bottom right, rgba(42, 56, 200,.2), rgba(23, 128, 204,.4));
 
             /* 标准的语法 */
             h3 {
@@ -67,6 +69,8 @@ body {
                 background: url("../images/register/button.png") no-repeat;
                 background-size: 100% 100%;
                 border-radius: 15px;
+                line-height: 40px;
+                cursor: $cursor;
             }
 
         }
@@ -77,14 +81,12 @@ body {
     background-color: rgba(133, 200, 255, .15);
     width: 430px;
     height: 550px;
-    // background-color: #fff;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     margin: auto;
-    // padding: 50px;
     border-radius: 5px;
     box-sizing: border-box;
     text-align: center;
@@ -102,4 +104,25 @@ body {
         bottom: 0;
         right: -25px;
     }
+}
+.register-password{
+    position: relative;
+    
+    .icon-suo{
+        position: absolute;
+        left:0;
+        top:2px;
+        text-indent: .5em;
+        color:#fff;
+        font-size: 15px;
+    }
+    input{
+        text-indent: 2em;
+    }
+}
+.register-delet{
+    position: absolute;
+    right:-30px;
+    top:-30px;
+    cursor: $cursor
 }

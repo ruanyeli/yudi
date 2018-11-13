@@ -13,13 +13,13 @@ body {
     body .person-container .person-register-box {
       background-color: rgba(32, 85, 201, 0.6) !important;
       box-shadow: 0px 4px 12px 1px rgba(0, 0, 0, 0.6);
-      background: -webkit-linear-gradient(left top, #2a38c8, #1780cc);
+      background: -webkit-linear-gradient(bottom right, rgba(42, 56, 200, 0.2), rgba(23, 128, 204, 0.4));
       /* Safari 5.1 - 6.0 */
-      background: -o-linear-gradient(bottom right, #2a38c8, #1780cc);
+      background: -o-linear-gradient(bottom right, rgba(42, 56, 200, 0.2), rgba(23, 128, 204, 0.2));
       /* Opera 11.1 - 12.0 */
-      background: -moz-linear-gradient(bottom right, #2a38c8, #1780cc);
+      background: -moz-linear-gradient(bottom right, rgba(42, 56, 200, 0.2), rgba(23, 128, 204, 0.4));
       /* Firefox 3.6 - 15 */
-      background: linear-gradient(to bottom right, #2a38c8, #1780cc);
+      background: linear-gradient(to bottom right, rgba(42, 56, 200, 0.2), rgba(23, 128, 204, 0.4));
       /* 标准的语法 */ }
       html .person-container .person-register-box h3,
       body .person-container .person-register-box h3 {
@@ -67,7 +67,9 @@ body {
         margin-top: 80px !important;
         background: url("../images/register/button.png") no-repeat;
         background-size: 100% 100%;
-        border-radius: 15px; }
+        border-radius: 15px;
+        line-height: 40px;
+        cursor: pointer; }
 
 .person-register-container {
   background-color: rgba(133, 200, 255, 0.15);
@@ -92,3 +94,21 @@ body {
     position: absolute;
     bottom: 0;
     right: -25px; }
+
+.register-password {
+  position: relative; }
+  .register-password .icon-suo {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    text-indent: .5em;
+    color: #fff;
+    font-size: 15px; }
+  .register-password input {
+    text-indent: 2em; }
+
+.register-delet {
+  position: absolute;
+  right: -30px;
+  top: -30px;
+  cursor: pointer; }
