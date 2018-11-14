@@ -9,6 +9,7 @@ body {
     height: 100%;
     background: url("../images/login/bg-1.png") no-repeat;
     background-size: 100% 100%; }
+<<<<<<< HEAD
     html .person-container .person-register-box,
     body .person-container .person-register-box {
       background-color: rgba(32, 85, 201, 0.6) !important;
@@ -109,3 +110,137 @@ body {
     position: absolute;
     bottom: 0;
     right: -25px; }
+=======
+    html .person-container input,
+    body .person-container input {
+      color: #ccc; }
+    html .person-container .person-login-box,
+    body .person-container .person-login-box {
+      background-color: rgba(32, 85, 201, 0.6) !important;
+      border: 10px solid rgba(81, 153, 212, 0.3);
+      box-shadow: 0px 4px 12px 1px rgba(0, 0, 0, 0.32); }
+      html .person-container .person-login-box h3,
+      body .person-container .person-login-box h3 {
+        letter-spacing: 20px;
+        text-align: center;
+        padding-left: 20px; }
+      html .person-container .person-login-box .login-phonenum input,
+      body .person-container .person-login-box .login-phonenum input {
+        background-color: #0063b3 !important;
+        color: #ccc; }
+      html .person-container .person-login-box .login-phonenum input::-webkit-input-placeholder,
+      body .person-container .person-login-box .login-phonenum input::-webkit-input-placeholder {
+        background-color: #0063b3 !important;
+        color: #fff; }
+      html .person-container .person-login-box .login-phonenum input::-moz-placeholder,
+      body .person-container .person-login-box .login-phonenum input::-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        background-color: #0063b3 !important;
+        color: #fff; }
+      html .person-container .person-login-box .login-phonenum input::-moz-placeholder,
+      body .person-container .person-login-box .login-phonenum input::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        background-color: #0063b3 !important;
+        color: #fff; }
+      html .person-container .person-login-box .login-phonenum input::-ms-input-placeholder,
+      body .person-container .person-login-box .login-phonenum input::-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        background-color: #0063b3 !important;
+        color: #fff; }
+      html .person-container .person-login-box input[type=password], html .person-container .person-login-box input[type=text],
+      body .person-container .person-login-box input[type=password],
+      body .person-container .person-login-box input[type=text] {
+        background-color: #0063b3 !important; }
+      html .person-container .person-login-box input[type=password]::-webkit-input-placeholder, html .person-container .person-login-box input[type=text]::-webkit-input-placeholder,
+      body .person-container .person-login-box input[type=password]::-webkit-input-placeholder,
+      body .person-container .person-login-box input[type=text]::-webkit-input-placeholder {
+        background-color: #0063b3 !important;
+        color: #fff; }
+      html .person-container .person-login-box input[type=password]::-moz-placeholder, html .person-container .person-login-box input[type=text]::-moz-placeholder,
+      body .person-container .person-login-box input[type=password]::-moz-placeholder,
+      body .person-container .person-login-box input[type=text]::-moz-placeholder {
+        background-color: #0063b3 !important;
+        color: #fff; }
+      html .person-container .person-login-box input[type=password]::-moz-placeholder, html .person-container .person-login-box input[type=text]::-moz-placeholder,
+      body .person-container .person-login-box input[type=password]::-moz-placeholder,
+      body .person-container .person-login-box input[type=text]::-moz-placeholder {
+        background-color: #0063b3 !important;
+        color: #fff; }
+      html .person-container .person-login-box input[type=password]::-ms-input-placeholder, html .person-container .person-login-box input[type=text]::-ms-input-placeholder,
+      body .person-container .person-login-box input[type=password]::-ms-input-placeholder,
+      body .person-container .person-login-box input[type=text]::-ms-input-placeholder {
+        background-color: #0063b3 !important;
+        color: #fff; }
+      html .person-container .person-login-box .login-box-forget,
+      body .person-container .person-login-box .login-box-forget {
+        position: absolute;
+        right: 0;
+        bottom: 0; }
+        html .person-container .person-login-box .login-box-forget a:first-child,
+        body .person-container .person-login-box .login-box-forget a:first-child {
+          border-right: 1px solid #ccc;
+          padding-right: 10px; }
+        html .person-container .person-login-box .login-box-forget a:last-child,
+        body .person-container .person-login-box .login-box-forget a:last-child {
+          padding-left: 20px; }
+
+.login-box-text-success {
+  line-height: 40px;
+  letter-spacing: 10px;
+  position: relative;
+  top: 10px;
+  cursor: pointer;
+  background: url("../images/login/bg1.png") no-repeat;
+  background-size: 100% 100%; }
+
+.login-three {
+  color: #fff;
+  position: relative;
+  top: 30px;
+  text-align: center; }
+  .login-three p {
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500; }
+  .login-three ul {
+    overflow: hidden;
+    width: 50%;
+    margin: auto;
+    margin-top: 20px; }
+    .login-three ul li {
+      float: left;
+      margin: 0 auto;
+      margin-left: 20px;
+      cursor: pointer; }
+
+.login-box-text {
+  position: relative;
+  margin-top: 30px; }
+  .login-box-text label {
+    position: absolute;
+    bottom: 0;
+    left: 0; }
+
+.login-password {
+  position: relative;
+  text-indent: 0 !important; }
+  .login-password input {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    text-indent: 2em; }
+
+.icon-yanjing_yincang_o {
+  color: #fff;
+  position: absolute;
+  right: 10px;
+  top: 13px;
+  cursor: pointer; }
+
+.login-delte {
+  position: absolute;
+  right: -25px;
+  top: -24px;
+  cursor: pointer; }
+>>>>>>> a79c2edca92fa5679b4ec9c85585516b7ca46763

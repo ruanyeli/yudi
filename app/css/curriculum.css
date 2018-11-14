@@ -142,6 +142,7 @@ html {
             padding: 5% 5%;
             background-color: #0a3754;
             border-radius: 10px;
+            border: solid 5px #2a6f90;
             width: 120px; }
           html body .curriculum-container .curriculum-right .curriculum-right-bottom .curriculum-right-bottom-video {
             margin-left: 2%;

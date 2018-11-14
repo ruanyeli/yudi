@@ -38,7 +38,9 @@ $(function(){
             var registerPasword=$.trim($(".password-get").val());
             var smsCoder=$.trim($(".person-code").val());
             getData({url:config.register,data:{mobile:registerPhone,sms_code:smsCoder,password:registerPasword}},function(data){
-                console.log(data)
+                if(data.token){
+                    location.href="Infocompelete.html"
+                }
             })
 
         })

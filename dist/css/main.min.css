@@ -111,8 +111,6 @@ input {
 .person-container .person-register {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: none;
   position: fixed;
   top: 0;
   z-index: 100; }
@@ -143,7 +141,7 @@ input {
 
 .person-container .person-register .person-register-box .phonenum {
   border-radius: 10px;
-  margin-top: 60px;
+  margin-top: 45px;
   width: 100%;
   height: 40px;
   line-height: 40px;
@@ -163,10 +161,10 @@ input {
   .person-container .person-register .person-register-box .phonenum .icon-shouji {
     position: absolute !important;
     left: 0;
-    color: #ccc;
+    color: #fff;
     text-indent: .5em;
     font-size: 17px !important;
-    top: 0;
+    top: 2px;
     font-size: 16px; }
 
 .person-container .person-register .person-register-box .person-register-code {
@@ -178,8 +176,8 @@ input {
   color: #aaaaaa; }
   .person-container .person-register .person-register-box .person-register-code .icon-bi {
     position: absolute;
-    top: 12px;
-    color: #ccc;
+    top: 11px;
+    color: #fff;
     font-size: 17px;
     left: 0;
     text-indent: .5em; }
@@ -203,7 +201,6 @@ input {
   width: 40%;
   height: 40px;
   font-size: 14px;
-  color: #aaa;
   border-radius: 10px;
   box-sizing: border-box;
   border: solid 1px #dddddd;
@@ -266,7 +263,7 @@ input {
 
 .person-container .person-login .person-login-box .login-phonenum {
   border-radius: 10px;
-  margin-top: 60px;
+  margin-top: 45px;
   width: 100%;
   height: 40px;
   position: relative;
@@ -287,7 +284,7 @@ input {
     top: 11px;
     left: 0;
     font-size: 18px;
-    color: #ccc;
+    color: #fff;
     text-indent: .5em; }
 
 .person-container .person-login .person-login-box .login-password {
@@ -304,7 +301,7 @@ input {
   -o-border-radius: 10px; }
 
 .person-container .person-login .person-login-box .login-box-text {
-  margin-top: 40px; }
+  margin-top: 60px; }
 
 .person-container .person-login .person-login-box .login-box-text label {
   float: left;
@@ -319,11 +316,7 @@ input {
   font-size: 12px;
   color: #aaaaaa; }
 
-.person-container .person-login .person-login-box .login-box-text .login-box-forget a:last-child {
-  color: #cc0000; }
-
 .person-container .person-login .person-login-box .login-box-text-success {
-  background: #eb6877;
   width: 100%;
   color: #fff;
   margin-top: 20px;
@@ -391,7 +384,7 @@ input {
   .index-container .person-register .person-register-box .phonenum .icon-shouji {
     position: absolute !important;
     left: 0;
-    color: #ccc;
+    color: #fff;
     text-indent: .5em;
     font-size: 17px !important;
     top: 0;
@@ -407,7 +400,7 @@ input {
   .index-container .person-register .person-register-box .person-register-code .icon-bi {
     position: absolute;
     top: 12px;
-    color: #ccc;
+    color: #fff;
     font-size: 17px;
     left: 0;
     text-indent: .5em; }
@@ -495,7 +488,7 @@ input {
 
 .index-container .person-login .person-login-box .login-phonenum {
   border-radius: 10px;
-  margin-top: 60px;
+  margin-top: 45px;
   width: 100%;
   height: 40px;
   position: relative;
@@ -516,7 +509,7 @@ input {
     top: 11px;
     left: 0;
     font-size: 18px;
-    color: #ccc;
+    color: #fff;
     text-indent: .5em; }
 
 .index-container .person-login .person-login-box .login-password {
@@ -537,7 +530,7 @@ input {
 
 .index-container .person-login .person-login-box .login-box-text label {
   float: left;
-  color: #aaaaaa;
+  color: #fff;
   font-size: 12px; }
 
 .index-container .person-login .person-login-register-box .login-box-text .login-box-forget {
@@ -546,10 +539,7 @@ input {
 
 .index-container .person-login .person-login-box .login-box-text .login-box-forget a {
   font-size: 12px;
-  color: #aaaaaa; }
-
-.index-container .person-login .person-login-box .login-box-text .login-box-forget a:last-child {
-  color: #cc0000; }
+  color: #fff; }
 
 .index-container .person-login .person-login-box .login-box-text-success {
   background: #eb6877;
@@ -714,11 +704,11 @@ input {
 
 
 @font-face {font-family: "iconfont";
-  src: url('iconfont.eot?t=1541905375518'); /* IE9*/
-  src: url('iconfont.eot?t=1541905375518#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('data:application/x-font-woff;charset=utf-8;base64,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') format('woff'),
-  url('iconfont.ttf?t=1541905375518') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1541905375518#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1542073722118'); /* IE9*/
+  src: url('iconfont.eot?t=1542073722118#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff;charset=utf-8;base64,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') format('woff'),
+  url('iconfont.ttf?t=1542073722118') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1542073722118#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 .iconfont {
@@ -741,7 +731,11 @@ input {
 
 .icon-touxiang:before { content: "\e63f"; }
 
+.icon-suo:before { content: "\eef6"; }
+
 .icon-you:before { content: "\e63b"; }
 
 .icon-zuo:before { content: "\e641"; }
+
+.icon-yanjing_yincang_o:before { content: "\ebcd"; }
 

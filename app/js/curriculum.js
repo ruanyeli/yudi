@@ -1,8 +1,6 @@
 
     var can = document.getElementById("canvas");
-	// var tips=document.querySelector(".tips").children[1];
 	var error=document.querySelector(".error");
-	
 	var msg = document.getElementById("msg");
 	var cxt = can.getContext("2d");
 	var w = 35,h = 35;
@@ -11,7 +9,7 @@
 	var curMap;//当前的地图
 	var curLevel;//当前等级的地图
 	var curMan;//初始化小人
-	var iCurlevel = 0;//关卡数
+	var iCurlevel = 6;//关卡数
 	var moveTimes = 0;//移动了多少次
 	var pushNum = 0;
 	var editor;
@@ -31,23 +29,15 @@
 		"right" : "images/game/right.png",
 	}
 
-	$(document).ready(function()
-	{ 
-		initTime = new Date();
-		
-		
-
-		
-	}); 
-
-	// $(".curriculum-right-center-left-button-lefe").click(function(){
-	// 	// cursorLocation=editor.selection.getCursor().column;//获取光标所在列数
-	// 	// if(cursorLocation!=0){//如果光标当前不在第一列，则先换行，否则就在光标所在处追加
-	// 	// 	editor.insert("\r");
-	// 	// }
-	// 	editor.insert("IronMan.goLeft");
-	// 	goLeft();
-	// });
+	$(".curriculum-right-center-left-button-left").click(function(){
+		console.log(editor)
+		cursorLocation=editor.selection.getCursor().column;//获取光标所在列数
+		if(cursorLocation!=0){//如果光标当前不在第一列，则先换行，否则就在光标所在处追加
+			editor.insert("\r");
+		}
+		editor.insert("IronMan.goLeft");
+		goLeft();
+	});
 	
 	// $(".curriculum-right-center-left-button-right").click(function(){
 	// 	// cursorLocation=editor.selection.getCursor().column;//获取光标所在列数
@@ -83,11 +73,6 @@
 			var code = theEvent.keyCode || theEvent.which || theEvent.charCode;
 			if (code == 13) {	
 				data = 	editor.getValue();
-				// var str = "abcdaabbssaaa";
-				// var reg = new RegExp("a","g");
-				// var a = str.replace(reg,"");
-				// console.log(a);
-
 				var left = new RegExp("IronMan.goLeft","g");
 				data = data.replace(left, '');
 				var up = new RegExp("IronMan.goUp","g");
@@ -101,7 +86,7 @@
 					url: 'http://47.100.31.94:5000/check_code',      
 					datatype: "json",      
 					type: 'post',    
-     				 data:{
+     				data:{
 			        		id: 'formdata',
 			        		text:data
 			        },

@@ -102,12 +102,13 @@ body {
             }
 
             .register-success {
-                margin-top: 80px !important;
+                margin-top: 40px !important;
                 background: url("../images/register/button.png") no-repeat;
                 background-size: 100% 100%;
                 border-radius: 15px;
                 p{
                     padding-top: 6px;
+                    cursor: pointer;
                 }
             }
 
@@ -146,4 +147,37 @@ body {
         bottom: 0;
         right: -25px;
     }
+}
+#container{
+    width: 100%;
+    height: 100%;
+    #scene{
+        width: 100%;
+        height: 100%;
+        .layer{
+            width: 100%;
+            height: 100%;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+.infophonenum1{
+    position: relative;
+    #zane-calendar{
+        position: absolute;
+        left:0;
+        width: 100%;
+    }
+}
+#info_city{
+    border: solid 1px #dddddd;
+    color:#fff;
+    text-align: left;
+    text-indent: 2em;
+    margin-top: 24px;
+    padding-left: 0!important;
 }
