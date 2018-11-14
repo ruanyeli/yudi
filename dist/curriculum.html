@@ -42,19 +42,19 @@
                             <div class="curriculum-right-center-left">
                                 <div class="curriculum-right-center-left-button">
                                     <h3>函数</h3>
-                                    <div class="curriculum-right-center-left-button-left">
+                                    <div class="curriculum-right-center-left-button-left" onclick="goLeft()">
                                         <i class="iconfont icon-zuo"></i>
                                         <span>goLeft()</span>
                                     </div>
-                                    <div class="curriculum-right-center-left-button-right">
+                                    <div class="curriculum-right-center-left-button-right" onclick="goRight()">
                                         <i class="iconfont icon-you"></i>
                                     <span onclick="goRight">goRight()</span>
                                     </div>
-                                    <div class="curriculum-right-center-left-button-up">
+                                    <div class="curriculum-right-center-left-button-up" onclick="goUp()">
                                         <i class="iconfont icon-xiangshang"></i>
                                         <span>goUp()</span>
                                     </div>
-                                    <div class="curriculum-right-center-left-button-down">
+                                    <div class="curriculum-right-center-left-button-down" onclick="goDown()">
                                         <i class="iconfont icon-xiangxia"></i>
                                     <span>goDown()</span>
                                     </div>
@@ -104,6 +104,20 @@
 
             </div>
         </div>
+    </div>
+
+    <div class="dialog" id="dialog">
+        <div class="dialog-contnet">
+                <p>恭喜你，该知识点已过关了课后还需多运用巩固哦!</p>
+                <h5>用时<span id="minute"></span>分<span id="second"></span>秒</h5>
+                <h6>错误次数 <span id="errorTimes"></span></h6>
+                <div class="img-share">
+                    <img src="./images/curriculum/game-share.png" alt="分享">
+                    <img src="./images/curriculum/excerise.png" alt="练习">
+                    <img src="./images/curriculum/dianzan.png" alt="点赞">
+                    <img src="./images/curriculum/game-return.png" alt="返回">
+                </div>
+        </div>  
     </div>
 
     <script src="./assets/jquery-3.3.1.js"></script>

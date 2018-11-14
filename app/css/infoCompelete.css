@@ -97,13 +97,14 @@ body {
         color: #fff; }
       html .person-container .person-register-box .register-success,
       body .person-container .person-register-box .register-success {
-        margin-top: 80px !important;
+        margin-top: 40px !important;
         background: url("../images/register/button.png") no-repeat;
         background-size: 100% 100%;
         border-radius: 15px; }
         html .person-container .person-register-box .register-success p,
         body .person-container .person-register-box .register-success p {
-          padding-top: 6px; }
+          padding-top: 6px;
+          cursor: pointer; }
 
 .person-register-container {
   background-color: rgba(133, 200, 255, 0.15);
@@ -128,3 +129,31 @@ body {
     position: absolute;
     bottom: 0;
     right: -25px; }
+
+#container {
+  width: 100%;
+  height: 100%; }
+  #container #scene {
+    width: 100%;
+    height: 100%; }
+    #container #scene .layer {
+      width: 100%;
+      height: 100%; }
+      #container #scene .layer img {
+        width: 100%;
+        height: 100%; }
+
+.infophonenum1 {
+  position: relative; }
+  .infophonenum1 #zane-calendar {
+    position: absolute;
+    left: 0;
+    width: 100%; }
+
+#info_city {
+  border: solid 1px #dddddd;
+  color: #fff;
+  text-align: left;
+  text-indent: 2em;
+  margin-top: 24px;
+  padding-left: 0 !important; }
