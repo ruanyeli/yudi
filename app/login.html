@@ -6,31 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>登陆</title>
+    <link rel="stylesheet" href="./css/infobgstyle.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/login.css">
+    
 </head>
 
 <body>
     <!-- 用户登陆 -->
     <div class="person-container">
-        <div class="person-login">
-            <div class="person-login-box">
-                <h3>登录</h3>
-                <div class="login-phonenum">
-                    <input type="text" placeholder="请输入手机号码" class="login-phone">
-                    <i class="iconfont icon-shouji"></i>
-                </div>
-                <input type="password" placeholder="6-20位新密码，字母/数字/符号至少2种" class="login-password">
-                <div class="login-box-text">
-                    <label><input type="checkbox"> 下次自动登陆</label>
-                    <div class="login-box-forget">
-                        <a href=" ">忘记密码？</a><a href="#">立即注册</a>
-                    </div>
-                </div>
-                <input type="button" value="完成" class="login-box-text-success">
+            <div id="container" class="container" >
+                    <ul id="scene" class="scene">
+                        <li class="layer" data-depth="0.00"><img src="images/common/r7.png"></li>
+                        <li class="layer" data-depth="0.00"><img src="images/common/r6.png"></li>
+                        <li class="layer" data-depth-x="0.15"><img src="images/common/r5.png"></li>
+                        <li class="layer" data-depth-x="0.20" data-depth-y="0"><img src="images/common/r4.png"></li>
+                        <li class="layer" data-depth-x="0.10" data-depth-y="0.1"><img src="images/common/r3.png"></li>
+                        <li class="layer" data-depth-x="0.10" data-depth-y="0.1"><img src="images/common/r2.png"></li>
+                        <li class="layer" data-depth-x="0.10" data-depth-y="0.2"><img src="images/common/r1.png"></li>
+                        <!-- <li class="layer" data-depth-x="0.40" data-depth-y="0.00"><img src="images/r1.png"></li>  -->
+                    </ul>
             </div>
+
+        <div class="person-register">
+                <div class="person-register-container">
+                        <img src="./images/register/bg1.png" alt="" class="register-bg1">
+                        <img src="./images/register/bg2.png" alt="" class="register-bg2">
+                    <div class="person-register-box">
+                        <h3>登录</h3>
+                        <div class="phonenum">
+                            <input type="text" placeholder="请输入手机号码" class="register-phone"> <i class="iconfont icon-shouji"></i>
+                        </div>
+                        <div class="register-password">
+                            <input type="password" placeholder="6-20位新密码，字母/数字/符号至少2种" class="login-password">
+                        </div>
+
+                        <div class="login-box-text">
+                                <label><input type="checkbox"> 下次自动登陆</label>
+                                <div class="login-box-forget">
+                                    <a href=" ">忘记密码？</a><a href="#">立即注册</a>
+                                </div>
+                        </div>
+                   
+                     </div>
+                </div>
         </div>
+
+
     </div>
+
+    <script src="./js/parallax.js"></script>
+	<script>
+
+	// Pretty simple huh?
+	var scene = document.getElementById('scene');
+	var parallax = new Parallax(scene);
+
+	</script>
+
+
 
 </body>
 
