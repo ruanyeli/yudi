@@ -14,26 +14,6 @@ body {
             color:#ccc;
         }
 
-<<<<<<< HEAD
-        .person-register-box {
-            background-color: rgba(32, 85, 201, .6) !important;
-            // border: 10px solid rgba(0, 0, 0, 0.33);
-            box-shadow: 0px 4px 12px 1px rgba(0, 0, 0, 0.6);
-            // opacity: 0.6;
-            background: -webkit-linear-gradient(left top, rgb(42, 56, 200), rgb(23, 128, 204));
-            /* Safari 5.1 - 6.0 */
-            background: -o-linear-gradient(bottom right, rgb(42, 56, 200), rgb(23, 128, 204));
-            /* Opera 11.1 - 12.0 */
-            background: -moz-linear-gradient(bottom right, rgb(42, 56, 200), rgb(23, 128, 204));
-            /* Firefox 3.6 - 15 */
-            background: linear-gradient(to bottom right, rgb(42, 56, 200), rgb(23, 128, 204));
-
-            /* 标准的语法 */
-            h3 {
-                letter-spacing: 10px;
-                color: #fff !important;
-            }
-=======
         .person-login-box {
             background-color: rgba(32,85,201,.6)!important;
             border:10px solid rgba(81,153,212,.3);
@@ -66,106 +46,8 @@ body {
                     background-color: rgb(0,99,179)!important;
                     color:#fff;
                  }
->>>>>>> a79c2edca92fa5679b4ec9c85585516b7ca46763
 
-            input[type=text],
-            input[type=button],
-            input[type=password] {
-                background-color: rgb(0, 99, 179) !important;
-                color: #fff;
             }
-<<<<<<< HEAD
-
-            input[type=text],
-            input[type=button],
-            input[type=password] {
-                background-color: rgb(0, 99, 179) !important;
-                // color:#fff;
-            }
-
-            input[type=text]::-webkit-input-placeholder,
-            input[type=button]::-webkit-input-placeholder,
-            input[type=password]::-webkit-input-placeholder {
-                background-color: rgb(0, 99, 179) !important;
-                color: #fff;
-            }
-
-            input[type=text]::-moz-placeholder input[type=button]::-moz-placeholder,
-            input[type=password]::-moz-placeholder {
-                background-color: rgb(0, 99, 179) !important;
-                color: #fff;
-            }
-
-            input[type=text]::-ms-input-placeholder,
-            input[type=button]::-ms-input-placeholder,
-            input[type=password]::-ms-input-placeholder {
-                background-color: rgb(0, 99, 179) !important;
-                color: #fff;
-            }
-
-            .register-success {
-                margin-top: 80px !important;
-                background: url("../images/register/button.png") no-repeat;
-                background-size: 100% 100%;
-                border-radius: 15px;
-            }
-
-            .login-box-text{
-                color: #fff;
-                label{
-                    
-                    float: left;
-                    font-size: 12px;
-                    margin-top: 40px;
-                }
-                .login-box-forget{
-                    margin-left: 40px;
-                    margin-top: 40px;
-                    float: left;
-                }
-                a{
-                    color: #fff;
-                    font-size: 12px;
-                    
-                }
-            }
-
-        }
-    }
-}
-
-.person-register-container {
-    background-color: rgba(133, 200, 255, .15);
-    width: 430px;
-    height: 550px;
-    // background-color: #fff;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    // padding: 50px;
-    border-radius: 5px;
-    box-sizing: border-box;
-    text-align: center;
-    border-top-left-radius: 20px !important;
-    border-bottom-right-radius: 20px !important;
-
-    .register-bg1 {
-        position: absolute;
-        left: -25px;
-        top: 0;
-    }
-
-    .register-bg2 {
-        position: absolute;
-        bottom: 0;
-        right: -25px;
-    }
-
-
-=======
             input[type=password],input[type=text]{
                 background-color: rgb(0,99,179)!important;
                 // color:#fff;
@@ -264,10 +146,23 @@ body {
     top:13px;
     cursor: $cursor
 }
+.icon-yanjing_xianshi_o{
+    color:#fff;
+    position: absolute;
+    right:10px;
+    top:13px;
+    cursor: $cursor
+}
 .login-delte{
     position: absolute;
     right: -25px;
     top: -24px;
     cursor: $cursor
->>>>>>> a79c2edca92fa5679b4ec9c85585516b7ca46763
+}
+.login-error{
+    color:#ccc;
+    font-size: 10px;
+    text-align: center;
+    margin-top: 5px;
+    box-sizing: border-box;
 }
