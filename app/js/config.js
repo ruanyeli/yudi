@@ -12,7 +12,7 @@ const config = {
     accounts: serverurl + 'accounts/{account}/password/token/', //根据用户帐号获取修改密码的token
     assgin: serverurl + '/assigns/', //题目
     qq: serverurl + '/qq/auth/', //qq登陆
-    // wechat:serverurl+
+    wechat:serverurl+'/weixin/auth/',//微信登陆
 
 
 }
@@ -24,12 +24,10 @@ window.getData = function (param, callback) {
     $.ajax({
         type: param.type || 'POST',
         url: param.url,
-        // headers: {'Authorization': token},
         data: param.data,
         async: param.async == null ? true : false,
         dataType: 'json',
         success: function (data) {
-            // console.log(data)
             callback && callback(data)
         },
         error: function(data){

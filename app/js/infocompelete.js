@@ -17,18 +17,16 @@ $(function(){
      ylc = yeluochenCity('info_city', (city) => {console.log(city)}, null);
     //  console.log(ylc)
     //  
+
     $(".register-success>p").on("click",function(){
+        var token=JSON.parse(localStorage.getItem('token'));
+        console.log(token)
         var infoname=$.trim($(".info-name").val());
         var infosex=$.trim($(".info-sex").val());
         var infoclass=$.trim($(".info-class").val());
         var infobir=$.trim($(".info-bir").val());
         var infocity=$(".info_city").val()
-
-        console.log(ylc)
-
-        getData({url:config.userinfo,type:'GET',headers: {
-            Authorization: localStorage.getItem("token")
-        },data:{username:infoname,gender:infosex,birthday:infobir,address:infocity}},function(data){
+        getData({url:config.userinfo,type:'GET',headers:{"X-CSRFToken":token},data:{username:infoname,gender:infosex,birthday:infobir,address:infocity}},function(data){
             console.log(data)
         })
     })

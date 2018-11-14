@@ -146,9 +146,23 @@ body {
     top:13px;
     cursor: $cursor
 }
+.icon-yanjing_xianshi_o{
+    color:#fff;
+    position: absolute;
+    right:10px;
+    top:13px;
+    cursor: $cursor
+}
 .login-delte{
     position: absolute;
     right: -25px;
     top: -24px;
     cursor: $cursor
+}
+.login-error{
+    color:#ccc;
+    font-size: 10px;
+    text-align: center;
+    margin-top: 5px;
+    box-sizing: border-box;
 }
