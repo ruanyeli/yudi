@@ -169,7 +169,11 @@ const acetip=[
         id:33,
         text:"IronMan.goDown(",
         caution:")" 
+    },
+    //传参
+    {
+       id:34,
+        
     }
-    //
    
 ]
