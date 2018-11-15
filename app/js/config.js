@@ -32,7 +32,7 @@ window.getData = function (param, callback) {
         },
         error: function(data){
             callback && callback(data)
-       }        
+       }      
     })
 }
 
