@@ -47,16 +47,16 @@ $(function(){
 
     })
 
-    //用户登陆
-    $('.login-box-text-success').click(function(){
-        console.log(1)
-        var loginPhone=$.trim($('.login-phone').val());
-        var loginPassword=$.trim($('.login-password').val());
-        console.log(loginPhone)
-        getData({url:config.login,data:{username:loginPhone,password:loginPassword}},function(data){
-            console.log(data)
-        })
-    })
+    // //用户登陆
+    // $('.login-box-text-success').click(function(){
+    //     console.log(1)
+    //     var loginPhone=$.trim($('.login-phone').val());
+    //     var loginPassword=$.trim($('.login-password').val());
+    //     console.log(loginPhone)
+    //     getData({url:config.login,data:{username:loginPhone,password:loginPassword}},function(data){
+    //         console.log(data)
+    //     })
+    // })
     
    })
 
