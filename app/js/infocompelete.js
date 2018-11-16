@@ -25,26 +25,44 @@ $(function(){
         var infosex=$.trim($(".info-sex").val());
         var infoclass=$.trim($(".info-class").val());
         var infobir=$.trim($(".info-bir").val());
-        var infocity=$(".info_city").val()
+        var infocity=$(".info_city").val();
+        // if(infosex=="null"){
+        //     // alert("请选择性别");
+        //     layer.msg("请选择性别");
+        // }else {
+            // if(infoclass=="null"){
+            //     // alert("请选择年级");
+            //     console.log("请选择年级");
+            //     layer.msg("请选择年级");
+            // }
+            // else{
+                console.log("infoclass="+infoclass);
+                $.ajax({
+                    url: config.userinfo,
+                    data: {
+                        username:infoname
+                        // address:infocity,
+                        // birthday:infobir,
+                        // gender:infosex,
+                        // class:infoclass
+                    },
+                    headers:{"Authorization":'Token '+token},
+                    dataType: 'JSON',
+                    type: 'PUT',
+                    success: function (data) {
+                        console.log(data)
+                    },
+                    error: function (data) {
+                        console.log(data)
+                    }
+                });
 
-        $.ajax({
-            url: config.userinfo,
-            data: {
-                username:infoname,
-                address:infoclass,
-                birthday:infobir,
-                gender:infosex
-            },
-            headers:{"Authorization":'Token '+'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6InNzeXppIiwiZXhwIjoxNTQyODY2NTE3LCJlbWFpbCI6IiJ9.eoF7G2-OrfFrRAkWSOJMOU0z-Z0CIkYOzRvdpUYim6E'},
-            dataType: 'JSON',
-            type: 'PUT',
-            success: function (data) {
-                console.log(data)
-            },
-            error: function (data) {
-                console.log(data)
-            }
-        });
+            // }
+        // } 
+
+       
+
+        
         // $.ajax({
         //     url: config.userinfo,
         //     // data: {
