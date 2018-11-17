@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  padding: 0; }
+
 html {
   width: 100%;
   height: 100%; }
@@ -118,22 +122,17 @@ html {
                 margin-top: 10px;
                 border-radius: 10px;
                 text-align: center;
-                cursor: pointer; }
+                cursor: pointer;
+                white-space: nowrap; }
                 html body .curriculum-container .curriculum-right .curriculum-right-center .curriculum-right-center-left .curriculum-right-center-left-button .curriculum-right-center-left-button-left .iconfont,
                 html body .curriculum-container .curriculum-right .curriculum-right-center .curriculum-right-center-left .curriculum-right-center-left-button .curriculum-right-center-left-button-right .iconfont,
                 html body .curriculum-container .curriculum-right .curriculum-right-center .curriculum-right-center-left .curriculum-right-center-left-button .curriculum-right-center-left-button-down .iconfont,
                 html body .curriculum-container .curriculum-right .curriculum-right-center .curriculum-right-center-left .curriculum-right-center-left-button .curriculum-right-center-left-button-up .iconfont,
                 html body .curriculum-container .curriculum-right .curriculum-right-center .curriculum-right-center-left .curriculum-right-center-left-button .curriculum-right-center-left-button-refresh .iconfont {
                   float: left; }
-          html body .curriculum-container .curriculum-right .curriculum-right-center .curriculum-right-center-right {
+          html body .curriculum-container .curriculum-right .curriculum-right-center #editor {
             width: 68.5%;
-            height: 100%;
-            float: right;
-            border-radius: 12px; }
-            html body .curriculum-container .curriculum-right .curriculum-right-center .curriculum-right-center-right #editor {
-              height: 100%;
-              width: 100%;
-              border-radius: 10px; }
+            height: 100%; }
         html body .curriculum-container .curriculum-right .curriculum-right-bottom {
           margin-top: 10px;
           height: 20%;
@@ -262,3 +261,6 @@ html {
       margin-left: 20%; }
       .visibility .dialog-contnet h6 span {
         color: #00fec5; }
+
+.iconfont {
+  font-size: 20px !important; }

@@ -3,7 +3,7 @@ const acetip=[
     {
         id:1,
         text:"IronMan",
-        caution:"输入正确"
+        caution:"正确的方法"
     },
     {
         id:2,
@@ -168,12 +168,46 @@ const acetip=[
     {
         id:33,
         text:"IronMan.goDown(",
-        caution:")" 
+        caution:"请在后面输入)" 
     },
     //传参
     {
        id:34,
+       text:"IronMan(",
+       caution:"请检查输入的内容"
         
-    }
+    },
+    {
+        id:35,
+        text:"IronMan.(",
+        caution:"请检查输入的内容" 
+    },
+    {
+        id:36,
+        text:"IronMan.(",
+        caution:"请检查输入的内容" 
+    },
+    {
+        id:37,
+        text:"IronMan.)",
+        caution:"请检查输入的内容" 
+    },
+    {
+        id:38,
+        text:"IronMan.(",
+        caution:"请检查输入的内容" 
+    },
+    {
+        id:39,
+        text:"IronMan()",
+        caution:"请检查输入的内容" 
+    },
+    {
+        id:40,
+        text:"IronMan.(",
+        caution:"请检查输入的内容" 
+    },
+    
+    
    
 ]

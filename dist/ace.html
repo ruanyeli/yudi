@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    #editor{
+        width: 300px;
+        height: 300px;
+    }
+
+</style>
+
+<body>
+    <div id="editor">
+
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ext-language_tools.js" type="text/javascript" charset="utf-8"></script>
+
+
+    <script>
+        var editor = ace.edit("editor");
+        editor.setOption("wrap", "free") //自动换行
+        editor.setOptions({
+            enableBasicAutocompletion: true,
+            // enableSnippets: true, 
+            enableLiveAutocompletion: true, //只能补全
+        });
+        ace.require("ace/ext/language_tools");
+        editor.setTheme("ace/theme/monokai"); //monokai模式是自动显示补全提示
+        editor.getSession().setMode("ace/mode/python"); //语言
+        editor.setFontSize(20);
+    </script>
+</body>
+
+</html>
