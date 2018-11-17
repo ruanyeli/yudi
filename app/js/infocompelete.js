@@ -64,9 +64,6 @@ $(function(){
             url: config.userinfo,
             data: {
                 username:infoname,
-                // address:infoclass,
-                // birthday:infobir,
-                // gender:infosex
             },
             headers:{"Authorization":'Token '+token},
             dataType: 'JSON',

@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>课程中心</title>
-    <link rel="stylesheet" href="./css/common.css">
+    <!-- <link rel="stylesheet" href="./css/common.css"> -->
     <link rel="stylesheet" href="./css/curriculum.css">
     <link rel="stylesheet" type="text/css" href="./fonts/font/iconfont.css">
 </head>
-
 <body>
-    <div class="curriculum-container">
+    <div class="curriculum-container" id="box1">
         <div class="curriculum-box-c">
             <img src="./images/curriculum/bg1.png" alt="" class="curriculum-box1">
             <img src="./images/curriculum/bg5.png" alt="" class="curriculum-box2">
@@ -22,7 +20,7 @@
                         <canvas id="canvas" width="525px" height="560"></canvas>
                     </div>
                     <div class="curriculum-left-center error">
-                            小豆豆就在眼前，加油哦！
+                        小豆豆就在眼前，加油哦！
                     </div>
                 </div>
                 <div class="curriculum-left-bottom">
@@ -32,52 +30,48 @@
 
             <div class="curriculum-right">
                 <div class="curriculum-right-top-cont">
-                        <div class="curriculum-right-top">
-                                加油,如果还有不理解的，可以点击下方视频重新学习或点击请求帮助。
-                            <div class="curriculum-right-top-help">
-                                    请求帮助
-                            </div>
+                    <div class="curriculum-right-top">
+                        加油,如果还有不理解的，可以点击下方视频重新学习或点击请求帮助。
+                        <div class="curriculum-right-top-help">
+                            请求帮助
                         </div>
-                        <div class="curriculum-right-center">
-                            <div class="curriculum-right-center-left">
-                                <div class="curriculum-right-center-left-button">
-                                    <h3>函数</h3>
-                                    <div class="curriculum-right-center-left-button-left" onclick="goLeft()">
-                                        <i class="iconfont icon-zuo"></i>
-                                        <span>goLeft()</span>
-                                    </div>
-                                    <div class="curriculum-right-center-left-button-right" onclick="goRight()">
-                                        <i class="iconfont icon-you"></i>
-                                    <span onclick="goRight">goRight()</span>
-                                    </div>
-                                    <div class="curriculum-right-center-left-button-up" onclick="goUp()">
-                                        <i class="iconfont icon-xiangshang"></i>
-                                        <span>goUp()</span>
-                                    </div>
-                                    <div class="curriculum-right-center-left-button-down" onclick="goDown()">
-                                        <i class="iconfont icon-xiangxia"></i>
+                    </div>
+                    <div class="curriculum-right-center">
+                        <div class="curriculum-right-center-left">
+                            <div class="curriculum-right-center-left-button">
+                                <h3>函数</h3>
+                                <div class="curriculum-right-center-left-button-left">
+                                    <i class="iconfont icon-zuo"></i>
+                                    <span>goLeft()</span>
+                                </div>
+                                <div class="curriculum-right-center-left-button-right">
+                                    <i class="iconfont icon-you"></i>
+                                    <span>goRight()</span>
+                                </div>
+                                <div class="curriculum-right-center-left-button-up">
+                                    <i class="iconfont icon-xiangshang"></i>
+                                    <span>goUp()</span>
+                                </div>
+                                <div class="curriculum-right-center-left-button-down">
+                                    <i class="iconfont icon-xiangxia"></i>
                                     <span>goDown()</span>
-                                    </div>
-                                    <div class="curriculum-right-center-left-button-refresh">
-                                        <i class="iconfont icon-xunhuan"></i>
-                                    <span>onLoad()</span>
-                                    </div>
-            
-            
+                                </div>
+                                <div class="curriculum-right-center-left-button-refresh">
+                                    <i class="iconfont icon-xunhuan"></i>
+                                    <span>push()</span>
                                 </div>
                             </div>
-                            <div class="curriculum-right-center-right">
-                                <div id="editor"></div>
-                            </div>
                         </div>
+                        <div id="editor">#让主角移动起来吧</div>
+                    </div>
                 </div>
-            
+
                 <div class="curriculum-right-bottom">
                     <div class="curriculum-right-bottom-image">
                         <!-- <img src="./images/user.png" alt="个人图像"> -->
                     </div>
                     <div class="curriculum-right-bottom-video">
-                        <video class="curriculum-video" controls >
+                        <video class="curriculum-video" controls>
                             <source src="https://www.w3cschool.cn/statics/demosource/movie.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -91,8 +85,8 @@
                             <p>分享</p>
                         </div>
                         <div class="curriculum-right-bottom-share-return">
-                            <img src="./images/curriculum/return.png" alt="返回">
-                            <p>返回</p>
+                            <img src="./images/curriculum/bg10.png" alt="重置">
+                            <p>重置</p>
                         </div>
                     </div>
                     <div class="curricu-right-go">
@@ -108,16 +102,16 @@
 
     <div class="dialog" id="dialog">
         <div class="dialog-contnet">
-                <p>恭喜你，该知识点已过关了课后还需多运用巩固哦!</p>
-                <h5>用时<span id="minute"></span>分<span id="second"></span>秒</h5>
-                <h6>错误次数 <span id="errorTimes"></span></h6>
-                <div class="img-share">
-                    <img src="./images/curriculum/game-share.png" alt="分享">
-                    <img src="./images/curriculum/excerise.png" alt="练习">
-                    <img src="./images/curriculum/dianzan.png" alt="点赞">
-                    <img src="./images/curriculum/game-return.png" alt="返回">
-                </div>
-        </div>  
+            <p>恭喜你，该知识点已过关了课后还需多运用巩固哦!</p>
+            <h5>用时<span id="minute"></span>分<span id="second"></span>秒</h5>
+            <h6>错误次数 <span id="errorTimes"></span></h6>
+            <div class="img-share">
+                <img src="./images/curriculum/game-share.png" alt="分享">
+                <img src="./images/curriculum/excerise.png" alt="练习">
+                <img src="./images/curriculum/dianzan.png" alt="点赞">
+                <img src="./images/curriculum/game-return.png" alt="返回">
+            </div>
+        </div>
     </div>
 
     <script src="./assets/jquery-3.3.1.js"></script>
@@ -128,8 +122,10 @@
     <script src="./assets/map6.js" type="text/javascript"></script>
     <script src="./js/aceconfig.js"></script>
     <script src="./js/acetips.js"></script>
-    <script src="./js/curriculum.js"></script>
     <script src="./js/acetip.js"></script>
+    <script src="./js/curriculum.js"></script>
+    <script src="./assets/html2canvas.js"></script>
+
 </body>
 
 </html>
