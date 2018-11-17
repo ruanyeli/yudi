@@ -1,0 +1,528 @@
+html {
+  width: 100%;
+  height: 100%;
+  background: #000; }
+  html body {
+    width: 100%;
+    height: 100%; }
+    html body .index-banner-container {
+      width: 100%;
+      height: 70px;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      position: absolute;
+      background: #fff;
+      display: flex;
+      flex-direction: row; }
+      html body .index-banner-container .index-banner-container-logo {
+        padding-left: 3%;
+        width: 25%;
+        display: flex;
+        flex-direction: row;
+        line-height: 70px;
+        font-size: 17px; }
+        html body .index-banner-container .index-banner-container-logo .index-banner-container-logo-img {
+          display: flex;
+          flex-direction: row;
+          align-items: center; }
+          html body .index-banner-container .index-banner-container-logo .index-banner-container-logo-img .container-logo-img-first img {
+            padding-top: 10px; }
+          html body .index-banner-container .index-banner-container-logo .index-banner-container-logo-img .container-logo-img-second img {
+            padding-left: 20px; }
+        html body .index-banner-container .index-banner-container-logo .index-banner-container-logo-text {
+          padding-left: 15px;
+          text-emphasis: 10px; }
+      html body .index-banner-container .index-banner-container-center {
+        width: 50%; }
+        html body .index-banner-container .index-banner-container-center ul {
+          display: flex;
+          flex-direction: row;
+          align-content: center; }
+          html body .index-banner-container .index-banner-container-center ul li {
+            width: 20%;
+            font-family: MicrosoftYaHei;
+            font-size: 20px;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 0px;
+            text-align: center;
+            color: #020057;
+            line-height: 70px; }
+            html body .index-banner-container .index-banner-container-center ul li .active {
+              background-color: #195bf0;
+              color: #fff; }
+            html body .index-banner-container .index-banner-container-center ul li .twowords {
+              letter-spacing: 10px; }
+      html body .index-banner-container .index-banner-container-right {
+        width: 15%;
+        padding-left: 8%;
+        top: 0;
+        right: 0;
+        position: absolute; }
+        html body .index-banner-container .index-banner-container-right ul {
+          display: flex;
+          flex-direction: row;
+          align-content: center; }
+          html body .index-banner-container .index-banner-container-right ul li {
+            width: 30%;
+            font-family: MicrosoftYaHei;
+            font-size: 20px;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 0px;
+            color: #020057;
+            line-height: 70px;
+            text-align: center; }
+            html body .index-banner-container .index-banner-container-right ul li img {
+              padding-top: 15px; }
+    html body .index-container {
+      height: 100%;
+      width: 100%; }
+      html body .index-container .index-container2 {
+        width: 100%;
+        height: 570px;
+        background: #fff;
+        display: flex;
+        flex-direction: row;
+        padding-top: 100px; }
+        html body .index-container .index-container2 .index-container2-left {
+          width: 50%;
+          height: 100%;
+          padding-left: 12%; }
+        html body .index-container .index-container2 .index-container2-right {
+          width: 50%;
+          height: 100%;
+          margin-top: 50px; }
+          html body .index-container .index-container2 .index-container2-right h1 {
+            font-family: MicrosoftYaHei;
+            font-size: 50px;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 0px;
+            color: #0060fe;
+            line-height: 50px;
+            margin-bottom: 40px; }
+      html body .index-container .index-container3 {
+        width: 100%;
+        height: 800px;
+        background-color: #417bff;
+        display: flex;
+        flex-direction: column;
+        align-content: center; }
+        html body .index-container .index-container3 .index-container3-top {
+          height: 23%;
+          width: 100%; }
+          html body .index-container .index-container3 .index-container3-top h1 {
+            font-family: MicrosoftYaHei;
+            font-size: 56px;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 0px;
+            color: #f1f5ff;
+            text-align: center;
+            padding-top: 60px; }
+        html body .index-container .index-container3 .index-container3-bottom {
+          height: 70%;
+          width: 100%; }
+      html body .index-container .index-container4 {
+        height: 734px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        background: #fff; }
+        html body .index-container .index-container4 .index-container4-top {
+          padding-top: 90px; }
+          html body .index-container .index-container4 .index-container4-top h1 {
+            font-family: MicrosoftYaHei;
+            font-size: 50px;
+            font-weight: normal;
+            font-stretch: normal;
+            line-height: 61.5px;
+            letter-spacing: 0px;
+            color: #1d68ff;
+            text-align: center; }
+          html body .index-container .index-container4 .index-container4-top h2 {
+            font-family: MicrosoftYaHei;
+            font-size: 36px;
+            font-weight: normal;
+            letter-spacing: 0px;
+            color: #1d68ff;
+            text-align: center; }
+        html body .index-container .index-container4 .index-container4-bottom {
+          display: flex;
+          align-content: center;
+          flex-direction: row; }
+          html body .index-container .index-container4 .index-container4-bottom .index-container4-bottom-left {
+            padding-left: 134px;
+            padding-top: 40px; }
+          html body .index-container .index-container4 .index-container4-bottom .index-container4-bottom-right {
+            padding-left: 160px;
+            padding-top: 50px; }
+      html body .index-container .index-container5 {
+        height: 700px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        background-color: #ff8560; }
+        html body .index-container .index-container5 .index-container5-top {
+          height: 30%;
+          width: 100%;
+          padding-top: 80px; }
+          html body .index-container .index-container5 .index-container5-top h1 {
+            font-family: MicrosoftYaHei;
+            font-size: 56.2px;
+            font-weight: normal;
+            font-stretch: normal;
+            line-height: 61.5px;
+            letter-spacing: 0px;
+            color: #f1f5ff;
+            text-align: center; }
+          html body .index-container .index-container5 .index-container5-top h2 {
+            font-family: MicrosoftYaHei;
+            font-size: 36px;
+            font-weight: normal;
+            letter-spacing: 0px;
+            color: #ffffff;
+            text-align: center;
+            padding-top: 10px; }
+        html body .index-container .index-container5 .index-container5-bottom {
+          height: 100%;
+          width: 70%;
+          display: flex;
+          flex-direction: row;
+          align-items: flex-end;
+          padding-left: 13.7%;
+          padding-right: 13.7%;
+          padding-bottom: 90px; }
+          html body .index-container .index-container5 .index-container5-bottom .index-container5-bottom1 {
+            width: 140px;
+            height: 172px;
+            border-radius: 8px;
+            background: url("../images/index-new/l6.png");
+            background-size: 100% 100%;
+            margin-right: 30px;
+            position: relative; }
+            html body .index-container .index-container5 .index-container5-bottom .index-container5-bottom1 .index-container5-bottom1-before {
+              display: block; }
+              html body .index-container .index-container5 .index-container5-bottom .index-container5-bottom1 .index-container5-bottom1-before h1 {
+                text-align: center;
+                font-family: FZXBSJW--GB1-0;
+                font-size: 38px;
+                font-weight: normal;
+                font-stretch: normal;
+                letter-spacing: 1.5px;
+                color: #ffffff; }
+              html body .index-container .index-container5 .index-container5-bottom .index-container5-bottom1 .index-container5-bottom1-before h2 {
+                text-align: center;
+                font-family: FZHTK--GBK1-0;
+                font-size: 24px;
+                font-weight: normal;
+                font-stretch: normal;
+                letter-spacing: 1px;
+                color: #ffffff;
+                padding-top: 70px; }
+            html body .index-container .index-container5 .index-container5-bottom .index-container5-bottom1 .index-container5-bottom1-after {
+              display: none;
+              padding-left: 5px;
+              padding-right: 5px; }
+              html body .index-container .index-container5 .index-container5-bottom .index-container5-bottom1 .index-container5-bottom1-after h1 {
+                font-family: FZHTK--GBK1-0;
+                font-size: 16px;
+                font-weight: normal;
+                font-stretch: normal;
+                line-height: 30px;
+                letter-spacing: 0px;
+                color: #ffffff;
+                position: absolute; }
+          html body .index-container .index-container5 .index-container5-bottom .index-container5-bottom2 {
+            width: 140px;
+            height: 219px;
+            border-radius: 8px;
+            background: url("../images/index-new/l5.png");
+            background-size: 100% 100%;
+            margin-right: 30px;
+            position: relative; }
+            html body .index-container .index-container5 .index-container5-bottom .index-container5-bottom2 .index-container5-bottom2-before {
+              display: block; }
+              html body .index-container .index-container5 .index-container5-bottom .index-container5-bottom2 .index-container5-bottom2-before h1 {
+                font-family: FZXBSJW--GB1-0;
+                font-size: 38px;
+                font-weight: normal;
+                font-stretch: normal;
+                letter-spacing: 1.5px;
+                color: #ffffff;
+                text-align: center; }
+              html body .index-container .index-container5 .index-container5-bottom .index-container5-bottom2 .index-container5-bottom2-before h2 {
+                font-family: FZHTK--GBK1-0;
+                font-size: 24px;
+                font-weight: normal;
+                font-stretch: normal;
+                letter-spacing: 1px;
+                color: #ffffff;
+                text-align: center;
+                padding-top: 115px; }
+            html body .index-container .index-container5 .index-container5-bottom .index-container5-bottom2 .index-container5-bottom2-after {
+              display: none;
+              padding-left: 9px;
+              padding-right: 9px; }
+              html body .index-container .index-container5 .index-container5-bottom .index-container5-bottom2 .index-container5-bottom2-after h1 {
+                font-family: FZHTK--GBK1-0;
+                font-size: 16px;
+                font-weight: normal;
+                font-stretch: normal;
+                line-height: 30px;
+                letter-spacing: 0px;
+                color: #ffffff;
+                bottom: 15px;
+                position: absolute; }
+          html body .index-container .index-container5 .index-container5-bottom .index-container5-bottom3 {
+            width: 140px;
+            height: 257px;
+            border-radius: 8px;
+            background: url("../images/index-new/l4.png");
+            background-size: 100% 100%;
+            margin-right: 30px;
+            position: relative; }
+            html body .index-container .index-container5 .index-container5-bottom .index-container5-bottom3 .index-container5-bottom3-before {
+              display: block; }
+              html body .index-container .index-container5 .index-container5-bottom .index-container5-bottom3 .index-container5-bottom3-before h1 {
+                font-family: FZXBSJW--GB1-0;
+                font-size: 38px;
+                font-weight: normal;
+                font-stretch: normal;
+                letter-spacing: 1.5px;
+                color: #ffffff;
+                text-align: center; }
+              html body .index-container .index-container5 .index-container5-bottom .index-container5-bottom3 .index-container5-bottom3-before h2 {
+                font-family: FZHTK--GBK1-0;
+                font-size: 24px;
+                font-weight: normal;
+                font-stretch: normal;
+                letter-spacing: 1px;
+                color: #ffffff;
+                text-align: center;
+                padding-top: 150px; }
+            html body .index-container .index-container5 .index-container5-bottom .index-container5-bottom3 .index-container5-bottom3-after {
+              display: none;
+              padding-left: 9px;
+              padding-right: 9px;
+              bottom: 17px;
+              position: absolute; }
+              html body .index-container .index-container5 .index-container5-bottom .index-container5-bottom3 .index-container5-bottom3-after h1 {
+                font-family: FZHTK--GBK1-0;
+                font-size: 16px;
+                font-weight: normal;
+                font-stretch: normal;
+                line-height: 30px;
+                letter-spacing: 0px;
+                color: #ffffff; }
+          html body .index-container .index-container5 .index-container5-bottom .index-container5-bottom4 {
+            width: 140px;
+            height: 309px;
+            border-radius: 8px;
+            background: url("../images/index-new/l3.png");
+            background-size: 100% 100%;
+            margin-right: 30px;
+            position: relative; }
+            html body .index-container .index-container5 .index-container5-bottom .index-container5-bottom4 .index-container5-bottom4-before {
+              display: block; }
+              html body .index-container .index-container5 .index-container5-bottom .index-container5-bottom4 .index-container5-bottom4-before h1 {
+                font-family: FZXBSJW--GB1-0;
+                font-size: 38px;
+                font-weight: normal;
+                font-stretch: normal;
+                letter-spacing: 1.5px;
+                color: #ffffff;
+                text-align: center; }
+              html body .index-container .index-container5 .index-container5-bottom .index-container5-bottom4 .index-container5-bottom4-before h2 {
+                font-family: FZHTK--GBK1-0;
+                font-size: 24px;
+                font-weight: normal;
+                font-stretch: normal;
+                letter-spacing: 1px;
+                color: #ffffff;
+                text-align: center;
+                padding-top: 200px; }
+            html body .index-container .index-container5 .index-container5-bottom .index-container5-bottom4 .index-container5-bottom4-after {
+              display: none;
+              padding-left: 9px;
+              padding-right: 9px; }
+              html body .index-container .index-container5 .index-container5-bottom .index-container5-bottom4 .index-container5-bottom4-after h1 {
+                font-family: FZHTK--GBK1-0;
+                font-size: 16px;
+                font-weight: normal;
+                font-stretch: normal;
+                line-height: 30px;
+                letter-spacing: 0px;
+                color: #ffffff;
+                position: absolute;
+                bottom: 15px; }
+          html body .index-container .index-container5 .index-container5-bottom .index-container5-bottom5 {
+            width: 140px;
+            height: 358px;
+            border-radius: 8px;
+            background: url("../images/index-new/l2.png");
+            background-size: 100% 100%;
+            margin-right: 30px;
+            position: relative; }
+            html body .index-container .index-container5 .index-container5-bottom .index-container5-bottom5 .index-container5-bottom5-before {
+              display: block; }
+              html body .index-container .index-container5 .index-container5-bottom .index-container5-bottom5 .index-container5-bottom5-before h1 {
+                font-family: FZXBSJW--GB1-0;
+                font-size: 38px;
+                font-weight: normal;
+                font-stretch: normal;
+                letter-spacing: 1.5px;
+                color: #ffffff;
+                text-align: center; }
+              html body .index-container .index-container5 .index-container5-bottom .index-container5-bottom5 .index-container5-bottom5-before h2 {
+                font-family: FZHTK--GBK1-0;
+                font-size: 24px;
+                font-weight: normal;
+                font-stretch: normal;
+                letter-spacing: 1px;
+                color: #ffffff;
+                text-align: center;
+                padding-top: 251px; }
+            html body .index-container .index-container5 .index-container5-bottom .index-container5-bottom5 .index-container5-bottom5-after {
+              display: none;
+              position: absolute;
+              bottom: 15px;
+              padding-left: 9px;
+              padding-right: 9px; }
+              html body .index-container .index-container5 .index-container5-bottom .index-container5-bottom5 .index-container5-bottom5-after h1 {
+                font-family: FZHTK--GBK1-0;
+                font-size: 16px;
+                font-weight: normal;
+                font-stretch: normal;
+                line-height: 30px;
+                letter-spacing: 0px;
+                color: #ffffff; }
+          html body .index-container .index-container5 .index-container5-bottom .index-container5-bottom6 {
+            width: 140px;
+            height: 401px;
+            border-radius: 8px;
+            background: url("../images/index-new/l1.png");
+            background-size: 100% 100%;
+            margin-right: 13px;
+            position: relative; }
+            html body .index-container .index-container5 .index-container5-bottom .index-container5-bottom6 .index-container5-bottom6-before {
+              display: block; }
+              html body .index-container .index-container5 .index-container5-bottom .index-container5-bottom6 .index-container5-bottom6-before h1 {
+                font-family: FZXBSJW--GB1-0;
+                font-size: 38px;
+                font-weight: normal;
+                font-stretch: normal;
+                letter-spacing: 1.5px;
+                color: #ffffff;
+                text-align: center; }
+              html body .index-container .index-container5 .index-container5-bottom .index-container5-bottom6 .index-container5-bottom6-before h2 {
+                font-family: FZHTK--GBK1-0;
+                font-size: 24px;
+                font-weight: normal;
+                font-stretch: normal;
+                letter-spacing: 1px;
+                color: #ffffff;
+                bottom: 15px;
+                text-align: center;
+                padding-top: 290px; }
+            html body .index-container .index-container5 .index-container5-bottom .index-container5-bottom6 .index-container5-bottom6-after {
+              display: none;
+              position: absolute;
+              bottom: 15px;
+              padding-left: 9px;
+              padding-right: 9px; }
+              html body .index-container .index-container5 .index-container5-bottom .index-container5-bottom6 .index-container5-bottom6-after h1 {
+                font-family: FZHTK--GBK1-0;
+                font-size: 16px;
+                font-weight: normal;
+                font-stretch: normal;
+                line-height: 30px;
+                letter-spacing: 0px;
+                color: #ffffff; }
+      html body .index-container .index-container6 {
+        width: 100%;
+        height: 600px;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        align-content: center; }
+        html body .index-container .index-container6 .index-container6-top {
+          height: 30%;
+          width: 100%; }
+          html body .index-container .index-container6 .index-container6-top h1 {
+            font-family: MicrosoftYaHei;
+            font-size: 56.2px;
+            font-weight: normal;
+            font-stretch: normal;
+            line-height: 61.5px;
+            letter-spacing: 0px;
+            color: #195fff;
+            text-align: center;
+            padding-top: 90px; }
+          html body .index-container .index-container6 .index-container6-top h2 {
+            font-size: 36px;
+            font-weight: normal;
+            letter-spacing: 0px;
+            color: #195fff;
+            text-align: center;
+            padding-top: 10px; }
+        html body .index-container .index-container6 .index-container6-bottom {
+          height: 70%;
+          width: 30%;
+          padding-left: 35%;
+          padding-right: 35%;
+          padding-top: 100px;
+          display: flex;
+          flex-direction: row; }
+      html body .index-container .index-footer {
+        width: 70%;
+        height: 300px;
+        display: flex;
+        flex-direction: row;
+        padding-left: 20%;
+        padding-right: 10%;
+        padding-top: 90px;
+        background-color: #3064fa; }
+        html body .index-container .index-footer .index-footer1 {
+          width: 16%;
+          height: 100%; }
+          html body .index-container .index-footer .index-footer1 h1 {
+            font-family: MicrosoftYaHei;
+            font-size: 18px;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 0px;
+            color: #ffffff;
+            padding-bottom: 20px; }
+        html body .index-container .index-footer .index-footer2 {
+          width: 16%;
+          height: 100%; }
+          html body .index-container .index-footer .index-footer2 h1 {
+            font-family: MicrosoftYaHei;
+            font-size: 18px;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 0px;
+            color: #ffffff;
+            padding-bottom: 20px; }
+        html body .index-container .index-footer .index-footer3 {
+          width: 30%;
+          height: 100%; }
+          html body .index-container .index-footer .index-footer3 h1 {
+            font-family: MicrosoftYaHei;
+            font-size: 18px;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 0px;
+            color: #ffffff;
+            padding-bottom: 20px; }
+        html body .index-container .index-footer .index-footer4 {
+          width: 16%;
+          height: 100%; }
+          html body .index-container .index-footer .index-footer4 img {
+            padding-left: 50%;
+            padding-right: 20%; }

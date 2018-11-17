@@ -9,7 +9,7 @@
 	var curMap;//当前的地图
 	var curLevel;//当前等级的地图
 	var curMan;//初始化小人
-	var iCurlevel = 6;//关卡数
+	var iCurlevel = 0;//关卡数
 	var moveTimes = 0;//移动了多少次
 	var pushNum = 0;
 	var editor;
@@ -666,4 +666,5 @@
 		return b;
 	}
 
-
+	//获取错误次数
+	

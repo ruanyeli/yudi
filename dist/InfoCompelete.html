@@ -8,7 +8,10 @@
     <title>信息完善</title>
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/infoCompelete.css">
+    <link rel="stylesheet" href="./assets/skin/layer.css">
+   
     <link rel="stylesheet" href="./assets/zane-calendar.min.css">
+    <link rel="stylesheet" href="./fonts/font/iconfont.css">
 </head>
 
 <body>
@@ -35,7 +38,7 @@
                 <div class="person-register-box">
                     <h3>信息完善</h3>
                     <div class="infophonenum">
-                        <input type="text" placeholder="请输入您的姓名" class="info-name"> <i class="iconfont icon-shouji"></i>
+                        <input type="text" placeholder="请输入您的姓名" class="info-name">
                     </div>
                     <div class="infophonenum">
                         <!-- <input type="text" placeholder="请输入您的性别" class="info-sex"> -->
@@ -44,12 +47,13 @@
                             <option value ="0">男</option>
                             <option value ="1">女</option>
                         </select>
-                         <i class="iconfont icon-shouji"></i>
+                         <i class="iconfont icon-xiangxia1"></i>
                     </div>
                     <div class="infophonenum">
                         <!-- <input type="text" placeholder="请输入您的年级" class="info-class">  -->
-                        <select placeholder="请选择您的年级" class="info-sex">
+                        <select placeholder="请选择您的年级" class="info-class">
                                 <option value="null" class="blue">请选择您的年级</option>
+                                <option value="0" class="blue">幼儿园</option>
                                 <option value ="1" class="blue">一年级</option>
                                 <option value ="2" class="blue">三年级</option>
                                 <option value ="3" class="blue">四年级</option>
@@ -62,12 +66,14 @@
                                 <option value ="10" class="blue">高二</option>
                                 <option value ="11" class="blue">高三</option>
                             </select>
-                        <i class="iconfont icon-shouji"></i>
+                            <i class="iconfont icon-xiangxia1"></i>
                     </div>
                     <div class="infophonenum infophonenum1">
-                        <input type="text" placeholder="生日日期" class="info-bir" id="zane-calendar"> <i class="iconfont icon-shouji"></i>
+                        <input type="text" placeholder="生日日期" class="info-bir" id="zane-calendar">
+                        <i class="iconfont icon-xiangxia1"></i>
                     </div>
-                    <div class="infophonenum" id="info_city" >                      
+                    <div class="infophonenum" id="info_city" >    
+                        <i class="iconfont icon-xiangxia1"></i>                  
                     </div>
                     <!-- <div class="person-success">完善个人信息>></div> -->
                     <div class="register-success">
@@ -83,6 +89,7 @@
     <script src="./assets/jquery-3.3.1.js"></script>
     <script src="./js/parallax.js"></script>
     <script src="./assets/zane-calendar.min.js"></script> 
+    <script src="./assets/layer.js"></script> 
     <script src="./assets/city.js"></script>
     <script src="./js/config.js"></script>
     <script src="./js/infocompelete.js"></script>
