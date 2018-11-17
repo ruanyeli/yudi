@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,8 +9,6 @@
     <link rel="stylesheet" href="./css/curriculum.css">
     <link rel="stylesheet" type="text/css" href="./fonts/font/iconfont.css">
 </head>
-
-
 <body>
     <div class="curriculum-container" id="box1">
         <div class="curriculum-box-c">
@@ -63,11 +60,9 @@
                                     <i class="iconfont icon-xunhuan"></i>
                                     <span>push()</span>
                                 </div>
-
-
                             </div>
                         </div>
-                        <div id="editor"></div>
+                        <div id="editor">#让主角移动起来吧</div>
                     </div>
                 </div>
 
@@ -90,8 +85,8 @@
                             <p>分享</p>
                         </div>
                         <div class="curriculum-right-bottom-share-return">
-                            <img src="./images/curriculum/return.png" alt="返回">
-                            <p>返回</p>
+                            <img src="./images/curriculum/bg10.png" alt="重置">
+                            <p>重置</p>
                         </div>
                     </div>
                     <div class="curricu-right-go">
@@ -113,7 +108,7 @@
             <div class="img-share">
                 <img src="./images/curriculum/game-share.png" alt="分享">
                 <img src="./images/curriculum/excerise.png" alt="练习">
-                <img src="./images/curriculum/dianzan.png" alt="点赞">
+                <img src="./images/curriculum/dianzan.png" alt="点赞" onClick="NextLevel(1)">
                 <img src="./images/curriculum/game-return.png" alt="返回">
             </div>
         </div>
@@ -130,6 +125,13 @@
     <script src="./js/acetip.js"></script>
     <script src="./js/curriculum.js"></script>
     <script src="./assets/html2canvas.js"></script>
+    <script>
+        function next(){
+            iCurlevel++;
+            init();
+
+        }
+    </script>
 
 </body>
 

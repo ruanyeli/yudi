@@ -204,15 +204,22 @@ html{
                     display: flex;
                     align-content: center;
                     flex-direction: row;
+                    padding-left: 14%;
+                    padding-top: 50px;
+                    // padding-right: 140px;
                     .index-container4-bottom-left{
-                        padding-left: 134px;
-                        padding-top: 40px;
+                        // padding-left: 134px;
+                        // padding-top: 40px;
+                        img{
+                            width: 600px;
+                            height: 500px;
+                            margin-top: -70px
+                        }
 
                     }
                     .index-container4-bottom-right{
                         padding-left: 160px;
-                        padding-top: 50px;
-
+                        padding-top: 30px;
                     }
                 }
             }
@@ -622,11 +629,48 @@ html{
                 .index-container6-bottom{
                     height: 70%;
                     width: 30%;
-                    padding-left: 35%;
-                    padding-right: 35%;
+                    padding-left: 30%;
+                    padding-right: 30%;
                     padding-top: 100px;
                     display: flex;
                     flex-direction: row;
+                    position: relative;
+                    .index-container6-bottom-left{
+                        // width: 50%;
+                        position: absolute;
+                        z-index: 10;
+                        animation: Updown1 1s infinite alternate;
+                        @keyframes Updown1 {
+                            from {
+                                padding-left: 20px;
+                            }
+                            to {
+                                padding-left: 10px;
+                            }
+                        }
+                    }
+
+                    .index-container6-bottom-right{
+                        // width: 50%;
+                        position: absolute;
+                        left:55%;
+                        margin-top: 20px;
+                        // animation: Updown2 1s infinite alternate;
+                        img{
+                            left: 0;
+                            position: absolute;
+                            top: 0;
+                        }
+                        // @keyframes Updown2 {
+                        //     from {
+                        //         padding-top: 20px;
+                        //     }
+                        //     to {
+                        //         padding-top: 10px;
+                        //     }
+                        // }
+
+                    }
                 }
             }
 

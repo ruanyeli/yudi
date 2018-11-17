@@ -13,6 +13,7 @@ const config = {
     assgin: serverurl + '/assigns/', //题目
     qq: serverurl + '/qq/auth/', //qq登陆
     wechat:serverurl+'/weixin/auth/',//微信登陆
+    findpassword:serverurl+'/sms_codes/'
 
 
 }

@@ -28,19 +28,14 @@
                 <div class="index-banner-container-logo-img">
                     <div class="container-logo-img-first">
                             <img src="./images/index-new/logo-before.png" alt="">
-
                     </div>
-                    
                     <div class="container-logo-img-second">
                         <img src="./images/index-new/logo.png" alt="">
-                    </div>
-                    
+                    </div>                   
                 </div>
                 <div class="index-banner-container-logo-text">
                     <p>编程在线教育</p>
-                </div>
-               
-                
+                </div>     
             </div>
             <div class="index-banner-container-center">
                     <ul>
@@ -65,8 +60,8 @@
                     <div class="banner" id="b02">
                         <ul>
                             <li><img src="./images/index-new/banner.png" alt="" width="100%" height="100%" ></li>
-                            <li><img src="./images/index-new/banner.png" alt="" width="100%" height="100%" ></li>
-                            <li><img src="./images/index-new/banner.png" alt="" width="100%" height="100%" ></li>
+                            <li><img src="./images/index-new/banner2.jpeg" alt="" width="100%" height="100%" ></li>
+                            <li><img src="./images/index-new/banner2.jpeg" alt="" width="100%" height="100%" ></li>
                          </ul>
                     </div>
                 </div>
@@ -308,7 +303,8 @@
                     </div>
                     <div class="index-container4-bottom">
                         <div class="index-container4-bottom-left">
-                            <img src="./images/index-new/img_computer.png" alt="">
+                            <img src="./images/index-new/computer.gif" alt="">
+                            <!-- <img src="./images/index-new/img_computer.png" alt=""> -->
 
                         </div>
                         <div class="index-container4-bottom-right">
@@ -414,11 +410,11 @@
                                             机视觉和自然语
                                             言处理中的应用。</h1>
                                 </div>
-                               
                         </div>
                     </div>
 
                 </div>
+
                 <div class="index-container6">
                     <div class="index-container6-top">
                         <h1>时间宝贵，赶快跟着我开始学习吧</h1>
@@ -428,21 +424,25 @@
                         <div class="index-container6-bottom-left"> 
                                 <img src="./images/index-new/img_arrow.png" alt="">
                         </div>
+
                         <div class="index-container6-bottom-right"> 
-                                <img src="./images/index-new/logo_img.png" alt="">
+                                <!-- <img src="./images/index-new/logo_img.png" alt=""> -->
+                                <img src="./images/index-new/bottomlogo.png" alt="" style="z-index:999" onclick="buttonclick()" id="logoimg">
+                                <img src="./images/index-new/shadow.png" alt="" style="left: 15;
+                                top: 25;">
                         </div>
                     </div>
                 </div>
+                
+
                 <div class="index-footer">
                     <div class="index-footer1">
                         <h1>关于我们</h1>
-                    
                     </div>
                     <div class="index-footer2">
                         <h1>关注我们</h1>
                         <h1>加盟合作</h1>
                         <h1>与我们联系</h1>
-
                     </div>
                     <div class="index-footer3">
                         <h1>联系我们</h1>
@@ -555,6 +555,19 @@
 							Awidth:1024,
 							scale:0.6,
 							auto:true
-						})
+                        })
+        
+                    function buttonclick(){
+                        $("#logoimg").css("margin-top","10px");
+                        console.log(localStorage.username);
+                        if(localStorage.username){//已经登陆
+                            window.location.href="./recommendation.html";
+
+                        }else{
+                            window.location.href="./login.html";
+                        }
+                        
+
+                    }
     </script>
 </html>

@@ -153,13 +153,16 @@ html {
         html body .index-container .index-container4 .index-container4-bottom {
           display: flex;
           align-content: center;
-          flex-direction: row; }
-          html body .index-container .index-container4 .index-container4-bottom .index-container4-bottom-left {
-            padding-left: 134px;
-            padding-top: 40px; }
+          flex-direction: row;
+          padding-left: 14%;
+          padding-top: 50px; }
+          html body .index-container .index-container4 .index-container4-bottom .index-container4-bottom-left img {
+            width: 600px;
+            height: 500px;
+            margin-top: -70px; }
           html body .index-container .index-container4 .index-container4-bottom .index-container4-bottom-right {
             padding-left: 160px;
-            padding-top: 50px; }
+            padding-top: 30px; }
       html body .index-container .index-container5 {
         height: 700px;
         width: 100%;
@@ -473,11 +476,30 @@ html {
         html body .index-container .index-container6 .index-container6-bottom {
           height: 70%;
           width: 30%;
-          padding-left: 35%;
-          padding-right: 35%;
+          padding-left: 30%;
+          padding-right: 30%;
           padding-top: 100px;
           display: flex;
-          flex-direction: row; }
+          flex-direction: row;
+          position: relative; }
+          html body .index-container .index-container6 .index-container6-bottom .index-container6-bottom-left {
+            position: absolute;
+            z-index: 10;
+            animation: Updown1 1s infinite alternate; }
+
+@keyframes Updown1 {
+  from {
+    padding-left: 20px; }
+  to {
+    padding-left: 10px; } }
+          html body .index-container .index-container6 .index-container6-bottom .index-container6-bottom-right {
+            position: absolute;
+            left: 55%;
+            margin-top: 20px; }
+            html body .index-container .index-container6 .index-container6-bottom .index-container6-bottom-right img {
+              left: 0;
+              position: absolute;
+              top: 0; }
       html body .index-container .index-footer {
         width: 70%;
         height: 300px;

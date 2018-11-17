@@ -165,10 +165,12 @@ imgPreload(oImgs, function (images) {
 });
 //初始化游戏
 function init() {
+	// alert("hh");
 	//InitMap();
 	//DrawMap(levels[0]);
 	initLevel(); //初始化对应等级的游戏
 	// showMoveInfo();//初始化对应等级的游戏数据
+	
 }
 
 //绘制地图
@@ -235,6 +237,8 @@ function checkFinish() {
 //初始化游戏等级
 function initLevel() {
 	curMap = copyArray(levels[iCurlevel]); //当前移动过的游戏地图
+	console.log(iCurlevel);
+	console.log(levels[iCurlevel]);
 	// console.log(curMap);
 	curLevel = levels[iCurlevel]; //当前等级的初始地图
 	curMan = down; //初始化小人
@@ -242,8 +246,10 @@ function initLevel() {
 	DrawMap(curMap); //绘制出当前等级的地图
 }
 //下一关
+
 function NextLevel(i) {
 	//iCurlevel当前的地图关数
+	$("#dialog").css("display","none");
 	iCurlevel = iCurlevel + i;
 	if (iCurlevel < 0) {
 		iCurlevel = 0;
@@ -255,8 +261,11 @@ function NextLevel(i) {
 	}
 	initLevel(); //初始当前等级关卡
 	moveTimes = 0; //游戏关卡移动步数清零
-	showMoveInfo(); //初始化当前关卡数据
+	// showMoveInfo(); //初始化当前关卡数据
 }
+
+
+
 // 小人移动
 function push(dir) {
 	var p1, p2;
@@ -286,36 +295,14 @@ function push(dir) {
 	//若果小人能够移动的话，更新游戏数据，并重绘地图
 	if (Trygo1(p1, p2)) {
 		moveTimes++;
-		// showMoveInfo();
+		//  showMoveInfo();
 	}
-
-
 	//重绘地板
 	InitMap();
 	//重绘当前更新了数据的地图
 	DrawMap(curMap);
 	//若果移动完成了进入下一关
 	if (checkFinish()) {
-		// var finishTime = new Date();
-		// var initTimeMonth = initTime.getMonth();
-		// var initTimeDay = initTime.getDay();
-		// var initTimeHour = initTime.getHours();
-		// var initTimeminute = initTime.getMinutes();
-		// var initTimesecond = initTime.getSeconds();
-
-		// var finishTimeMonth = finishTime.getMonth();
-		// var finishTimeDay = finishTime.getDay();
-		// var finishTimeHour = finishTime.getHours();
-		// var finishTimeminute = finishTime.getMinutes();
-		// var finishTimesecond = finishTime.getSeconds();
-
-		// var month = finishTimeMonth - initTimeMonth;
-		// var Day = finishTimeDay - initTimeDay;
-		// var hour = finishTimeHour - initTimeHour;
-		// var minute = finishTimeminute - initTimeminute;
-		// var second = finishTimesecond - initTimesecond;
-
-
 		$("#minute").html(minute);
 		$("#second").html(second);
 
@@ -323,7 +310,7 @@ function push(dir) {
 
 		console.log($("#dialog").attr("class"));
 		$("#dialog").style.visibility = "visible";
-		NextLevel(iCurlevel)
+		// NextLevel(1);
 	}
 
 }
@@ -357,7 +344,8 @@ function go(dir) {
 	//若果小人能够移动的话，更新游戏数据，并重绘地图
 	if (Trygo(p1, p2)) {
 		moveTimes++;
-		// showMoveInfo();
+		//  showMoveInfo();
+
 	}
 	//重绘地板
 	InitMap();
@@ -365,39 +353,13 @@ function go(dir) {
 	DrawMap(curMap);
 	//若果移动完成了进入下一关
 	if (checkFinish()) {
-		// // alert("恭喜过关！！");
-		// var finishTime = new Date();
-		// // var initTimeDay = initTime.getDay();
-		// var initTimeHour = initTime.getHours();
-		// var initTimeminute = initTime.getMinutes();
-		// var initTimesecond = initTime.getSeconds();
-
-
-		// var finishTimeDay = finishTime.getDay();
-		// var finishTimeHour = finishTime.getHours();
-		// var finishTimeminute = finishTime.getMinutes();
-		// var finishTimesecond = finishTime.getSeconds();
-
-
-		// var Day = finishTimeDay - initTimeDay;
-		// var hour = finishTimeHour - initTimeHour;
-		// var minute = finishTimeminute - initTimeminute;
-		// var second = finishTimesecond - initTimesecond;
-		// // if(minute==0){
-		// // 	$("#second").html(second);
-		// // }else if(minute>0) {
-		// // 	$("#minute").html(minute);
-		// // 	$("#second").html(second);
-		// // }
-		// $("#minute").html(minute);
-		// $("#second").html(second);
 		// $("#errorTimes").html(errorTime);
 
 
 		$("#dialog").removeClass("dialog");
 		$("#dialog").addClass("visibility");
 
-		NextLevel()
+		// NextLevel(1);
 	}
 }
 
@@ -579,7 +541,7 @@ function showHelp() {
 	if (showhelp) {
 		msg.innerHTML = "根据提示，把箱子全部推到小球的位置即可过关。箱子只可向前推，不能往后拉，并且小人一次只能推动一个箱子。";
 	} else {
-		// showMoveInfo();
+		//  showMoveInfo();
 	}
 }
 //点击事件
@@ -635,6 +597,7 @@ function goRight() {
 
 //克隆二维数组
 function copyArray(arr) {
+	console.log("aRR"+arr);
 	var b = []; //每次移动更新地图数据都先清空再添加新的地图
 	for (var i = 0; i < arr.length; i++) {
 		b[i] = arr[i].concat(); //链接两个数组
