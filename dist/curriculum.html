@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="./css/curriculum.css">
     <link rel="stylesheet" type="text/css" href="./fonts/font/iconfont.css">
 </head>
+
 <body>
     <div class="curriculum-container" id="box1">
         <div class="curriculum-box-c">
@@ -31,9 +33,15 @@
             <div class="curriculum-right">
                 <div class="curriculum-right-top-cont">
                     <div class="curriculum-right-top">
-                        加油,如果还有不理解的，可以点击下方视频重新学习或点击请求帮助。
+                        <div class="curriculum-right-top-text">
+                            <textarea name="text" id="text" cols="30" rows="10"></textarea>
+                            <!-- 加油,如果还有不理解的，可以点击下方视频重新学习或点击请求帮助。 -->
+                        </div>
                         <div class="curriculum-right-top-help">
                             请求帮助
+                        </div>
+                        <div class="curriculum-right-top-help-left">
+                                <img src="./images/index-new/img_arrow.png" alt="" width="50px">
                         </div>
                     </div>
                     <div class="curriculum-right-center">
@@ -108,7 +116,7 @@
             <div class="img-share">
                 <img src="./images/curriculum/game-share.png" alt="分享">
                 <img src="./images/curriculum/excerise.png" alt="练习">
-                <img src="./images/curriculum/dianzan.png" alt="点赞" onClick="NextLevel(1)">
+                <img src="./images/curriculum/next.png" alt="下一关" onClick="NextLevel(1)">
                 <img src="./images/curriculum/game-return.png" alt="返回">
             </div>
         </div>
@@ -121,16 +129,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.6/ext-language_tools.js" type="text/javascript" charset="utf-8"></script>
     <script src="./assets/map6.js" type="text/javascript"></script>
     <script src="./js/aceconfig.js"></script>
+    <!-- <script src="./js/config.js"></script> -->
     <script src="./js/acetips.js"></script>
     <script src="./js/acetip.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/config.js"></script>
     <script src="./js/curriculum.js"></script>
     <script src="./assets/html2canvas.js"></script>
-    <script>
-        function next(){
-            iCurlevel++;
-            init();
+    <script src="./js/tips.js"></script>
+    <!-- <script src="./js/config.js"></script> -->
 
-        }
+    <script>
+        $(document).ready(function () {
+
+        });
+
     </script>
 
 </body>

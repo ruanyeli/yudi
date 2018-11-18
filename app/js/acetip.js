@@ -1,10 +1,10 @@
 const acetip=[
     //人物方法
-    {
-        id:1,
-        text:"IronMan",
-        caution:"正确的方法"
-    },
+    // {
+    //     id:1,
+    //     text:"IronMan",
+    //     caution:"正确的方法"
+    // },
     {
         id:2,
         text:"I",
@@ -77,11 +77,11 @@ const acetip=[
         caution:"请在后面输入)" 
     },
     //goRight
-    {
-        id:16,
-        text:"IronMan.goRight()",
-        caution:"输入正确" 
-    },
+    // {
+    //     id:16,
+    //     text:"IronMan.goRight()",
+    //     caution:"输入正确" 
+    // },
     {
         id:17,
         text:"IronMan.g",
@@ -123,11 +123,11 @@ const acetip=[
         caution:"请在后面输入)" 
     },
     //goup
-    {
-        id:25,
-        text:"IronMan.goUp()",
-        caution:"输入正确" 
-    },
+    // {
+    //     id:25,
+    //     text:"IronMan.goUp()",
+    //     caution:"输入正确" 
+    // },
 
     {
         id:26,

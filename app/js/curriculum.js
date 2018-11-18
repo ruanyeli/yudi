@@ -16,6 +16,7 @@ var editor;
 var cursorLocation;
 var initTime;
 var errorTime = 0;
+var errcode;
 
 //预加载所有图片
 var oImgs = {
@@ -249,7 +250,9 @@ function initLevel() {
 
 function NextLevel(i) {
 	//iCurlevel当前的地图关数
-	$("#dialog").css("display","none");
+	// $("#dialog").css("display","none");
+	$("#dialog").removeClass("visibility");
+	$("#dialog").addClass("dialog");
 	iCurlevel = iCurlevel + i;
 	if (iCurlevel < 0) {
 		iCurlevel = 0;
@@ -261,8 +264,40 @@ function NextLevel(i) {
 	}
 	initLevel(); //初始当前等级关卡
 	moveTimes = 0; //游戏关卡移动步数清零
-	// showMoveInfo(); //初始化当前关卡数据
+	var iCurlevelNew = iCurlevel+1;
+	// $(".curriculum-right-top-text").html("");
+	$("#text").val("");
+
+
+	var token=JSON.parse(localStorage.getItem('token'));
+	// console.log(token)
+	$.ajax({
+		url: config.gamesread+iCurlevelNew+"/",
+		headers: { "Authorization": 'Token ' + token },
+		dataType: 'JSON',
+		type: 'GET',
+		success: function (data) {
+			console.log(data);
+			var default_code = data.default_code.replace(/\r\n/g,"\r");
+			editor.setValue(default_code);
+		},
+		error: function (data) {
+			console.log(data)
+		}
+	});
+
 }
+
+// $(".curriculum-right-top-help").click(function(){
+// 	var iCurlevelNew = iCurlevel+1;
+// 	getData1({url:config.gamesread+iCurlevelNew+"/",type:"GET",data:{id:iCurlevel}},function(data){
+// 		var whitetips = data.hint;
+// 		// whitetips = whitetips.replace(/\r/g,"<br/>&nbsp&nbsp&nbsp&nbsp&nbsp");
+// 		// $(".curriculum-right-top-text").html(whitetips);
+// 		$("#text").val(whitetips);
+		
+// })
+// });
 
 
 
@@ -303,12 +338,10 @@ function push(dir) {
 	DrawMap(curMap);
 	//若果移动完成了进入下一关
 	if (checkFinish()) {
+		// alert(325);
 		$("#minute").html(minute);
 		$("#second").html(second);
-
 		$("#errorTimes").html(errorTime);
-
-		console.log($("#dialog").attr("class"));
 		$("#dialog").style.visibility = "visible";
 		// NextLevel(1);
 	}
@@ -354,11 +387,9 @@ function go(dir) {
 	//若果移动完成了进入下一关
 	if (checkFinish()) {
 		// $("#errorTimes").html(errorTime);
-
-
+		// alert(378);
 		$("#dialog").removeClass("dialog");
 		$("#dialog").addClass("visibility");
-
 		// NextLevel(1);
 	}
 }
@@ -525,7 +556,7 @@ function trycatch() {
 }
 
 function popContent() {
-	alert(editor.getValue());
+	// alert(editor.getValue());
 }
 
 
@@ -609,32 +640,70 @@ function copyArray(arr) {
 
 //点击运行
 $(".curricu-right-go").on("click", function () {
-	var acecode = editor.getValue(); // or session.getValue获取编辑器内的代码
-	var acerow = editor.session.getLength(); //获取总行数
-	//去掉最后一个括号
-	console.log(acecode)
-	var acecode3=acecode.substr(acecode.indexOf("I"))//清除默认的提示字符
-	console.log(acecode3)
-	if (acecode3 == 'IronMan.goLeft()') {
-		goLeft()
-	} else if (acecode3 == 'IronMan.goRight()') {
-		goRight()
-	} else if (acecode3 == 'IronMan.goDown()') {	
-		goDown()
-	} else if (acecode3 == 'IronMan.goUp()') {
-		goUp()
+	// var acecode = editor.getValue(); // or session.getValue获取编辑器内的代码
+	// var acerow = editor.session.getLength(); //获取总行数
+	// //去掉最后一个括号
+	// console.log(acecode)
+	// var acecode3=acecode.substr(acecode.indexOf("I"))//清除默认的提示字符
+	// console.log(acecode3)
+	// if (acecode3 == 'IronMan.goLeft()') {
+	// 	goLeft()
+	// } else if (acecode3 == 'IronMan.goRight()') {
+	// 	goRight()
+	// } else if (acecode3 == 'IronMan.goDown()') {	
+	// 	goDown()
+	// } else if (acecode3 == 'IronMan.goUp()') {
+	// 	goUp()
+	// }
+
+	// var acecode1 = acecode.split(/I/g)
+	// var acecode2 = getace(acecode1)
+	// acecode2.shift()
+	// console.log(acecode2)
+
+	// //对比
+	// // console.log(acetip)
+	// console.log(constace(acecode2, acetip))
+	var acecode = editor.getValue();
+	console.log(acecode);
+	// acecode = acecode.replace(" ","").replace(/[\r\n]/g,"");//去掉回车换行;
+	console.log(acecode);
+	var codestr = acecode.split("\r");
+	// var codestr = codestr1.split("\r\n");
+	console.log(codestr);
+	
+	a:for(var i=0;i<codestr.length;i++){
+		b:for(var j=0;j<acetip.length;j++){
+			if(codestr[i]==acetip[j].text){//遇到错误了
+				// alert("cw");
+				var row = i+1;
+				errcode = "第"+row+"行："+acetip[j].caution;
+				//  error.innerHTML = "第"+row+"行："+acetip[j].caution;
+				error.innerHTML = "哎哟，小朋友，代码出错了哦"
+				errorTime++;
+				break a;
+			}
+		}
+		if(codestr[i]=="IronMan.goRight()"||codestr[i]=="IronMan.goright()"){
+			goRight()
+		}
+		if(codestr[i]=="IronMan.goLeft()"||codestr[i]=="IronMan.goleft()"){
+			goLeft()
+		}
+		if(codestr[i]=="IronMan.goDown()"||codestr[i]=="IronMan.godown()"){
+			goDown();
+			// window.setTimeout(goDown,5000);
+		}
+		if(codestr[i]=="IronMan.goUp()"||codestr[i]=="IronMan.goup()"){
+			goUp();
+			// window.setTimeout(goUp,5000);
+		}
+		if(i==codestr.length-1){//当执行到代码的最后一步时，做一个校验，看小人有没有走到终点
+			if(!checkFinish()){//如果还没有走完
+				// error.innerHTML = "小朋友，还没走完哦";
+			}
+		}
 	}
-
-	var acecode1 = acecode.split(/I/g)
-	var acecode2 = getace(acecode1)
-	acecode2.shift()
-	console.log(acecode2)
-
-	//对比
-	// console.log(acetip)
-	console.log(constace(acecode2, acetip))
-
-
 
 })
 
@@ -659,3 +728,30 @@ function constace(arr, params) {
 	return result
 }
 
+
+
+$(".curriculum-right-top-help").on("click", function () {
+	var token=JSON.parse(localStorage.getItem('token'));
+	// console.log(token)
+	$.ajax({
+		url: config.gamesread+1+"/",
+		// data: {
+		//     username: infoname,
+		// },
+		headers: { "Authorization": 'Token ' + token },
+		dataType: 'JSON',
+		type: 'GET',
+		success: function (data) {
+			console.log(data)
+			$("#text").val(data.hint)
+		},
+		error: function (data) {
+			console.log(data)
+		}
+	});
+})
+
+$(".curriculum-right-top-help-left").on("click", function () {
+	$("#text").val(errcode);
+	
+})

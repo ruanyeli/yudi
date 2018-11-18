@@ -85,6 +85,11 @@ html {
             line-height: 38px;
             color: #fff;
             cursor: pointer; }
+          html body .curriculum-container .curriculum-right .curriculum-right-top .curriculum-right-top-help-left {
+            position: absolute;
+            bottom: 10px;
+            right: 140px;
+            cursor: pointer; }
         html body .curriculum-container .curriculum-right .curriculum-right-center {
           height: 70%;
           width: 100%;
@@ -186,6 +191,13 @@ html {
 .curriculum-right-top-cont {
   height: 75%;
   position: relative; }
+  .curriculum-right-top-cont .curriculum-right-top .curriculum-right-top-text textarea {
+    width: 100%;
+    border: 0;
+    left: 0;
+    top: 0;
+    position: absolute;
+    height: 100%; }
 
 .curriculum-box-c {
   width: 100%;
