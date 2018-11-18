@@ -8,9 +8,33 @@ body {
   body .body-img {
     position: absolute;
     right: 3%;
-    top: 4%;
+    top: 4.3%;
     z-index: 10;
     cursor: pointer; }
+  body .body-dig {
+    width: 120px;
+    height: 140px;
+    background-color: rgba(244, 244, 244, 0.2);
+    position: absolute;
+    top: 10%;
+    right: 3.4%;
+    z-index: 100;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: none; }
+    body .body-dig ul {
+      height: 100%;
+      width: 100%;
+      padding: 10px 0;
+      box-sizing: border-box; }
+      body .body-dig ul li {
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        color: #fff;
+        cursor: pointer; }
+      body .body-dig ul .active {
+        color: blue; }
 
 .recommendation-container {
   width: 100%;
