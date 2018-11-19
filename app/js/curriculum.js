@@ -15,8 +15,18 @@ var pushNum = 0;
 var editor;
 var cursorLocation;
 var initTime;
+var costTimeMin;
+var costTimeSecond;
 var errorTime = 0;
 var errcode;
+var rule1;
+var rule2;
+var rule3;
+var limitTime=0;
+var defaultCodeLength;
+var standard_codeLength=0;
+var totalrule;
+var timer = null;
 
 //预加载所有图片
 var oImgs = {
@@ -220,18 +230,18 @@ function DrawMap(level) {
 		}
 	}
 }
-//判断是否推成功
-function checkFinish() {
-	for (var i = 0; i < curMap.length; i++) {
-		for (var j = 0; j < curMap[i].length; j++) {
-			//当前移动过的地图和初始地图进行比较，若果初始地图上的陷进参数在移动之后不是箱子的话就指代没推成功
-			if (curLevel[i][j] == 2 && curMap[i][j] != 3 || curLevel[i][j] == 5 && curMap[i][j] != 3) {
-				return false;
-			}
-		}
-	}
-	return true;
-}
+// //判断是否推成功
+// function checkFinish() {
+// 	for (var i = 0; i < curMap.length; i++) {
+// 		for (var j = 0; j < curMap[i].length; j++) {
+// 			//当前移动过的地图和初始地图进行比较，若果初始地图上的陷进参数在移动之后不是箱子的话就指代没推成功
+// 			if (curLevel[i][j] == 2 && curMap[i][j] != 3 || curLevel[i][j] == 5 && curMap[i][j] != 3) {
+// 				return false;
+// 			}
+// 		}
+// 	}
+// 	return true;
+// }
 
 
 
@@ -247,10 +257,57 @@ function initLevel() {
 	DrawMap(curMap); //绘制出当前等级的地图
 }
 //下一关
-
 function NextLevel(i) {
 	//iCurlevel当前的地图关数
 	// $("#dialog").css("display","none");
+	// clearInterval(timer);
+	$("#dialog").removeClass("visibility");
+	$("#dialog").addClass("dialog");
+	$(".curriculum-right-top-help-left").css("display","none");
+	iCurlevel = iCurlevel + i;
+	if (iCurlevel < 0) {
+		iCurlevel = 0;
+		return;
+	}
+	var len = levels.length;
+	if (iCurlevel > len - 1) {
+		iCurlevel = len - 1;
+	}
+	initLevel(); //初始当前等级关卡
+	clearInterval(timer)
+	moveTimes = 0; //游戏关卡移动步数清零
+	var iCurlevelNew = iCurlevel+1;
+	// $(".curriculum-right-top-text").html("");
+	$("#text").val("");
+	var token=JSON.parse(localStorage.getItem('token'));
+	// console.log(token)
+	$.ajax({
+		url: config.gamesread+iCurlevelNew+"/",
+		headers: {"Authorization": 'Token ' + token },
+		dataType: 'JSON',
+		type: 'GET',
+		success: function (data) {
+			console.log(data);
+			var default_code = data.default_code.replace(/\r\n/g,"\r");
+			editor.setValue(default_code);
+			defaultCodeLength = default_code.split('\r').length;
+			limitTime = data.best_duration;
+			var standard_code = data.standard_code.split('\r\n');
+			standard_codeLength = standard_code.length;
+			console.log("standard_codeLength="+standard_codeLength);
+
+		},
+		error: function (data) {
+			console.log(data)
+		}
+	});
+}
+
+
+function NextLevelold(i) {
+	//iCurlevel当前的地图关数
+	// $("#dialog").css("display","none");
+	$(".curriculum-right-top-help-left").css("display","none");
 	$("#dialog").removeClass("visibility");
 	$("#dialog").addClass("dialog");
 	iCurlevel = iCurlevel + i;
@@ -263,41 +320,8 @@ function NextLevel(i) {
 		iCurlevel = len - 1;
 	}
 	initLevel(); //初始当前等级关卡
-	moveTimes = 0; //游戏关卡移动步数清零
-	var iCurlevelNew = iCurlevel+1;
-	// $(".curriculum-right-top-text").html("");
-	$("#text").val("");
-
-
-	var token=JSON.parse(localStorage.getItem('token'));
-	// console.log(token)
-	$.ajax({
-		url: config.gamesread+iCurlevelNew+"/",
-		headers: { "Authorization": 'Token ' + token },
-		dataType: 'JSON',
-		type: 'GET',
-		success: function (data) {
-			console.log(data);
-			var default_code = data.default_code.replace(/\r\n/g,"\r");
-			editor.setValue(default_code);
-		},
-		error: function (data) {
-			console.log(data)
-		}
-	});
-
 }
 
-// $(".curriculum-right-top-help").click(function(){
-// 	var iCurlevelNew = iCurlevel+1;
-// 	getData1({url:config.gamesread+iCurlevelNew+"/",type:"GET",data:{id:iCurlevel}},function(data){
-// 		var whitetips = data.hint;
-// 		// whitetips = whitetips.replace(/\r/g,"<br/>&nbsp&nbsp&nbsp&nbsp&nbsp");
-// 		// $(".curriculum-right-top-text").html(whitetips);
-// 		$("#text").val(whitetips);
-		
-// })
-// });
 
 
 
@@ -338,14 +362,57 @@ function push(dir) {
 	DrawMap(curMap);
 	//若果移动完成了进入下一关
 	if (checkFinish()) {
-		// alert(325);
-		$("#minute").html(minute);
-		$("#second").html(second);
-		$("#errorTimes").html(errorTime);
-		$("#dialog").style.visibility = "visible";
-		// NextLevel(1);
-	}
+		// clearInterval(timer);
+		// var endTime = new Date();
+		// costTimeMin = endTime.getMinutes() - initTime.getMinutes();
+		// costTimeSecond = endTime.getSeconds() - initTime.getSeconds();
+		// console.log(costTimeMin);
+		// console.log(costTimeSecond);
+		// // $("#minute").html(costTimeMin);
+		// $("#second").html(costTimeMin*60+costTimeSecond);
+		// $("#errorTimes").html(errorTime);
+		// // if(costTimeMin*60+costTimeSecond>60){
+		// // 	$("#minute").html(costTimeMin);
+		// // }
+		// if(costTimeMin*60+costTimeSecond<limitTime){
+		// 	rule1 =3;
+		// }else if(limitTime<costTimeMin*60+costTimeSecond<2*limitTime){
+		// 	rule1 = 2
+		// }else {
+		// 	rule1 = 1;
+		// }
+		// if(errorTime/standard_codeLength<0.5){
+		// 	rule2 = 3;
+		// }else if(0.5<errorTime/standard_codeLength<1){
+		// 	rule2 = 2;
 
+		// }else {rule2 = 1;}
+
+		// if((editor.session.getLength()-defaultCodeLength)/standard_codeLength==0){
+		// 	rule3 = 3
+		// }else if((editor.session.getLength()-defaultCodeLength)/standard_codeLength<1){
+		// 	rule3 = 2;
+		// }else rule3 =1;
+
+		// totalrule = (rule1+rule2+rule3)/3;
+		// console.log("totalrule"+totalrule);
+		// if(6<totalrule<9){
+		// 	$(".dialog-contnet").find("p").html("");
+		// 	$(".dialog-contnet").find("p").html("非常棒：高速度高效率高质量的代码表现，你的前途是星辰大海");
+		// }
+		// if(3<totalrule<6){
+		// 	$(".dialog-contnet").find("p").html("");
+		// 	$(".dialog-contnet").find("p").html("干得漂亮：学习能力，思维能力，理解能力满分，加油！");
+		// }
+		// if(0<totalrule<3){
+		// 	$(".dialog-contnet").find("p").html("");
+		// 	$(".dialog-contnet").find("p").html("恭喜你通关成功，不过你可以试试用更少的时间，更精简的代码通关");
+		// }
+		// $("#dialog").removeClass("dialog");
+		// $("#dialog").addClass("visibility");
+		
+		
+	}
 }
 
 
@@ -386,17 +453,64 @@ function go(dir) {
 	DrawMap(curMap);
 	//若果移动完成了进入下一关
 	if (checkFinish()) {
-		// $("#errorTimes").html(errorTime);
-		// alert(378);
+		clearInterval(timer);
+		var endTime = new Date();
+		
+		costTimeMin = endTime.getMinutes() - initTime.getMinutes();
+		costTimeSecond = endTime.getSeconds() - initTime.getSeconds();
+		
+		// $("#minute").html(costTimeMin);
+		$("#second").html(costTimeMin*60+costTimeSecond);
+		$("#errorTimes").html(errorTime);
+		// if(costTimeMin*60+costTimeSecond>60){
+		// 	$("#minute").html(costTimeMin);
+		// }
+		if(costTimeMin*60+costTimeSecond<limitTime){
+			rule1 =3;
+		}else if(limitTime<costTimeMin*60+costTimeSecond<2*limitTime){
+			rule1 = 2
+		}else {
+			rule1 = 1;
+		}
+		if(errorTime/standard_codeLength<0.5){
+			rule2 = 3;
+		}else if(0.5<errorTime/standard_codeLength<1){
+			rule2 = 2;
+
+		}else {rule2 = 1;}
+
+		if((editor.session.getLength()-defaultCodeLength)/standard_codeLength==0){
+			rule3 = 3
+		}else if((editor.session.getLength()-defaultCodeLength)/standard_codeLength<1){
+			rule3 = 2;
+		}else rule3 =1;
+
+		totalrule = (rule1+rule2+rule3)/3;
+		console.log("totalrule"+totalrule);
+		if(totalrule>=6&&totalrule<9){
+			// alert("1");
+			$(".dialog-contnet").find("p").html("");
+			$(".dialog-contnet").find("p").html("非常棒：高速度高效率高质量的代码表现，你的前途是星辰大海");
+		}
+		if(totalrule>3&&totalrule<6){
+			
+			$(".dialog-contnet").find("p").html("");
+			$(".dialog-contnet").find("p").html("干得漂亮：学习能力，思维能力，理解能力满分，加油！");
+		}
+		if(totalrule>0&&totalrule<=3){
+			$(".dialog-contnet").find("p").html("");
+			$(".dialog-contnet").find("p").html("恭喜你通关成功，不过你可以试试用更少的时间，更精简的代码通关");
+		}
 		$("#dialog").removeClass("dialog");
 		$("#dialog").addClass("visibility");
-		// NextLevel(1);
+		
 	}
 }
 
 
 //判断是否推成功
 function checkFinish() {
+	
 	for (var i = 0; i < curMap.length; i++) {
 		for (var j = 0; j < curMap[i].length; j++) {
 			//当前移动过的地图和初始地图进行比较，若果初始地图上的陷进参数在移动之后不是箱子或者不是人物的话就指代没推成功
@@ -578,16 +692,9 @@ function showHelp() {
 //点击事件
 function goDown() {
 	// console.log(1)
+	// window.setTimeout(go("down"),6000);
+	console.log("我在向下走");
 	go("down");
-	// tips.innerHTML+=arguments.callee.name+"()"+"<br>";
-	trycatch()
-}
-
-function goDownfour() {
-	// console.log(1)
-	for (var i = 0; i < 4; i++) {
-		go("down");
-	}
 	// tips.innerHTML+=arguments.callee.name+"()"+"<br>";
 	trycatch()
 }
@@ -595,35 +702,18 @@ function goDownfour() {
 function goUp() {
 	go("up");
 	trycatch();
-	// tips.innerHTML+=arguments.callee.name+"()"+"<br>"
 }
 
 function goLeft() {
 	go("left");
-	trycatch()
-	// tips.innerHTML+=arguments.callee.name+"()"+"<br>"
+	trycatch();
 }
 
-function goRighttwo() {
-	for (var i = 0; i < 2; i++) {
-		go("right");
-	}
-	trycatch()
-	// tips.innerHTML+=arguments.callee.name+"()"+"<br>"
-}
 
-function goRightthree() {
-	for (var i = 0; i < 3; i++) {
-		go("right");
-	}
-	trycatch()
-	tips.innerHTML += arguments.callee.name + "()" + "<br>"
-}
 
 function goRight() {
 	go("right");
 	trycatch()
-	// tips.innerHTML+=arguments.callee.name+"()"+"<br>"
 }
 
 //克隆二维数组
@@ -640,30 +730,6 @@ function copyArray(arr) {
 
 //点击运行
 $(".curricu-right-go").on("click", function () {
-	// var acecode = editor.getValue(); // or session.getValue获取编辑器内的代码
-	// var acerow = editor.session.getLength(); //获取总行数
-	// //去掉最后一个括号
-	// console.log(acecode)
-	// var acecode3=acecode.substr(acecode.indexOf("I"))//清除默认的提示字符
-	// console.log(acecode3)
-	// if (acecode3 == 'IronMan.goLeft()') {
-	// 	goLeft()
-	// } else if (acecode3 == 'IronMan.goRight()') {
-	// 	goRight()
-	// } else if (acecode3 == 'IronMan.goDown()') {	
-	// 	goDown()
-	// } else if (acecode3 == 'IronMan.goUp()') {
-	// 	goUp()
-	// }
-
-	// var acecode1 = acecode.split(/I/g)
-	// var acecode2 = getace(acecode1)
-	// acecode2.shift()
-	// console.log(acecode2)
-
-	// //对比
-	// // console.log(acetip)
-	// console.log(constace(acecode2, acetip))
 	var acecode = editor.getValue();
 	console.log(acecode);
 	// acecode = acecode.replace(" ","").replace(/[\r\n]/g,"");//去掉回车换行;
@@ -673,40 +739,73 @@ $(".curricu-right-go").on("click", function () {
 	console.log(codestr);
 	
 	a:for(var i=0;i<codestr.length;i++){
+		console.log(i)
+		if(codestr[i]=="IronMan.goRight()"||codestr[i]=="IronMan.goright()"){
+			timer = setTimeout(function(){goRight()},i*1000);
+		}else if(codestr[i]=="IronMan.goLeft()"||codestr[i]=="IronMan.goleft()"){
+			timer = setTimeout(function(){goLeft()},i*1000);
+		}else if(codestr[i]=="IronMan.goDown()"||codestr[i]=="IronMan.godown()"){
+			timer = setTimeout(function(){goDown()},i*1000);
+		}else if(codestr[i]=="IronMan.goUp()"||codestr[i]=="IronMan.goup()"){
+			timer = setTimeout(function(){goUp()},i*1000);
+		}
+
 		b:for(var j=0;j<acetip.length;j++){
 			if(codestr[i]==acetip[j].text){//遇到错误了
 				// alert("cw");
 				var row = i+1;
 				errcode = "第"+row+"行："+acetip[j].caution;
 				//  error.innerHTML = "第"+row+"行："+acetip[j].caution;
-				error.innerHTML = "哎哟，小朋友，代码出错了哦"
+				error.innerHTML = "哎哟，小朋友，代码出错了,你可以点击“请求帮助”查看解决办法哦";
 				errorTime++;
-				break a;
-			}
+				i=codestr.length;
+				 NextLevelold(0);
+				$(".curriculum-right-top-help-left").css("display","block");
+				break;
+			};
 		}
-		if(codestr[i]=="IronMan.goRight()"||codestr[i]=="IronMan.goright()"){
-			goRight()
-		}
-		if(codestr[i]=="IronMan.goLeft()"||codestr[i]=="IronMan.goleft()"){
-			goLeft()
-		}
-		if(codestr[i]=="IronMan.goDown()"||codestr[i]=="IronMan.godown()"){
-			goDown();
-			// window.setTimeout(goDown,5000);
-		}
-		if(codestr[i]=="IronMan.goUp()"||codestr[i]=="IronMan.goup()"){
-			goUp();
-			// window.setTimeout(goUp,5000);
-		}
-		if(i==codestr.length-1){//当执行到代码的最后一步时，做一个校验，看小人有没有走到终点
+		if(i==codestr.length-1){
+		timer = setTimeout(function(){
 			if(!checkFinish()){//如果还没有走完
-				// error.innerHTML = "小朋友，还没走完哦";
+				NextLevelold(0);
+				// clearInterval(timer)
+				var random =Math.random()*3
+				 if(parseInt(random)<=1){
+					error.innerHTML = "哎呀，小朋友还没走完呢，请重新运行代码哦";
+				 }
+				 if(parseInt(random)>1&&parseInt(random)<=2){
+					error.innerHTML = "小朋友,你离成功只有一步之遥,请重新运行代码哦";
+				 }
+				 if(parseInt(random)>2&&parseInt(random)<=3){
+					error.innerHTML = "加油，小朋友，成功就在眼前，请重新运行代码哦";
+				 }	
+			}else{
+				clearInterval(timer)
 			}
-		}
+
+		},i*1000);
 	}
 
-})
 
+			// if(i==codestr.length-1){//当执行到代码的最后一步时，做一个校验，看小人有没有走到终点
+			// 	if(!checkFinish()){//如果还没有走完
+			// 		// clearInterval(timer)
+			// 		var random =Math.random()*3
+			// 		 if(parseInt(random)<=1){
+			// 			error.innerHTML = "哎呀，小朋友还没走完呢";
+			// 		 }
+			// 		 if(parseInt(random)>1&&parseInt(random)<=2){
+			// 			error.innerHTML = "小朋友,你离成功只有一步之遥哦";
+			// 		 }
+			// 		 if(parseInt(random)>2&&parseInt(random)<=3){
+			// 			error.innerHTML = "加油，小朋友，成功就在眼前啦";
+			// 		 }	
+			// 	}else{
+			// 		clearInterval(timer)
+			// 	}
+			// }
+	}
+});
 
 function getace(params) {
 	var arr2 = []
@@ -735,9 +834,6 @@ $(".curriculum-right-top-help").on("click", function () {
 	// console.log(token)
 	$.ajax({
 		url: config.gamesread+1+"/",
-		// data: {
-		//     username: infoname,
-		// },
 		headers: { "Authorization": 'Token ' + token },
 		dataType: 'JSON',
 		type: 'GET',
@@ -754,4 +850,34 @@ $(".curriculum-right-top-help").on("click", function () {
 $(".curriculum-right-top-help-left").on("click", function () {
 	$("#text").val(errcode);
 	
-})
+});
+
+$(document).ready(function () {
+	initTime = new Date();
+	var iCurlevelNew = iCurlevel+1;
+	var token=JSON.parse(localStorage.getItem('token'));
+	// console.log(token)
+	$.ajax({
+		url: config.gamesread+iCurlevelNew+"/",
+		headers: {"Authorization": 'Token ' + token },
+		dataType: 'JSON',
+		type: 'GET',
+		success: function (data) {
+			console.log(data);
+			var default_code = data.default_code.replace(/\r\n/g,"\r");
+			editor.setValue(default_code);
+			limitTime = data.best_duration;
+			var standard_code = data.standard_code.split('\r\n');
+			standard_codeLength = standard_code.length;
+			console.log("standard_codeLength="+standard_codeLength);
+		},
+		error: function (data) {
+			console.log(data)
+		}
+	});
+	
+
+
+
+
+});

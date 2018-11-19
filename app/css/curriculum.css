@@ -33,7 +33,7 @@ html {
               height: 100%; }
           html body .curriculum-container .curriculum-left .curriculum-box .curriculum-left-center {
             border-radius: 12px;
-            background-color: #fff;
+            background-color: #2c79c0;
             height: 25%;
             margin-top: 20px;
             font-size: 15px;
@@ -41,19 +41,21 @@ html {
             padding: 10px;
             box-sizing: border-box;
             overflow: hidden;
-            border: solid 5px #2a6f90; }
+            border: solid 5px #0fc2f5;
+            color: #fff;
+            font-size: 15px; }
         html body .curriculum-container .curriculum-left .curriculum-left-bottom {
           height: 20%;
           border-radius: 12px;
           font-size: 12px;
-          background-color: #fff;
-          color: #50bbed;
+          background-color: #2c79c0;
+          color: #2feeff;
           font-weight: 700;
           font-size: 18px;
           box-sizing: border-box;
           padding: 5%;
           margin-top: 10px;
-          border: solid 5px #2a6f90;
+          border: solid 5px #0fc2f5;
           box-sizing: border-box; }
       html body .curriculum-container .curriculum-right {
         float: left;
@@ -62,7 +64,6 @@ html {
         margin-left: 1%;
         box-sizing: border-box; }
         html body .curriculum-container .curriculum-right .curriculum-right-top {
-          background-color: #fff;
           border-radius: 12px;
           height: 28%;
           position: relative;
@@ -71,7 +72,7 @@ html {
           font-weight: 500;
           padding-top: 30px;
           box-sizing: border-box;
-          border: solid 5px #2a6f90; }
+          border: solid 5px #0fc2f5; }
           html body .curriculum-container .curriculum-right .curriculum-right-top .curriculum-right-top-help {
             position: absolute;
             bottom: 10px;
@@ -89,7 +90,8 @@ html {
             position: absolute;
             bottom: 10px;
             right: 140px;
-            cursor: pointer; }
+            cursor: pointer;
+            display: none; }
         html body .curriculum-container .curriculum-right .curriculum-right-center {
           height: 70%;
           width: 100%;
@@ -101,17 +103,17 @@ html {
             height: 100%;
             float: left;
             margin-right: 1%;
-            background-color: #fff;
+            background-color: #2c79c0;
             border-radius: 12px;
             box-sizing: border-box;
-            border: solid 5px #2a6f90; }
+            border: solid 5px #0fc2f5; }
             html body .curriculum-container .curriculum-right .curriculum-right-center .curriculum-right-center-left .curriculum-right-center-left-button {
               display: flex;
               flex-direction: column;
               margin: 10px 17px 0 13px; }
               html body .curriculum-container .curriculum-right .curriculum-right-center .curriculum-right-center-left .curriculum-right-center-left-button h3 {
                 text-align: center;
-                color: #fff;
+                color: #2feeff;
                 letter-spacing: 5px;
                 font-weight: 700; }
               html body .curriculum-container .curriculum-right .curriculum-right-center .curriculum-right-center-left .curriculum-right-center-left-button .curriculum-right-center-left-button-left,
@@ -162,8 +164,9 @@ html {
             width: 50%;
             display: flex;
             align-items: center;
-            padding-left: 3%;
-            box-sizing: border-box; }
+            padding-left: 5.5%;
+            box-sizing: border-box;
+            padding-bottom: 2.5%; }
             html body .curriculum-container .curriculum-right .curriculum-right-bottom .curriculum-right-bottom-share .curriculum-right-bottom-share-save,
             html body .curriculum-container .curriculum-right .curriculum-right-bottom .curriculum-right-bottom-share .curriculum-right-bottom-share-share,
             html body .curriculum-container .curriculum-right .curriculum-right-bottom .curriculum-right-bottom-share .curriculum-right-bottom-share-return {
@@ -187,17 +190,30 @@ html {
             align-items: center;
             cursor: pointer;
             z-index: 10; }
+            html body .curriculum-container .curriculum-right .curriculum-right-bottom .curricu-right-go img {
+              width: 170px;
+              height: 130px;
+              margin-top: 13px; }
 
 .curriculum-right-top-cont {
   height: 75%;
   position: relative; }
-  .curriculum-right-top-cont .curriculum-right-top .curriculum-right-top-text textarea {
-    width: 100%;
-    border: 0;
-    left: 0;
-    top: 0;
-    position: absolute;
-    height: 100%; }
+  .curriculum-right-top-cont .curriculum-right-top .curriculum-right-top-text {
+    border-radius: 10px; }
+    .curriculum-right-top-cont .curriculum-right-top .curriculum-right-top-text textarea {
+      width: 100%;
+      border: 0;
+      left: 0;
+      top: 0;
+      position: absolute;
+      height: 100%;
+      background: #2c79c0;
+      color: #fff;
+      font-size: 20px;
+      border-radius: 10px;
+      padding-left: 10px;
+      box-sizing: border-box;
+      padding-top: 10px; }
 
 .curriculum-box-c {
   width: 100%;
@@ -246,7 +262,7 @@ html {
       width: 289px;
       height: 60px;
       font-family: MicrosoftYaHei;
-      font-size: 20px;
+      font-size: 15px;
       font-weight: normal;
       font-stretch: normal;
       letter-spacing: 2.2px;

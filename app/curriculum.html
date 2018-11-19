@@ -89,11 +89,11 @@
                             <p>保存</p>
                         </div>
                         <div class="curriculum-right-bottom-share-share">
-                            <img src="./images/curriculum/share.png" alt="分享">
-                            <p>分享</p>
+                            <img src="./images/curriculum/return.png" alt="分享" onClick="window.location.href='./recommendation.html' "/>
+                            <p>返回</p>
                         </div>
                         <div class="curriculum-right-bottom-share-return">
-                            <img src="./images/curriculum/bg10.png" alt="重置">
+                            <img src="./images/curriculum/bg10.png" alt="重置" onClick="NextLevel(0)">
                             <p>重置</p>
                         </div>
                     </div>
@@ -111,13 +111,14 @@
     <div class="dialog" id="dialog">
         <div class="dialog-contnet">
             <p>恭喜你，该知识点已过关了课后还需多运用巩固哦!</p>
-            <h5>用时<span id="minute"></span>分<span id="second"></span>秒</h5>
+            <h5>用时<span id="second"></span>秒</h5>
+            <!-- <span id="minute"></span>分 -->
             <h6>错误次数 <span id="errorTimes"></span></h6>
             <div class="img-share">
                 <img src="./images/curriculum/game-share.png" alt="分享">
                 <img src="./images/curriculum/excerise.png" alt="练习">
                 <img src="./images/curriculum/next.png" alt="下一关" onClick="NextLevel(1)">
-                <img src="./images/curriculum/game-return.png" alt="返回">
+                <img src="./images/curriculum/game-return.png" alt="返回" onClick="NextLevel(0)">
             </div>
         </div>
     </div>
